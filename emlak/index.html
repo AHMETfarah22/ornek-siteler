@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ardıç &amp; Taş Gayrimenkul · Satılık ve Kiralık Konutlar</title>
+<meta name="description" content="Ardıç &amp; Taş Gayrimenkul — İstanbul'da satılık ve kiralık daire, villa ve rezidans ilanları. İlçe, oda sayısı ve fiyata göre filtreleyin, danışmanınızla hemen iletişime geçin.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#15171c">
+<meta property="og:title" content="Ardıç &amp; Taş Gayrimenkul · Satılık ve Kiralık Konutlar">
+<meta property="og:description" content="Doğrulanmış ilanlar, şeffaf fiyatlar ve size özel gayrimenkul danışmanı. Hayalinizdeki evi bugün bulun.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232340d9'/%3E%3Cpath d='M14 50V28l18-14 18 14v22H38V36H26v14z' fill='%23ecebe6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15171c;--ink-2:#262a33;--con:#ecebe6;--con-2:#e2e0d9;--paper:#f7f6f2;--cob:#2340d9;--cob-2:#1a31b0;--sun:#f2c14e;
+  --muted:#666a73;--line:rgba(21,23,28,.13);
+  --disp:'Syne',system-ui,sans-serif;--sans:'Hanken Grotesk',system-ui,sans-serif;--max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--con);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--disp);margin:0;line-height:1;letter-spacing:-.03em;font-weight:800}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px}
+.sec{padding:80px 0}
+.lbl{font:700 .72rem var(--sans);letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lbl::before{content:"";width:10px;height:10px;background:var(--cob)}
+.h2{font-size:clamp(1.6rem,6.4vw,3.7rem);overflow-wrap:anywhere;margin-top:14px;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 .95rem var(--sans);padding:15px 22px;border-radius:4px;background:var(--cob);color:#fff;text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--cob-2)}
+.btn.dk{background:var(--ink)}
+.btn.dk:hover{background:var(--ink-2)}
+.ph{background-color:#c9c6bd;background-size:cover;background-position:center}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.1rem var(--disp);letter-spacing:-.02em;text-transform:uppercase}
+.logo i{width:30px;height:30px;background:var(--cob);display:grid;place-items:center;border-radius:4px}
+.logo i svg{width:18px;height:18px}
+.nav{display:none}
+.nav a{text-decoration:none;font-weight:600;font-size:.92rem;opacity:.75;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.mb{width:44px;height:44px;border:1px solid rgba(255,255,255,.25);background:none;border-radius:4px;color:#fff;cursor:pointer;display:grid;place-items:center}
+.mb svg{width:20px;height:20px}
+.mb .c{display:none}
+body.open .mb .o{display:none}body.open .mb .c{display:block}
+.mnav{position:fixed;inset:64px 0 0;z-index:49;background:var(--cob);color:#fff;padding:20px 18px 28px;display:flex;flex-direction:column;clip-path:inset(0 0 0 100%);visibility:hidden;transition:clip-path .45s cubic-bezier(.7,0,.2,1),visibility .45s}
+body.open .mnav{clip-path:inset(0);visibility:visible}
+.mnav a{text-decoration:none;font:800 2rem/1.1 var(--disp);text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2);display:flex;justify-content:space-between}
+.mnav p{margin-top:auto;opacity:.8}
+@media(min-width:940px){.nav{display:flex;gap:28px;align-items:center}.mb,.mnav{display:none}}
+
+/* hero */
+.hero{position:relative;color:#fff;background:var(--ink)}
+.hero .bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=70&auto=format&fit=crop');background-color:#2b2d33}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,23,28,.35) 0%,rgba(21,23,28,.55) 50%,rgba(21,23,28,.92) 100%)}
+.hero .wrap{position:relative;padding-top:80px;padding-bottom:28px;min-height:min(86vh,760px);display:flex;flex-direction:column;justify-content:flex-end}
+.hero h1{font-size:clamp(2rem,9.6vw,7rem);text-transform:uppercase;letter-spacing:-.045em}
+.hero h1 span{color:var(--sun)}
+.hero p{max-width:480px;font-size:1.08rem;opacity:.85;margin:18px 0 28px}
+.qs{background:#fff;color:var(--ink);border-radius:6px;padding:10px;display:grid;gap:8px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.qs>*{min-width:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--con);border-radius:4px;padding:4px;gap:4px}
+.seg button{border:0;background:transparent;border-radius:3px;padding:11px 14px;font:700 .92rem var(--sans);color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.sel{width:100%;min-width:0;font:600 .98rem var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:13px 36px 13px 12px;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2315171c' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+input.sel{background-image:none;padding-right:12px}
+.sel:focus{outline:2px solid var(--cob);outline-offset:-1px}
+.hstats{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:28px;font-size:.88rem;opacity:.85}
+.hstats b{font:800 1.5rem var(--disp);display:block;letter-spacing:-.03em}
+@media(min-width:760px){.qs{grid-template-columns:240px 1fr 1fr auto;align-items:center}}
+
+/* listings */
+.lhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.lhead>*{min-width:0}
+.filters{margin-top:30px;background:#fff;border-radius:6px;padding:16px;display:grid;gap:14px;border:1px solid var(--line)}
+.filters>*{min-width:0}
+.fl{display:flex;flex-direction:column;gap:6px}
+.fl>span{font:700 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rooms{display:flex;flex-wrap:wrap;gap:6px}
+.rooms button{border:1px solid var(--line);background:var(--paper);border-radius:4px;padding:10px 13px;font:700 .88rem var(--sans);color:var(--ink);cursor:pointer}
+.rooms button[aria-pressed="true"]{background:var(--cob);color:#fff;border-color:var(--cob)}
+.pr{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px}
+.fbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 16px}
+.count{font-weight:600}
+.count b{font:800 1.3rem var(--disp)}
+.fbar .sel{width:auto;padding-top:10px;padding-bottom:10px}
+.reset{background:none;border:0;font:700 .88rem var(--sans);color:var(--cob);cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:6px 0}
+@media(min-width:800px){.filters{grid-template-columns:200px 1.4fr 1fr 1.2fr;align-items:end}}
+.grid{display:grid;gap:18px}
+.card{background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .3s,box-shadow .3s;animation:ci .45s ease both}
+@keyframes ci{from{opacity:0;transform:translateY(10px)}}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 40px -26px rgba(21,23,28,.55)}
+.card:focus-visible{outline:3px solid var(--cob);outline-offset:2px}
+.card .im{position:relative;aspect-ratio:4/3}
+.card .im .ph{position:absolute;inset:0}
+.badge{position:absolute;left:12px;top:12px;font:700 .7rem var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:3px;background:var(--ink);color:#fff}
+.badge.k{background:var(--sun);color:var(--ink)}
+.cnt{position:absolute;left:12px;bottom:12px;font:700 .75rem var(--sans);background:rgba(21,23,28,.75);color:#fff;padding:4px 8px;border-radius:3px}
+.fav{position:absolute;right:10px;top:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.fav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.fav[aria-pressed="true"]{color:#e0433a}
+.fav[aria-pressed="true"] svg{fill:currentColor}
+.card .b{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.price{font:800 1.45rem var(--disp);letter-spacing:-.03em}
+.price small{font:600 .8rem var(--sans);color:var(--muted);letter-spacing:0}
+.card h3{font:700 1.02rem/1.35 var(--sans);letter-spacing:0}
+.loc{font-size:.86rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.specs span{font:700 .78rem var(--sans);background:var(--con);padding:5px 9px;border-radius:3px}
+.empty{grid-column:1/-1;background:#fff;border-radius:6px;padding:40px 20px;text-align:center}
+.empty h3{font-size:1.5rem;margin-bottom:8px}
+@media(min-width:620px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* modal */
+.mdl{position:fixed;inset:0;z-index:90;background:rgba(21,23,28,.7);display:none;align-items:flex-end;justify-content:center}
+.mdl.on{display:flex}
+.box{background:var(--paper);width:100%;max-width:1040px;max-height:94vh;overflow-y:auto;overflow-x:hidden;border-radius:10px 10px 0 0;position:relative;animation:mu .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes mu{from{transform:translateY(40px);opacity:0}}
+.close{position:sticky;top:10px;margin:10px 10px -54px auto;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.2);font-size:1.5rem;cursor:pointer;display:grid;place-items:center}
+.gmain{position:relative;aspect-ratio:16/10;background:#c9c6bd}
+.gmain .ph{position:absolute;inset:0;transition:opacity .25s}
+.gmain .nv{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:1.4rem;cursor:pointer}
+.gmain .p{left:10px}.gmain .n{right:10px}
+.gmain .ix{position:absolute;right:12px;bottom:12px;background:rgba(21,23,28,.75);color:#fff;font:700 .78rem var(--sans);padding:4px 9px;border-radius:3px}
+.thumbs{display:flex;gap:6px;padding:8px;overflow-x:auto;scrollbar-width:none}
+.thumbs button{flex:0 0 78px;height:56px;border:2px solid transparent;border-radius:4px;padding:0;cursor:pointer;opacity:.6}
+.thumbs button[aria-current="true"]{border-color:var(--cob);opacity:1}
+.thumbs button span{display:block;width:100%;height:100%;border-radius:2px}
+.mb-body{padding:18px 18px 26px;display:grid;gap:26px}
+.mb-body>*{min-width:0}
+.mb-body h2{font-size:clamp(1.5rem,6vw,2.2rem);text-transform:none;letter-spacing:-.03em;line-height:1.1}
+.dgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;margin-top:18px}
+.dgrid div{background:#fff;padding:12px}
+.dgrid span{display:block;font:700 .68rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dgrid b{font-size:1rem}
+.feat{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:16px 0 0}
+.feat li{font-size:.85rem;font-weight:600;border:1px solid var(--line);padding:5px 10px;border-radius:30px;background:#fff}
+.feat li::before{content:"✓ ";color:var(--cob)}
+.agent{background:var(--ink);color:#fff;border-radius:6px;padding:20px;align-self:start}
+.agent .who{display:flex;gap:14px;align-items:center}
+.agent .ph{width:64px;height:64px;border-radius:50%;flex:none}
+.agent b{display:block;font:800 1.1rem var(--disp)}
+.agent small{opacity:.7}
+.agent .tel{display:block;margin:16px 0;padding:12px;border:1px solid rgba(255,255,255,.2);border-radius:4px;text-align:center;font-weight:700;text-decoration:none}
+.agent .btn{width:100%;background:#25d366;color:#0b2e17}
+.agent .btn:hover{background:#3be07b}
+.agent .no{font-size:.78rem;opacity:.6;margin-top:12px;text-align:center}
+@media(min-width:760px){.mdl{align-items:center;padding:24px}.box{border-radius:10px;max-height:90vh}.dgrid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:900px){.mb-body{grid-template-columns:1.5fr 1fr;padding:28px}}
+
+/* services */
+.svcs{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.sv{background:var(--con);padding:28px 22px;transition:background .3s,color .3s}
+.sv:hover{background:var(--ink);color:#fff}
+.sv .n{font:800 .9rem var(--disp);color:var(--cob)}
+.sv:hover .n{color:var(--sun)}
+.sv h3{font-size:1.45rem;margin:22px 0 10px;text-transform:uppercase}
+.sv p{margin:0;font-size:.93rem;opacity:.8}
+@media(min-width:700px){.svcs{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.svcs{grid-template-columns:repeat(4,1fr)}}
+
+/* agents */
+.ag-sec{background:var(--ink);color:#fff}
+.ag-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:40px}
+.ag .ph{aspect-ratio:3/4;border-radius:4px;filter:grayscale(1);transition:filter .4s}
+.ag:hover .ph{filter:none}
+.ag h3{font-size:1.1rem;margin-top:12px}
+.ag p{margin:4px 0 0;font-size:.85rem;opacity:.65}
+@media(min-width:900px){.ag-grid{grid-template-columns:repeat(4,1fr);gap:22px}}
+
+/* value cta */
+.val{display:grid;gap:0;background:var(--cob);color:#fff;border-radius:6px;overflow:hidden}
+.val>*{min-width:0}
+.val .t{padding:34px 22px}
+.val .t p{opacity:.85;max-width:440px}
+.val .ph{min-height:240px;background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=70&auto=format&fit=crop')}
+.val .btn{background:#fff;color:var(--cob)}
+.val .btn:hover{background:var(--sun);color:var(--ink)}
+@media(min-width:860px){.val{grid-template-columns:1.1fr .9fr}.val .t{padding:56px 48px}}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);font-size:.9rem}
+.foot{display:grid;gap:26px;padding:50px 18px 30px}
+.foot .logo{color:#fff}
+.foot h4{color:#fff;margin:0 0 10px;font:800 .9rem var(--disp);text-transform:uppercase}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+.copy{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:18px;font-size:.8rem;opacity:.6}
+@media(min-width:800px){.foot{grid-template-columns:1.5fr 1fr 1fr}}
+.afm{display:block;text-align:center;background:#0c0d10;color:rgba(255,255,255,.65);font:500 .82rem/1.4 var(--sans);padding:13px 16px;text-decoration:none;transition:color .2s}
+.afm:hover{color:var(--sun)}
+.afm b{color:#fff}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body id="top">
+
+<header class="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo"><i><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 54V26L32 8l24 18v28H40V36H24v18z" fill="#ecebe6"/></svg></i>Ardıç &amp; Taş</a>
+    <nav class="nav" aria-label="Ana menü"><a href="#ilanlar">İlanlar</a><a href="#hizmetler">Hizmetler</a><a href="#danismanlar">Danışmanlar</a><a href="#degerleme">Değerleme</a><a href="#ilanlar" class="btn" style="opacity:1;padding:10px 18px">İlan Ara</a></nav>
+    <button class="mb" id="mb" aria-label="Menü" aria-expanded="false" aria-controls="mnav"><svg class="o" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h12"/></svg><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobil menü">
+  <a href="#ilanlar">İlanlar <span>→</span></a><a href="#hizmetler">Hizmetler <span>→</span></a><a href="#danismanlar">Danışmanlar <span>→</span></a><a href="#degerleme">Değerleme <span>→</span></a>
+  <p>0 (532) 000 00 00<br>Hafta içi 09:00 – 19:00 · Cumartesi 10:00 – 17:00</p>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="bg ph" role="img" aria-label="Akşam ışığında modern müstakil ev"></div>
+  <div class="wrap">
+    <div class="rv">
+      <h1>Doğru ev,<br><span>doğru</span> fiyat.</h1>
+      <p>İstanbul'un 6 ilçesinde yerinde incelenmiş, tapusu kontrol edilmiş satılık ve kiralık konutlar. Size özel bir danışmanla.</p>
+    </div>
+    <form class="qs rv" id="qs" role="search">
+      <div class="seg" id="qMode"><button type="button" aria-pressed="true" data-m="sat">Satılık</button><button type="button" aria-pressed="false" data-m="kira">Kiralık</button></div>
+      <select class="sel" id="qDist" aria-label="İlçe"></select>
+      <select class="sel" id="qRoom" aria-label="Oda sayısı"><option value="">Tüm oda sayıları</option><option>1+1</option><option>2+1</option><option>3+1</option><option value="4+">4+1 ve üzeri</option></select>
+      <button class="btn" type="submit">İlanları Göster</button>
+    </form>
+    <div class="hstats rv"><div><b>340+</b>aktif ilan</div><div><b>2.100</b>tamamlanan işlem</div><div><b>%100</b>tapu kontrolü</div></div>
+  </div>
+</section>
+
+<section class="sec" id="ilanlar">
+  <div class="wrap">
+    <div class="lhead rv">
+      <div><span class="lbl">Güncel İlanlar</span><h2 class="h2">Portföyümüz</h2></div>
+      <div class="seg" id="mode" style="min-width:240px"><button type="button" aria-pressed="true" data-m="sat">Satılık</button><button type="button" aria-pressed="false" data-m="kira">Kiralık</button></div>
+    </div>
+    <div class="filters rv">
+      <label class="fl"><span>İlçe</span><select class="sel" id="fDist"></select></label>
+      <div class="fl"><span>Oda sayısı</span><div class="rooms" id="fRooms" role="group" aria-label="Oda sayısı"></div></div>
+      <div class="fl"><span id="prLbl">Fiyat aralığı (₺)</span><div class="pr"><input class="sel" id="fMin" inputmode="numeric" placeholder="En az" aria-label="En düşük fiyat"><span>–</span><input class="sel" id="fMax" inputmode="numeric" placeholder="En çok" aria-label="En yüksek fiyat"></div></div>
+      <label class="fl"><span>Sırala</span><select class="sel" id="fSort"><option value="new">En yeni</option><option value="pa">Fiyat (artan)</option><option value="pd">Fiyat (azalan)</option><option value="m2">Metrekare (büyük)</option></select></label>
+    </div>
+    <div class="fbar"><span class="count" aria-live="polite"><b id="cnt">0</b> ilan bulundu</span><button type="button" class="reset" id="reset">Filtreleri temizle</button></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div class="mdl" id="mdl" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box" id="box">
+    <button class="close" id="mClose" aria-label="Kapat">×</button>
+    <div class="gmain"><div class="ph" id="gImg" role="img"></div><button class="nv p" id="gP" aria-label="Önceki fotoğraf">‹</button><button class="nv n" id="gN" aria-label="Sonraki fotoğraf">›</button><span class="ix" id="gIx"></span></div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="mb-body">
+      <div>
+        <span class="lbl" id="mType"></span>
+        <h2 id="mTitle" style="margin-top:12px"></h2>
+        <p class="loc" id="mLoc" style="margin-top:8px"></p>
+        <div class="price" id="mPrice" style="font-size:2rem;margin-top:10px"></div>
+        <div class="dgrid" id="mDet"></div>
+        <p id="mDesc" style="margin:18px 0 0"></p>
+        <ul class="feat" id="mFeat"></ul>
+      </div>
+      <aside class="agent">
+        <div class="who"><div class="ph" id="aImg"></div><div><small>İlan danışmanı</small><b id="aName"></b><small id="aRole"></small></div></div>
+        <a class="tel" href="#ilanlar" id="aTel">0 (532) 000 00 00</a>
+        <button type="button" class="btn" id="waBtn">Bu ilan için bilgi al</button>
+        <p class="no" id="mNo"></p>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="hizmetler" style="padding-top:20px">
+  <div class="wrap">
+    <span class="lbl rv">Hizmetler</span>
+    <h2 class="h2 rv">Alımdan tapuya<br>tek masa</h2>
+    <div class="svcs rv">
+      <div class="sv"><span class="n">01</span><h3>Satış</h3><p>Profesyonel fotoğraf, doğru fiyatlama ve nitelikli alıcı ağıyla evinizi ortalama 45 günde satıyoruz.</p></div>
+      <div class="sv"><span class="n">02</span><h3>Kiralama</h3><p>Kiracı ön değerlendirmesi, sözleşme ve depozito süreçlerini sizin yerinize yönetiyoruz.</p></div>
+      <div class="sv"><span class="n">03</span><h3>Değerleme</h3><p>Bölgesel emsal verileriyle mülkünüzün güncel piyasa değerini 48 saat içinde raporluyoruz.</p></div>
+      <div class="sv"><span class="n">04</span><h3>Yatırım</h3><p>Kira getirisi ve değer artışı analiziyle portföyünüze uygun yatırım fırsatları sunuyoruz.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ag-sec" id="danismanlar">
+  <div class="wrap">
+    <span class="lbl rv" style="color:#fff">Ekibimiz</span>
+    <h2 class="h2 rv">Bölgeyi bilen<br>danışmanlar</h2>
+    <div class="ag-grid" id="agents"></div>
+  </div>
+</section>
+
+<section class="sec" id="degerleme">
+  <div class="wrap">
+    <div class="val rv">
+      <div class="t">
+        <span class="lbl" style="color:#fff">Ücretsiz Değerleme</span>
+        <h2 class="h2" style="font-size:clamp(1.9rem,6.5vw,3.2rem)">Eviniz bugün ne eder?</h2>
+        <p>Adresinizi ve temel bilgileri iletin; uzmanımız emsal ilanları ve son satışları inceleyerek size ücretsiz bir değer aralığı sunsun.</p>
+        <a class="btn" href="https://wa.me/905416264074?text=Merhaba%2C%20evimin%20de%C4%9Ferlemesini%20yapt%C4%B1rmak%20istiyorum." target="_blank" rel="noopener">WhatsApp ile değerleme iste →</a>
+      </div>
+      <div class="ph" role="img" aria-label="Danışmanlar ofiste müşteriyle görüşüyor"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><a href="#top" class="logo"><i><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 54V26L32 8l24 18v28H40V36H24v18z" fill="#ecebe6"/></svg></i>Ardıç &amp; Taş</a><p style="max-width:340px">Yetki Belge No: 0000000 · Taşınmaz ticareti yetki belgeli gayrimenkul danışmanlığı.</p></div>
+    <div><h4>Ofis</h4>Örnek Mah. Bağdat Cad. No: 00<br>Kadıköy / İstanbul</div>
+    <div><h4>İletişim</h4>0 (532) 000 00 00<br>info@ardictas-ornek.com</div>
+    <div class="copy">© 2026 Ardıç &amp; Taş Gayrimenkul · İlan bilgileri temsilidir.</div>
+  </div>
+  <a class="afm" href="https://wa.me/905416264074?text=Merhaba%2C%20%C3%B6rnek%20siteyi%20g%C3%B6rd%C3%BCm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini <b>AFM-CODING</b> ile yaptırın →</a>
+</footer>
+
+<script>
+(function(){
+  var I='https://images.unsplash.com/photo-',U='?w=1200&q=70&auto=format&fit=crop',T='?w=300&q=60&auto=format&fit=crop';
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var AG=[
+    {n:'Can Erdem',r:'Kadıköy & Ataşehir',img:'1599566150163-29194dcaad36'},
+    {n:'Leyla Şahin',r:'Beşiktaş & Sarıyer',img:'1573496359142-b8d87734a5a2'},
+    {n:'Orhan Yalçın',r:'Kurucu · Yatırım',img:'1472099645785-5658abf4ff4e'},
+    {n:'Emre Koç',r:'Üsküdar & Bakırköy',img:'1507003211169-0a1dd7228f2d'}
+  ];
+  /* id, mode, title, district, neighbourhood, rooms, m2, floor, age, price, agent, imgs, features, desc */
+  var L=[
+    [1042,'sat','Deniz manzaralı yenilenmiş daire','Kadıköy','Moda','3+1',145,'4 / 6',22,12850000,0,['1600607687939-ce8a6c25118c','1560448204-e02f11c3d0e2','1484154218962-a197022b5858','1505691938895-1758d7feb511'],['Deniz manzarası','Asansör','Balkon','Doğalgaz'],'Moda sahiline 5 dakika yürüme mesafesinde, tamamı yenilenmiş, aydınlık köşe daire.'],
+    [1043,'sat','Bahçeli müstakil villa','Sarıyer','Zekeriyaköy','5+2',320,'Müstakil',8,28500000,1,['1613490493576-7fde63acd811','1600210492486-724fe5c67fb0','1556909114-f6e7ad7d3136','1540518614846-7eded433c457'],['Özel havuz','Bahçe','Otopark','Akıllı ev','Güvenlik'],'Orman sınırında, 600 m² bahçe içinde havuzlu, mimari tasarım villa.'],
+    [1044,'sat','Site içinde yeni 2+1','Ataşehir','Küçükbakkalköy','2+1',98,'7 / 14',2,6950000,0,['1545324418-cc1a3fa10c00','1502672260266-1c1ef2d93688','1554995207-c18c203602cb'],['Site içi','Havuz','Spor salonu','Kapalı otopark'],'Metroya yürüme mesafesinde, sosyal donatılı sitede yeni bina.'],
+    [1045,'sat','Boğaz yakınında tarihi bina dairesi','Beşiktaş','Abbasağa','2+1',110,'2 / 4',60,9400000,1,['1560185007-cde436f6a4d0','1586023492125-27b2c045efd7','1552321554-5fefe8c9ef14'],['Yüksek tavan','Ahşap parke','Merkezi konum'],'Restore edilmiş tarihi yapıda, yüksek tavanlı ve karakterli daire.'],
+    [1046,'sat','Yatırımlık 1+1 rezidans','Üsküdar','Altunizade','1+1',62,'11 / 22',4,4250000,3,['1486406146926-c627a92ad1ab','1522708323590-d24dbb6b0267','1505691938895-1758d7feb511'],['Rezidans','Concierge','Kira garantili'],'Marmaray ve metro bağlantılı, kiracılı teslim yatırımlık rezidans.'],
+    [1047,'sat','Modern tripleks bahçe katı','Bakırköy','Yeşilköy','4+1',210,'Bahçe katı',6,17900000,3,['1600566753190-17f0baa2a6c3','1600607687939-ce8a6c25118c','1484154218962-a197022b5858','1540518614846-7eded433c457'],['Bahçe','Şömine','Ebeveyn banyosu','Otopark'],'Yeşilköy\'ün sakin sokaklarında, ahşap detaylı modern tripleks.'],
+    [1048,'sat','Havuzlu sitede aile evi','Sarıyer','Tarabya','3+1',165,'1 / 3',10,14600000,1,['1512917774080-9991f1c4c750','1560448204-e02f11c3d0e2','1556909114-f6e7ad7d3136'],['Havuz','Site içi','Boğaz\'a yakın'],'Yeşillikler içinde düşük yoğunluklu sitede geniş aile dairesi.'],
+    [2051,'kira','Eşyalı stüdyo daire','Kadıköy','Caferağa','1+1',55,'3 / 5',15,26000,0,['1502672260266-1c1ef2d93688','1554995207-c18c203602cb','1552321554-5fefe8c9ef14'],['Eşyalı','Kombi','Çarşıya yakın'],'Çarşıya ve iskeleye yürüme mesafesinde, beyaz eşyalı şirin daire.'],
+    [2052,'kira','Boğaz manzaralı 3+1','Beşiktaş','Ortaköy','3+1',150,'5 / 6',12,85000,1,['1600210492486-724fe5c67fb0','1586023492125-27b2c045efd7','1540518614846-7eded433c457','1484154218962-a197022b5858'],['Boğaz manzarası','Teras','Otopark'],'Geniş terasından Boğaz\'ı izleyebileceğiniz ferah daire.'],
+    [2053,'kira','Rezidansta 2+1','Ataşehir','Barbaros','2+1',105,'18 / 30',3,48000,0,['1574362848149-11496d93a7c7','1600607687939-ce8a6c25118c','1505691938895-1758d7feb511'],['Rezidans','Spor salonu','7/24 güvenlik','Havuz'],'Finans merkezine yakın, şehir manzaralı yüksek katta rezidans dairesi.'],
+    [2054,'kira','Bahçeli müstakil ev','Sarıyer','Bahçeköy','4+1',240,'Müstakil',14,95000,1,['1564013799919-ab600027ffc6','1560185007-cde436f6a4d0','1556909114-f6e7ad7d3136'],['Bahçe','Şömine','Evcil hayvan uygun'],'Belgrad Ormanı\'na komşu, bahçeli ve sakin müstakil ev.'],
+    [2055,'kira','Metroya yakın 2+1','Üsküdar','Ünalan','2+1',90,'2 / 7',7,32000,3,['1545324418-cc1a3fa10c00','1522708323590-d24dbb6b0267','1552321554-5fefe8c9ef14'],['Asansör','Balkon','Metroya 3 dk'],'Ulaşım akslarına çok yakın, bakımlı binada kullanışlı daire.'],
+    [2056,'kira','Sahile yakın 3+1','Bakırköy','Ataköy','3+1',135,'6 / 10',9,52000,3,['1580587771525-78b9dba3b914','1560448204-e02f11c3d0e2','1505691938895-1758d7feb511'],['Site içi','Kapalı otopark','Sahile yakın'],'Ataköy sahiline yürüme mesafesinde, site içinde geniş daire.']
+  ].map(function(a){return {id:a[0],m:a[1],t:a[2],d:a[3],nb:a[4],r:a[5],m2:a[6],fl:a[7],age:a[8],p:a[9],ag:a[10],img:a[11],f:a[12],ds:a[13]}});
+  var DIST=['Kadıköy','Beşiktaş','Ataşehir','Sarıyer','Üsküdar','Bakırköy'],ROOMS=['1+1','2+1','3+1','4+'];
+  var tl=function(n){return '₺'+n.toLocaleString('tr-TR')};
+  var F={m:'sat',d:'',r:'',min:null,max:null,s:'new'};
+  var favs=[];try{favs=JSON.parse(localStorage.getItem('at_favs')||'[]')}catch(e){}
+  var $=function(id){return document.getElementById(id)};
+  var opts='<option value="">Tüm ilçeler</option>'+DIST.map(function(d){return '<option>'+d+'</option>'}).join('');
+  $('fDist').innerHTML=opts;$('qDist').innerHTML=opts;
+  $('fRooms').innerHTML='<button type="button" aria-pressed="true" data-r="">Tümü</button>'+ROOMS.map(function(r){return '<button type="button" aria-pressed="false" data-r="'+r+'">'+(r==='4+'?'4+1 ve üzeri':r)+'</button>'}).join('');
+  $('agents').innerHTML=AG.map(function(a){return '<div class="ag rv"><div class="ph" style="background-image:url(\''+I+a.img+U+'\')" role="img" aria-label="'+a.n+'"></div><h3>'+a.n+'</h3><p>'+a.r+'</p></div>'}).join('');
+
+  function setMode(m){F.m=m;document.querySelectorAll('#mode button,#qMode button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.m===m)});
+    $('prLbl').textContent=m==='sat'?'Fiyat aralığı (₺)':'Aylık kira (₺)';$('fMin').placeholder=m==='sat'?'Örn. 5.000.000':'Örn. 25.000';$('fMax').placeholder='En çok';}
+  function rooms(r){F.r=r;$('fRooms').querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.r===r)})}
+  function num(v){v=String(v).replace(/\D/g,'');return v?+v:null}
+  function roomOk(x){if(!F.r)return true;if(F.r==='4+')return parseInt(x.r,10)>=4;return x.r===F.r}
+  function render(){
+    var res=L.filter(function(x){return x.m===F.m&&(!F.d||x.d===F.d)&&roomOk(x)&&(F.min===null||x.p>=F.min)&&(F.max===null||x.p<=F.max)});
+    res.sort(function(a,b){return F.s==='pa'?a.p-b.p:F.s==='pd'?b.p-a.p:F.s==='m2'?b.m2-a.m2:b.id-a.id});
+    $('cnt').textContent=res.length;
+    $('grid').innerHTML=res.length?res.map(function(x,i){var fv=favs.indexOf(x.id)>-1;return '<article class="card" tabindex="0" data-id="'+x.id+'" style="animation-delay:'+(i*40)+'ms" aria-label="'+x.t+', '+tl(x.p)+'"><div class="im"><div class="ph" style="background-image:url(\''+I+x.img[0]+U+'\')"></div><span class="badge'+(x.m==='kira'?' k':'')+'">'+(x.m==='sat'?'Satılık':'Kiralık')+'</span><span class="cnt">▣ '+x.img.length+'</span><button type="button" class="fav" aria-label="Favorilere ekle" aria-pressed="'+fv+'" data-fav="'+x.id+'"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.3C1 8.2 3.2 4.5 6.9 4.5c2.1 0 3.6 1.1 5.1 3 1.5-1.9 3-3 5.1-3 3.7 0 5.9 3.7 4.4 7.2C19.5 16.4 12 21 12 21z"/></svg></button></div><div class="b"><div class="price">'+tl(x.p)+(x.m==='kira'?' <small>/ ay</small>':'')+'</div><h3>'+x.t+'</h3><span class="loc">◉ '+x.nb+', '+x.d+'</span><div class="specs"><span>'+x.r+'</span><span>'+x.m2+' m²</span><span>Kat '+x.fl+'</span><span>'+(x.age<1?'Sıfır':x.age+' yaşında')+'</span></div></div></article>'}).join('')
+      :'<div class="empty"><h3>Bu kriterlere uygun ilan yok</h3><p>Filtreleri genişletmeyi deneyin ya da aradığınız evi danışmanımıza söyleyin, portföy dışı ilanları da tarayalım.</p><button type="button" class="btn" id="emptyReset">Filtreleri temizle</button></div>';
+  }
+  function resetAll(){F.d='';F.min=F.max=null;F.s='new';$('fDist').value='';$('fMin').value='';$('fMax').value='';$('fSort').value='new';rooms('');render()}
+  document.querySelectorAll('#mode button').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.m);F.min=F.max=null;$('fMin').value=$('fMax').value='';render()})});
+  document.querySelectorAll('#qMode button').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.m)})});
+  $('fDist').addEventListener('change',function(){F.d=this.value;render()});
+  $('fSort').addEventListener('change',function(){F.s=this.value;render()});
+  $('fRooms').addEventListener('click',function(e){var b=e.target.closest('button');if(b){rooms(b.dataset.r);render()}});
+  ['fMin','fMax'].forEach(function(id){$(id).addEventListener('input',function(){var v=num(this.value);this.value=v===null?'':v.toLocaleString('tr-TR');F[id==='fMin'?'min':'max']=v;render()})});
+  $('reset').addEventListener('click',resetAll);
+  $('qs').addEventListener('submit',function(e){e.preventDefault();F.d=$('qDist').value;$('fDist').value=F.d;rooms($('qRoom').value);F.min=F.max=null;$('fMin').value=$('fMax').value='';render();$('ilanlar').scrollIntoView({behavior:reduce?'auto':'smooth'})});
+  var grid=$('grid');
+  grid.addEventListener('click',function(e){
+    if(e.target.closest('#emptyReset')){resetAll();return}
+    var fb=e.target.closest('[data-fav]');
+    if(fb){e.stopPropagation();var id=+fb.dataset.fav,k=favs.indexOf(id);if(k>-1)favs.splice(k,1);else favs.push(id);fb.setAttribute('aria-pressed',k<0);fb.setAttribute('aria-label',k<0?'Favorilerden çıkar':'Favorilere ekle');try{localStorage.setItem('at_favs',JSON.stringify(favs))}catch(err){}return}
+    var c=e.target.closest('.card');if(c)openM(+c.dataset.id);
+  });
+  grid.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('card')){e.preventDefault();openM(+e.target.dataset.id)}});
+
+  /* modal */
+  var mdl=$('mdl'),cur=null,gi=0,lastF=null;
+  function gShow(i){gi=(i+cur.img.length)%cur.img.length;$('gImg').style.backgroundImage="url('"+I+cur.img[gi]+U+"')";$('gImg').setAttribute('aria-label',cur.t+' fotoğraf '+(gi+1));$('gIx').textContent=(gi+1)+' / '+cur.img.length;
+    $('thumbs').querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===gi)})}
+  function openM(id){
+    cur=L.filter(function(x){return x.id===id})[0];if(!cur)return;lastF=document.activeElement;var a=AG[cur.ag];
+    $('mType').textContent=(cur.m==='sat'?'Satılık':'Kiralık')+' · İlan No '+cur.id;$('mTitle').textContent=cur.t;$('mLoc').textContent='◉ '+cur.nb+' Mah., '+cur.d+' / İstanbul';
+    $('mPrice').innerHTML=tl(cur.p)+(cur.m==='kira'?' <small>/ ay</small>':'');
+    var det=[['Oda',cur.r],['Net alan',cur.m2+' m²'],['Kat',cur.fl],['Bina yaşı',cur.age],['m² fiyatı',tl(Math.round(cur.p/cur.m2))],['Isınma','Kombi / Doğalgaz'],['Tapu',cur.m==='sat'?'Kat mülkiyeti':'—'],['Durum',cur.m==='sat'?'Boş':'Hemen taşınılabilir']];
+    $('mDet').innerHTML=det.map(function(d){return '<div><span>'+d[0]+'</span><b>'+d[1]+'</b></div>'}).join('');
+    $('mDesc').textContent=cur.ds;$('mFeat').innerHTML=cur.f.map(function(f){return '<li>'+f+'</li>'}).join('');
+    $('aImg').style.backgroundImage="url('"+I+a.img+T+"')";$('aName').textContent=a.n;$('aRole').textContent=a.r;$('mNo').textContent='İlan No: '+cur.id+' · Son güncelleme: bu hafta';
+    $('thumbs').innerHTML=cur.img.map(function(s,k){return '<button type="button" aria-label="Fotoğraf '+(k+1)+'" data-k="'+k+'"><span class="ph" style="background-image:url(\''+I+s+T+'\')"></span></button>'}).join('');
+    gShow(0);mdl.classList.add('on');document.body.style.overflow='hidden';$('box').scrollTop=0;$('mClose').focus();
+  }
+  function closeM(){mdl.classList.remove('on');document.body.style.overflow='';if(lastF&&lastF.focus)lastF.focus()}
+  $('gP').onclick=function(){gShow(gi-1)};$('gN').onclick=function(){gShow(gi+1)};
+  $('thumbs').addEventListener('click',function(e){var b=e.target.closest('button');if(b)gShow(+b.dataset.k)});
+  $('mClose').onclick=closeM;mdl.addEventListener('click',function(e){if(e.target===mdl)closeM()});
+  var tx=null;$('gImg').parentNode.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+  $('gImg').parentNode.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)gShow(gi+(dx<0?1:-1));tx=null});
+  addEventListener('keydown',function(e){if(!mdl.classList.contains('on'))return;if(e.key==='Escape')closeM();if(e.key==='ArrowLeft')gShow(gi-1);if(e.key==='ArrowRight')gShow(gi+1);
+    if(e.key==='Tab'){var f=$('box').querySelectorAll('button,a[href]'),fi=f[0],la=f[f.length-1];if(e.shiftKey&&document.activeElement===fi){e.preventDefault();la.focus()}else if(!e.shiftKey&&document.activeElement===la){e.preventDefault();fi.focus()}}});
+  $('waBtn').addEventListener('click',function(){var m='Merhaba, "'+cur.t+'" ilanı hakkında bilgi almak istiyorum.\nİlan No: '+cur.id+'\nKonum: '+cur.nb+', '+cur.d+'\nFiyat: '+tl(cur.p)+(cur.m==='kira'?' / ay':'');window.open('https://wa.me/905416264074?text='+encodeURIComponent(m),'_blank','noopener')});
+
+  setMode('sat');render();
+
+  /* menu */
+  var mb=$('mb');function menu(o){document.body.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+  mb.addEventListener('click',function(){menu(!document.body.classList.contains('open'))});
+  document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&document.body.classList.contains('open'))menu(false)});
+  /* reveal */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});els.forEach(function(el){io.observe(el)})}
+  else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>

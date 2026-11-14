@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gülkurusu Atelier · Saç, Tırnak &amp; Güzellik Stüdyosu</title>
+<meta name="description" content="Gülkurusu Atelier — saç kesim ve renklendirme, manikür, pedikür, kirpik ve cilt bakımı. Fiyat listesi, ekibimiz ve online randevu.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2b1a1f">
+<meta property="og:title" content="Gülkurusu Atelier · Saç, Tırnak &amp; Güzellik Stüdyosu">
+<meta property="og:description" content="Saç, tırnak ve cilt bakımında butik stüdyo deneyimi. Hizmetini ve uzmanını seç, saniyeler içinde randevu al.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c98e86'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23fbf3ee'%3Eg%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2b1a1f;--plum-2:#3d262d;--rose:#c98e86;--rose-2:#b4766e;--blush:#f3dcd5;--cream:#fbf3ee;--sand:#efe2d9;--sage:#7f8f72;
+  --muted:#7a6168;--line:rgba(43,26,31,.13);
+  --disp:'Gloock',Georgia,serif;--sans:'Figtree',system-ui,sans-serif;--max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--cream);color:var(--plum);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--disp);font-weight:400;margin:0;line-height:1.02;letter-spacing:-.01em}
+h1 i,h2 i{color:var(--rose-2)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px}
+.sec{padding:84px 0}
+.tag{font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-2)}
+.h2{font-size:clamp(2.3rem,9vw,4.2rem);margin-top:12px}
+.lead{color:var(--muted);font-size:1.04rem;max-width:520px;margin:14px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 .95rem var(--sans);padding:15px 26px;border-radius:999px;background:var(--plum);color:var(--cream);text-decoration:none;border:0;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.btn:hover{background:var(--rose-2);transform:translateY(-1px)}
+.btn.lt{background:transparent;color:var(--plum);box-shadow:inset 0 0 0 1.5px var(--plum)}
+.btn.lt:hover{background:var(--plum);color:var(--cream)}
+.ph{background-color:#e2c6bd;background-size:cover;background-position:center}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(251,243,238,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font:400 1.45rem var(--disp);text-decoration:none;letter-spacing:-.01em;display:flex;align-items:baseline;gap:6px}
+.logo span{font:600 .62rem var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--rose-2)}
+.nav{display:none}
+.nav a{text-decoration:none;font-weight:500;font-size:.93rem;color:var(--plum-2);opacity:.85}
+.nav a:hover{opacity:1;color:var(--rose-2)}
+.mbtn{border:0;background:none;font:600 .8rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--plum);cursor:pointer;display:flex;align-items:center;gap:10px;padding:10px 0}
+.mbtn i{width:24px;height:10px;position:relative;display:block}
+.mbtn i::before,.mbtn i::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .3s,top .3s}
+.mbtn i::before{top:0}.mbtn i::after{top:8px}
+body.open .mbtn i::before{top:4px;transform:rotate(45deg)}
+body.open .mbtn i::after{top:4px;transform:rotate(-45deg)}
+.mnav{position:fixed;inset:66px 0 0;z-index:49;background:var(--blush);padding:30px 18px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+body.open .mnav{opacity:1;visibility:visible}
+.mnav a{text-decoration:none;font:400 2.5rem/1.25 var(--disp);transform:translateY(12px);opacity:0;transition:transform .45s,opacity .45s}
+body.open .mnav a{transform:none;opacity:1}
+body.open .mnav a:nth-child(2){transition-delay:.04s}body.open .mnav a:nth-child(3){transition-delay:.08s}body.open .mnav a:nth-child(4){transition-delay:.12s}body.open .mnav a:nth-child(5){transition-delay:.16s}body.open .mnav a:nth-child(6){transition-delay:.2s}
+.mnav p{margin-top:auto;color:var(--muted)}
+@media(min-width:940px){.nav{display:flex;gap:30px;align-items:center}.mbtn,.mnav{display:none}}
+
+/* hero */
+.hero{padding:34px 0 0;overflow:hidden}
+.hero .wrap{display:grid;gap:36px}
+.hero .wrap>*{min-width:0}
+.hero h1{font-size:clamp(3rem,14vw,6.6rem)}
+.hero h1 i{display:block}
+.hero .lead{font-size:1.1rem}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.arches{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;align-items:end;position:relative}
+.arch{border-radius:999px 999px 18px 18px;aspect-ratio:3/4.4}
+.arch.s{aspect-ratio:3/4;border-radius:18px 18px 999px 999px;margin-bottom:40px}
+.badge{position:absolute;left:50%;top:6%;transform:translateX(-50%);width:110px;height:110px;border-radius:50%;background:var(--plum);color:var(--cream);display:grid;place-items:center;text-align:center;font:600 .66rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.badge b{display:block;font:400 1.9rem/1 var(--disp);letter-spacing:0;text-transform:none;color:var(--blush)}
+@media(min-width:900px){.hero{padding:60px 0 0}.hero .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:60px}}
+.marq{margin-top:56px;background:var(--plum);color:var(--blush);overflow:hidden;white-space:nowrap;padding:16px 0;font:400 1.5rem var(--disp)}
+.marq div{display:inline-block;animation:mq 34s linear infinite}
+.marq span{margin:0 18px}
+.marq span:nth-child(even){color:var(--rose)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* price list */
+.ptabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:34px -18px 0;padding:0 18px 6px}
+.ptabs::-webkit-scrollbar{display:none}
+.ptab{flex:0 0 auto;border:1.5px solid var(--line);background:transparent;border-radius:999px;padding:10px 20px;font:600 .92rem var(--sans);color:var(--plum);cursor:pointer;transition:all .2s}
+.ptab[aria-selected="true"]{background:var(--plum);color:var(--cream);border-color:var(--plum)}
+.plist{display:grid;gap:0 60px;margin-top:22px}
+.pi{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline;animation:pf .4s ease both}
+@keyframes pf{from{opacity:0;transform:translateY(6px)}}
+.pi h3{font-size:1.35rem}
+.pi .pr{font:400 1.35rem var(--disp);color:var(--rose-2);white-space:nowrap}
+.pi p{margin:0;color:var(--muted);font-size:.9rem}
+.pi .du{font-size:.8rem;font-weight:600;color:var(--sage);white-space:nowrap;text-align:right}
+.pi button{grid-column:1/-1;justify-self:start;background:none;border:0;padding:4px 0 0;font:600 .85rem var(--sans);color:var(--plum);cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--rose)}
+.svc-split{display:grid;gap:40px}
+.svc-split>*{min-width:0}
+.svc-img{border-radius:22px;aspect-ratio:4/5;display:none}
+@media(min-width:760px){.plist{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.svc-split{grid-template-columns:.75fr 1.25fr;align-items:start}.svc-img{display:block;position:sticky;top:96px}.plist{grid-template-columns:1fr}}
+
+/* team */
+.team{background:var(--blush)}
+.trow{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,72%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:40px -18px 0;padding:0 18px 12px;scrollbar-width:thin}
+.mem{scroll-snap-align:start;background:var(--cream);border-radius:22px;overflow:hidden}
+.mem .ph{aspect-ratio:4/5}
+.mem div.b{padding:16px 18px 20px}
+.mem h3{font-size:1.5rem}
+.mem .r{font-size:.84rem;color:var(--rose-2);font-weight:600;letter-spacing:.04em}
+.mem p{margin:8px 0 0;font-size:.88rem;color:var(--muted)}
+@media(min-width:900px){.trow{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;margin:40px 0 0;padding:0}}
+
+/* gallery */
+.gal{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px;margin-top:40px}
+.gal button{border:0;padding:0;border-radius:16px;cursor:zoom-in;position:relative;overflow:hidden}
+.gal button .ph{position:absolute;inset:0;transition:transform .6s}
+.gal button:hover .ph{transform:scale(1.05)}
+.gal .t{grid-row:span 2}
+@media(min-width:800px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:190px}.gal .w{grid-column:span 2}}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(43,26,31,.94);display:none;align-items:center;justify-content:center;padding:60px 16px}
+.lb.on{display:flex}
+.lb .ph{width:100%;max-width:900px;height:100%;max-height:78vh;background-size:contain;background-repeat:no-repeat;background-color:transparent}
+.lb button{position:absolute;background:rgba(251,243,238,.12);color:var(--cream);border:0;width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+.lb .x{top:14px;right:14px}.lb .pv{left:10px;top:50%}.lb .nx{right:10px;top:50%}
+.lb .cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:var(--blush);font-size:.9rem}
+
+/* insta */
+.ig-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px}
+.ig-prof{display:flex;align-items:center;gap:14px}
+.ig-prof .av{width:62px;height:62px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,#c98e86,#e9b384,#7f8f72,#c98e86)}
+.ig-prof .av span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--plum);color:var(--blush);font:400 1.6rem var(--disp);border:3px solid var(--cream)}
+.ig-prof b{display:block;font-size:1rem}
+.ig-prof small{color:var(--muted)}
+.ig{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-top:28px}
+.ig a{position:relative;aspect-ratio:1/1;display:block;overflow:hidden}
+.ig a .ph{position:absolute;inset:0}
+.ig a .ov{position:absolute;inset:0;background:rgba(43,26,31,.55);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font-weight:700;font-size:.9rem;opacity:0;transition:opacity .25s}
+.ig a:hover .ov,.ig a:focus-visible .ov{opacity:1}
+@media(min-width:800px){.ig{grid-template-columns:repeat(6,1fr)}}
+
+/* gift */
+.gift{background:var(--plum);color:var(--cream)}
+.gift .wrap{display:grid;gap:44px;align-items:center}
+.gift .wrap>*{min-width:0}
+.gift .lead{color:rgba(251,243,238,.72)}
+.gcard{position:relative;aspect-ratio:1.6/1;border-radius:22px;padding:24px;background:linear-gradient(135deg,#d9a59c 0%,#c98e86 45%,#a8695f 100%);color:var(--plum);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -30px rgba(0,0,0,.6);overflow:hidden;max-width:460px;width:100%}
+.gcard::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1.5px solid rgba(251,243,238,.35);right:-90px;top:-110px}
+.gcard::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:1.5px solid rgba(251,243,238,.3);right:-40px;top:-60px}
+.gcard .l{font:400 1.4rem var(--disp)}
+.gcard .l small{display:block;font:600 .62rem var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.gcard .amt{font:400 clamp(2.6rem,11vw,3.6rem)/1 var(--disp)}
+.gcard .to{font-size:.85rem;font-weight:600;display:flex;justify-content:space-between;gap:10px}
+.amts{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 16px}
+.amts button{border:1.5px solid rgba(251,243,238,.3);background:transparent;color:var(--cream);border-radius:999px;padding:10px 18px;font:600 .95rem var(--sans);cursor:pointer}
+.amts button[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:var(--plum)}
+.gift input{width:100%;max-width:360px;background:transparent;border:0;border-bottom:1.5px solid rgba(251,243,238,.3);color:var(--cream);font:500 1rem var(--sans);padding:12px 0;margin-bottom:22px}
+.gift input::placeholder{color:rgba(251,243,238,.5)}
+.gift input:focus{outline:none;border-color:var(--rose)}
+.gift .btn{background:var(--cream);color:var(--plum)}
+.gift .btn:hover{background:var(--rose)}
+@media(min-width:900px){.gift .wrap{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* booking */
+.book{display:grid;gap:30px;margin-top:40px}
+.book>*{min-width:0}
+.bk{background:#fff;border-radius:26px;padding:22px 18px;border:1px solid var(--line)}
+.bk h3{font-size:1.5rem;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.bk h3 span{font:700 .72rem var(--sans);width:26px;height:26px;border-radius:50%;background:var(--blush);display:grid;place-items:center;flex:none}
+.bk+.bk{margin-top:14px}
+.bk select,.bk input{width:100%;min-width:0;font:500 1rem var(--sans);color:var(--plum);background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:13px 12px;-webkit-appearance:none;appearance:none}
+.bk select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232b1a1f' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.bk select:focus,.bk input:focus{outline:none;border-color:var(--rose)}
+.pros{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+.pro{border:1.5px solid var(--line);background:var(--cream);border-radius:16px;padding:10px 6px;cursor:pointer;text-align:center;font:600 .82rem var(--sans);color:var(--plum)}
+.pro .ph{width:52px;height:52px;border-radius:50%;margin:0 auto 6px}
+.pro.any .ph{display:grid;place-items:center;background:var(--blush);font:400 1.4rem var(--disp)}
+.pro[aria-pressed="true"]{border-color:var(--plum);background:var(--blush)}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 62px;border:1.5px solid var(--line);background:var(--cream);border-radius:14px;padding:8px 0;cursor:pointer;text-align:center;color:var(--plum);font:500 .72rem var(--sans)}
+.day b{display:block;font:400 1.4rem/1.1 var(--disp)}
+.day[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:var(--cream)}
+.day:disabled{opacity:.35;cursor:not-allowed}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:8px;margin-top:14px}
+.times button{border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:9px 0;font:600 .88rem var(--sans);color:var(--plum);cursor:pointer}
+.times button[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
+.times button:disabled{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+.two{display:grid;gap:10px}
+.recap{background:var(--plum);color:var(--cream);border-radius:26px;padding:26px 22px;align-self:start}
+.recap h3{font-size:1.8rem}
+.recap dl{margin:18px 0;display:grid;gap:10px}
+.recap dl div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(251,243,238,.18);padding-bottom:8px;font-size:.92rem}
+.recap dt{color:rgba(251,243,238,.6)}
+.recap dd{margin:0;text-align:right;font-weight:600}
+.recap .tot{font:400 2rem var(--disp);color:var(--blush)}
+.recap .btn{width:100%;background:var(--rose);color:var(--plum);margin-top:12px}
+.recap .btn:hover{background:var(--blush)}
+.err{color:#ffb4a8;font-size:.88rem;font-weight:600;min-height:1.3em;margin:10px 0 0}
+.recap small{display:block;margin-top:12px;color:rgba(251,243,238,.55);font-size:.78rem}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.book{grid-template-columns:1.4fr .9fr;gap:24px}.recap{position:sticky;top:92px}}
+
+/* contact strip */
+.visit{display:grid;gap:24px;border-top:1px solid var(--line);padding-top:40px;margin-top:70px}
+.visit h4{margin:0 0 8px;font:400 1.4rem var(--disp)}
+.visit p{margin:0;color:var(--muted);font-size:.95rem}
+@media(min-width:760px){.visit{grid-template-columns:repeat(3,1fr)}}
+
+footer{background:var(--sand);font-size:.9rem;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:30px 18px}
+.foot .logo{color:var(--plum)}
+.afm{display:block;text-align:center;background:var(--plum);color:rgba(251,243,238,.72);font:500 .82rem/1.4 var(--sans);padding:13px 16px;text-decoration:none;transition:color .2s}
+.afm:hover{color:var(--rose)}
+.afm b{color:var(--cream)}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.marq div{animation:none}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body id="top">
+
+<header class="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo">Gülkurusu <span>Atelier</span></a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#hizmetler">Hizmetler</a><a href="#ekip">Ekip</a><a href="#galeri">Galeri</a><a href="#hediye">Hediye Kartı</a><a href="#randevu" class="btn" style="padding:11px 20px;opacity:1;color:var(--cream)">Randevu Al</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mnav">Menü <i aria-hidden="true"></i></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobil menü">
+  <a href="#hizmetler">Hizmetler</a><a href="#ekip">Ekibimiz</a><a href="#galeri">Galeri</a><a href="#instagram">Instagram</a><a href="#hediye">Hediye Kartı</a><a href="#randevu"><i>Randevu al →</i></a>
+  <p>0 (532) 000 00 00 · Salı – Pazar 10:00 – 20:00</p>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag">Saç · Tırnak · Cilt</span>
+      <h1 style="margin-top:14px">Kendine ayırdığın <i>en güzel saat.</i></h1>
+      <p class="lead">Moda'nın sakin bir sokağında, kahvenizi içerken saçınızı, tırnaklarınızı ve cildinizi uzman ellere bıraktığınız butik bir atölye.</p>
+      <div class="acts"><a href="#randevu" class="btn">Online Randevu</a><a href="#hizmetler" class="btn lt">Fiyat Listesi</a></div>
+    </div>
+    <div class="arches rv">
+      <div class="arch ph" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Dalgalı uzun saç"></div>
+      <div class="arch s ph" style="background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Özel tasarım tırnaklar"></div>
+      <div class="badge"><div><b>4.9</b>Google<br>puanı</div></div>
+    </div>
+  </div>
+  <div class="marq" aria-hidden="true"><div><span>Balayage</span><span>✦</span><span>Protez Tırnak</span><span>✦</span><span>Keratin Bakım</span><span>✦</span><span>Kirpik Lifting</span><span>✦</span><span>Gelin Saçı</span><span>✦</span><span>Cilt Bakımı</span><span>✦</span><span>Balayage</span><span>✦</span><span>Protez Tırnak</span><span>✦</span><span>Keratin Bakım</span><span>✦</span><span>Kirpik Lifting</span><span>✦</span><span>Gelin Saçı</span><span>✦</span><span>Cilt Bakımı</span><span>✦</span></div></div>
+</section>
+
+<section class="sec" id="hizmetler">
+  <div class="wrap svc-split">
+    <div class="svc-img ph" id="svcImg" style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Kuaför saç şekillendiriyor"></div>
+    <div>
+      <span class="tag rv">Hizmetler &amp; Fiyatlar</span>
+      <h2 class="h2 rv">Menümüz, <i>şeffaf</i> fiyatlarla</h2>
+      <p class="lead rv">Tüm fiyatlara ürün ve şekillendirme dahildir. Saç uzunluğuna göre ±%15 fark olabilir.</p>
+      <div class="ptabs" id="ptabs" role="tablist" aria-label="Hizmet kategorileri"></div>
+      <div class="plist" id="plist" role="tabpanel"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec team" id="ekip">
+  <div class="wrap">
+    <span class="tag rv">Ekibimiz</span>
+    <h2 class="h2 rv">Ellerine <i>güvenebileceğin</i> dört usta</h2>
+    <div class="trow" id="team"></div>
+  </div>
+</section>
+
+<section class="sec" id="galeri">
+  <div class="wrap">
+    <span class="tag rv">Galeri</span>
+    <h2 class="h2 rv">Atölyeden <i>kareler</i></h2>
+    <div class="gal rv" id="gal"></div>
+  </div>
+</section>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Görsel büyütme">
+  <div class="ph" id="lbImg"></div>
+  <button class="x" id="lbX" aria-label="Kapat">×</button><button class="pv" id="lbP" aria-label="Önceki">‹</button><button class="nx" id="lbN" aria-label="Sonraki">›</button>
+  <p class="cap" id="lbCap"></p>
+</div>
+
+<section class="sec" id="instagram" style="padding-top:0">
+  <div class="wrap">
+    <div class="ig-head rv">
+      <div class="ig-prof"><div class="av"><span>g</span></div><div><b>@gulkurusu.atelier</b><small>412 gönderi · 18,4 B takipçi</small></div></div>
+      <a href="#instagram" class="btn lt">Takip Et</a>
+    </div>
+    <div class="ig rv" id="ig"></div>
+  </div>
+</section>
+
+<section class="sec gift" id="hediye">
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag" style="color:var(--rose)">Hediye Kartı</span>
+      <h2 class="h2">Sevdiğine bir <i style="color:var(--rose)">“kendine vakit”</i> hediye et</h2>
+      <p class="lead">Tutarı seç, alıcının adını yaz; dijital kartını WhatsApp'tan gönderelim. 12 ay geçerli, tüm hizmetlerde kullanılabilir.</p>
+      <div class="amts" id="amts" role="group" aria-label="Kart tutarı"></div>
+      <label for="gTo" class="tag" style="color:rgba(251,243,238,.6)">Kime?</label><br>
+      <input id="gTo" maxlength="28" placeholder="Alıcının adı">
+      <br><button type="button" class="btn" id="gBtn">Hediye Kartı İste →</button>
+    </div>
+    <div class="rv" style="display:flex;justify-content:center">
+      <div class="gcard" aria-live="polite">
+        <div class="l"><small>Hediye Kartı</small>Gülkurusu Atelier</div>
+        <div class="amt" id="gAmt">₺1.500</div>
+        <div class="to"><span id="gName">Sevgili …</span><span>Kod: GK-<span id="gCode">2648</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="randevu">
+  <div class="wrap">
+    <span class="tag rv">Online Randevu</span>
+    <h2 class="h2 rv">Koltuğunu <i>ayırt</i></h2>
+    <p class="lead rv">Hizmetini ve uzmanını seç, uygun saati işaretle. Talebin WhatsApp üzerinden bize ulaşır, birkaç dakika içinde onaylarız.</p>
+    <div class="book">
+      <div class="rv">
+        <div class="bk"><h3><span>1</span>Hizmet</h3><select id="bSvc" aria-label="Hizmet"></select></div>
+        <div class="bk"><h3><span>2</span>Uzman</h3><div class="pros" id="bPro" role="group" aria-label="Uzman"></div></div>
+        <div class="bk"><h3><span>3</span>Gün &amp; saat</h3><div class="days" id="bDays" role="group" aria-label="Gün"></div><div class="times" id="bTimes" role="group" aria-label="Saat"></div></div>
+        <div class="bk"><h3><span>4</span>Bilgilerin</h3><div class="two"><input id="bName" placeholder="Ad Soyad" autocomplete="name" aria-label="Ad Soyad"><input id="bTel" type="tel" placeholder="05xx xxx xx xx" autocomplete="tel" aria-label="Telefon"></div></div>
+      </div>
+      <aside class="recap rv" aria-live="polite">
+        <h3>Randevu özeti</h3>
+        <dl id="recap"></dl>
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span>Tahmini tutar</span><span class="tot" id="tot">—</span></div>
+        <button type="button" class="btn" id="bSend">WhatsApp ile Gönder</button>
+        <p class="err" id="bErr" role="alert"></p>
+        <small>Randevudan 24 saat öncesine kadar ücretsiz iptal/değişiklik.</small>
+      </aside>
+    </div>
+    <div class="visit">
+      <div><h4>Adres</h4><p>Örnek Sok. No: 00, Moda<br>Kadıköy / İstanbul</p></div>
+      <div><h4>Saatler</h4><p>Salı – Pazar · 10:00 – 20:00<br>Pazartesi kapalı</p></div>
+      <div><h4>İletişim</h4><p>0 (532) 000 00 00<br>merhaba@gulkurusu-ornek.com</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot"><a href="#top" class="logo">Gülkurusu <span>Atelier</span></a><span>© 2026 Gülkurusu Atelier · Tüm hakları saklıdır.</span></div>
+  <a class="afm" href="https://wa.me/905416264074?text=Merhaba%2C%20%C3%B6rnek%20siteyi%20g%C3%B6rd%C3%BCm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini <b>AFM-CODING</b> ile yaptırın →</a>
+</footer>
+
+<script>
+(function(){
+  var I='https://images.unsplash.com/photo-',U='?w=1200&q=70&auto=format&fit=crop',S2='?w=400&q=70&auto=format&fit=crop';
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var tl=function(n){return '₺'+n.toLocaleString('tr-TR')};
+  /* services: [name, desc, minutes, price] */
+  var C={
+    'Saç':{img:'1562322140-8baeececf3df',k:'sac',l:[
+      ['Kesim & Fön','Yıkama, kişiye özel kesim ve fön',60,950],
+      ['Balayage','El boyaması doğal geçişler, tonlama dahil',180,4800],
+      ['Dip Boya','Tek renk kök boyama ve fön',90,1700],
+      ['Keratin Bakım','Elektriklenme ve kabarmaya karşı 3 ay etki',150,3600],
+      ['Gelin Saçı','Prova + düğün günü topuz/dalga',120,5500]]},
+    'Tırnak':{img:'1604654894610-df63bc536371',k:'tirnak',l:[
+      ['Klasik Manikür','Şekillendirme, kütikül bakımı, oje',45,450],
+      ['Kalıcı Oje','Jel bazlı, 3 haftaya kadar parlak',60,650],
+      ['Protez Tırnak','Jel ile uzatma, tasarım dahil',120,1400],
+      ['Spa Pedikür','Tuz peelingi, masaj ve maske',60,750],
+      ['Nail Art (10 parmak)','Çizim, taş ve krom detaylar',30,350]]},
+    'Cilt & Kirpik':{img:'1570172619644-dfd03ed5d881',k:'cilt',l:[
+      ['Klasik Cilt Bakımı','Temizleme, peeling, maske, masaj',60,1200],
+      ['Hydrafacial','Derin temizlik ve nem terapisi',75,2400],
+      ['Kirpik Lifting','Kalıcı kıvrım + boyama',50,900],
+      ['İpek Kirpik','Tek tek uygulama, doğal hacim',90,1500],
+      ['Kaş Tasarımı','Alım, şekillendirme ve laminasyon',40,600]]},
+    'Makyaj':{img:'1487412947147-5cebf100ffc2',k:'makyaj',l:[
+      ['Günlük Makyaj','Doğal, hafif ve kalıcı',45,1100],
+      ['Gece Makyajı','Smokey göz veya parlak dudak',60,1600],
+      ['Gelin Makyajı','Prova + düğün günü, kirpik dahil',120,6500]]}
+  };
+  var T=[
+    {n:'Defne',r:'Saç Tasarımcısı · Balayage',img:'1544005313-94ddf0286df2',k:['sac'],p:'12 yıldır renklendirmede uzman; doğal geçişlerin ustası.'},
+    {n:'Selin',r:'Tırnak Sanatçısı',img:'1494790108377-be9c29b29330',k:['tirnak'],p:'Minimal çizgiler ve krom detaylarıyla Instagram\'ın gözdesi.'},
+    {n:'Ada',r:'Cilt & Kirpik Uzmanı',img:'1438761681033-6461ffad8d80',k:['cilt','makyaj'],p:'Estetisyen; hassas ciltler için kişiye özel bakım planı.'},
+    {n:'Melis',r:'Makyaj & Gelin Saçı',img:'1531123897727-8f129e1688ce',k:['makyaj','sac'],p:'200\'den fazla gelinin en mutlu gününde yanındaydı.'}
+  ];
+  /* tabs */
+  var pt=document.getElementById('ptabs'),pl=document.getElementById('plist'),si=document.getElementById('svcImg');
+  Object.keys(C).forEach(function(c,i){var b=document.createElement('button');b.className='ptab';b.setAttribute('role','tab');b.setAttribute('aria-selected',i===0);b.textContent=c;pt.appendChild(b)});
+  function showCat(c){
+    pt.querySelectorAll('.ptab').forEach(function(b){b.setAttribute('aria-selected',b.textContent===c)});
+    si.style.backgroundImage="url('"+I+C[c].img+U+"')";
+    pl.innerHTML=C[c].l.map(function(s){return '<div class="pi"><h3>'+s[0]+'</h3><span class="pr">'+tl(s[3])+'</span><p>'+s[1]+'</p><span class="du">'+s[2]+' dk</span><button type="button" data-s="'+c+'|'+s[0]+'">Bu hizmet için randevu →</button></div>'}).join('');
+  }
+  pt.addEventListener('click',function(e){var b=e.target.closest('.ptab');if(b)showCat(b.textContent)});
+  showCat('Saç');
+  pl.addEventListener('click',function(e){var b=e.target.closest('button[data-s]');if(!b)return;svcSel.value=b.dataset.s;onSvc();document.getElementById('randevu').scrollIntoView({behavior:reduce?'auto':'smooth'})});
+  /* team */
+  document.getElementById('team').innerHTML=T.map(function(m){return '<article class="mem"><div class="ph" style="background-image:url(\''+I+m.img+U+'\')" role="img" aria-label="'+m.n+'"></div><div class="b"><h3>'+m.n+'</h3><span class="r">'+m.r+'</span><p>'+m.p+'</p></div></article>'}).join('');
+  /* gallery */
+  var G=[['1560066984-138dadb4c035','Atölye salonu','t'],['1595476108010-b4d1f102b1b1','Renk öncesi hazırlık',''],['1519014816548-bf5fe059798b','Kırmızı nail art',''],['1600948836101-f9ffda59d250','Bekleme alanı','w'],['1516975080664-ed2fc6a32937','Makyaj masası','t'],['1580618672591-eb180b1a973f','Fön & şekillendirme',''],['1607779097040-26e80aa78e66','Pastel tırnaklar','w'],['1487412947147-5cebf100ffc2','Gece makyajı','']];
+  var gal=document.getElementById('gal');
+  gal.innerHTML=G.map(function(g,i){return '<button type="button" class="'+g[2]+'" data-i="'+i+'" aria-label="Büyüt: '+g[1]+'"><span class="ph" style="background-image:url(\''+I+g[0]+U+'\')"></span></button>'}).join('');
+  var lb=document.getElementById('lb'),lbI=document.getElementById('lbImg'),cur=0,lastF=null;
+  function lbShow(i){cur=(i+G.length)%G.length;lbI.style.backgroundImage="url('"+I+G[cur][0]+U+"')";document.getElementById('lbCap').textContent=G[cur][1]+' · '+(cur+1)+'/'+G.length}
+  function lbOpen(i){lastF=document.activeElement;lbShow(i);lb.classList.add('on');document.body.style.overflow='hidden';document.getElementById('lbX').focus()}
+  function lbClose(){lb.classList.remove('on');document.body.style.overflow='';if(lastF)lastF.focus()}
+  gal.addEventListener('click',function(e){var b=e.target.closest('button');if(b)lbOpen(+b.dataset.i)});
+  document.getElementById('lbX').onclick=lbClose;document.getElementById('lbP').onclick=function(){lbShow(cur-1)};document.getElementById('lbN').onclick=function(){lbShow(cur+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)lbClose()});
+  addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbShow(cur-1);if(e.key==='ArrowRight')lbShow(cur+1)});
+  /* instagram */
+  var IG=['1610992015732-2449b76344bc','1527799820374-dcf8d9d4a388','1633681926022-84c23e8cb2d6','1534528741775-53994a69daeb','1521590832167-7bcbfaa6381f','1570172619644-dfd03ed5d881'];
+  document.getElementById('ig').innerHTML=IG.map(function(id,i){return '<a href="#instagram" aria-label="Instagram gönderisi '+(i+1)+'"><span class="ph" style="background-image:url(\''+I+id+S2+'\')"></span><span class="ov">♥ '+(320+i*137%500)+'&nbsp; 💬 '+(12+i*7)+'</span></a>'}).join('');
+  /* gift */
+  var amts=[750,1500,3000,5000],ga=1500,ae=document.getElementById('amts'),gTo=document.getElementById('gTo');
+  ae.innerHTML=amts.map(function(a){return '<button type="button" aria-pressed="'+(a===ga)+'">'+tl(a)+'</button>'}).join('');
+  ae.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;ga=amts[[].indexOf.call(ae.children,b)];ae.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.getElementById('gAmt').textContent=tl(ga);document.getElementById('gCode').textContent=String(1000+ga*7%9000)});
+  gTo.addEventListener('input',function(){document.getElementById('gName').textContent='Sevgili '+(gTo.value.trim()||'…')});
+  document.getElementById('gBtn').addEventListener('click',function(){var m='Merhaba, Gülkurusu Atelier\'den '+tl(ga)+' tutarında bir hediye kartı almak istiyorum.'+(gTo.value.trim()?'\nAlıcı: '+gTo.value.trim():'');window.open('https://wa.me/905416264074?text='+encodeURIComponent(m),'_blank','noopener')});
+  /* booking */
+  var svcSel=document.getElementById('bSvc'),proEl=document.getElementById('bPro'),daysEl=document.getElementById('bDays'),timesEl=document.getElementById('bTimes'),err=document.getElementById('bErr');
+  var B={svc:null,pro:'',day:null,time:''};
+  svcSel.innerHTML=Object.keys(C).map(function(c){return '<optgroup label="'+c+'">'+C[c].l.map(function(s){return '<option value="'+c+'|'+s[0]+'">'+s[0]+' — '+tl(s[3])+'</option>'}).join('')+'</optgroup>'}).join('');
+  function findSvc(v){var p=v.split('|'),c=C[p[0]];for(var i=0;i<c.l.length;i++)if(c.l[i][0]===p[1])return {cat:p[0],k:c.k,n:c.l[i][0],m:c.l[i][2],p:c.l[i][3]}}
+  function onSvc(){B.svc=findSvc(svcSel.value);var ok=T.filter(function(m){return m.k.indexOf(B.svc.k)>-1});
+    if(B.pro&&!ok.some(function(m){return m.n===B.pro}))B.pro='';
+    proEl.innerHTML='<button type="button" class="pro any" aria-pressed="'+(!B.pro)+'" data-n=""><span class="ph">✦</span>Fark etmez</button>'+ok.map(function(m){return '<button type="button" class="pro" aria-pressed="'+(B.pro===m.n)+'" data-n="'+m.n+'"><span class="ph" style="background-image:url(\''+I+m.img+S2+'\')"></span>'+m.n+'</button>'}).join('');
+    renderTimes()}
+  svcSel.addEventListener('change',onSvc);
+  proEl.addEventListener('click',function(e){var b=e.target.closest('.pro');if(!b)return;B.pro=b.dataset.n;proEl.querySelectorAll('.pro').forEach(function(x){x.setAttribute('aria-pressed',x===b)});renderTimes()});
+  var dn=['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'],now=new Date(),ds=[];
+  for(var i=0;i<14;i++){var d=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);ds.push(d)}
+  daysEl.innerHTML=ds.map(function(d,i){var c=d.getDay()===1;return '<button type="button" class="day" data-i="'+i+'" aria-pressed="false"'+(c?' disabled title="Pazartesi kapalı"':'')+' aria-label="'+d.toLocaleDateString('tr-TR',{day:'numeric',month:'long',weekday:'long'})+'">'+(i===0?'Bugün':dn[d.getDay()])+'<b>'+d.getDate()+'</b>'+d.toLocaleDateString('tr-TR',{month:'short'})+'</button>'}).join('');
+  daysEl.addEventListener('click',function(e){var b=e.target.closest('.day');if(!b||b.disabled)return;B.day=ds[+b.dataset.i];daysEl.querySelectorAll('.day').forEach(function(x){x.setAttribute('aria-pressed',x===b)});renderTimes()});
+  function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*33+s.charCodeAt(i))|0;return Math.abs(h)}
+  function hm(t){var h=Math.floor(t),m=Math.round(t%1*60);return (h<10?'0':'')+h+':'+(m<10?'0':'')+m}
+  function renderTimes(){
+    B.time='';
+    if(!B.day){timesEl.innerHTML='<p style="grid-column:1/-1;margin:0;color:var(--muted);font-size:.9rem">Yukarıdan bir gün seç.</p>';recap();return}
+    var dur=B.svc.m/60,out='',isT=B.day.toDateString()===now.toDateString(),hr=now.getHours()+now.getMinutes()/60;
+    for(var t=10;t+dur<=20;t+=.5){var busy=hash(B.day.toDateString()+B.pro+hm(t))%3===0||(isT&&t<hr+.5);out+='<button type="button" aria-pressed="false"'+(busy?' disabled':'')+'>'+hm(t)+'</button>'}
+    timesEl.innerHTML=out||'<p>Bu hizmet için uygun saat yok.</p>';recap()}
+  timesEl.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;B.time=b.textContent;timesEl.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});recap()});
+  function recap(){
+    var r=[['Hizmet',B.svc?B.svc.n:'—'],['Süre',B.svc?B.svc.m+' dk':'—'],['Uzman',B.pro||'Fark etmez'],['Gün',B.day?B.day.toLocaleDateString('tr-TR',{day:'numeric',month:'long',weekday:'long'}):'Seçilmedi'],['Saat',B.time||'Seçilmedi']];
+    document.getElementById('recap').innerHTML=r.map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+x[1]+'</dd></div>'}).join('');
+    document.getElementById('tot').textContent=B.svc?tl(B.svc.p):'—'}
+  var fi=ds.findIndex(function(d){return d.getDay()!==1});B.day=ds[fi];daysEl.children[fi].setAttribute('aria-pressed','true');
+  onSvc();
+  document.getElementById('bSend').addEventListener('click',function(){
+    var n=document.getElementById('bName').value.trim(),p=document.getElementById('bTel').value.trim();
+    if(!B.day){err.textContent='Lütfen bir gün seç.';return}
+    if(!B.time){err.textContent='Lütfen uygun bir saat seç.';return}
+    if(n.length<3){err.textContent='Lütfen adını soyadını yaz.';return}
+    if(p.replace(/\D/g,'').length<10){err.textContent='Lütfen geçerli bir telefon numarası yaz.';return}
+    err.textContent='';
+    var m='Merhaba Gülkurusu Atelier, randevu almak istiyorum:\n\n• Hizmet: '+B.svc.n+' ('+B.svc.m+' dk, '+tl(B.svc.p)+')\n• Uzman: '+(B.pro||'Fark etmez')+'\n• Tarih: '+B.day.toLocaleDateString('tr-TR',{day:'numeric',month:'long',year:'numeric',weekday:'long'})+'\n• Saat: '+B.time+'\n• Ad Soyad: '+n+'\n• Telefon: '+p;
+    window.open('https://wa.me/905416264074?text='+encodeURIComponent(m),'_blank','noopener');
+  });
+  /* menu */
+  var mb=document.getElementById('mbtn');
+  function menu(o){document.body.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.firstChild.textContent=o?'Kapat ':'Menü ';document.body.style.overflow=o?'hidden':''}
+  mb.addEventListener('click',function(){menu(!document.body.classList.contains('open'))});
+  document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&document.body.classList.contains('open'))menu(false)});
+  /* reveal */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});els.forEach(function(el){io.observe(el)})}
+  else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>
