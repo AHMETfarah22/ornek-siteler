@@ -6,6 +6,11 @@
 <title>Kavruk — Taze Kavrulmuş Nitelikli Kahve</title>
 <meta name="description" content="Kavruk Kahve Kavurma Evi: her pazartesi kavrulan nitelikli çekirdek kahve, filtre kahve, Türk kahvesi ve demleme ekipmanları. 750 ₺ üzeri ücretsiz kargo.">
 <meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kavruk — Taze Kavrulmuş Nitelikli Kahve">
+<meta property="og:description" content="Kavruk Kahve Kavurma Evi: her pazartesi kavrulan nitelikli çekirdek kahve, filtre kahve, Türk kahvesi ve demleme ekipmanları. 750 ₺ üzeri ücretsiz kargo.">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234E1638'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23F2A65A'%3EK%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#4E1638">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +32,7 @@
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:16.5px;line-height:1.55;overflow-x:clip;padding-bottom:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:16.5px;line-height:1.55;overflow-x:clip}
 body.lock{overflow:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
@@ -150,7 +155,7 @@ summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:
 details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
 details p{margin:0 0 20px;color:var(--muted);max-width:62ch}
 
-footer{background:var(--ink);color:#E9D6DF;padding:48px 0 32px;font-size:15px}
+footer{background:var(--ink);color:#E9D6DF;padding:48px 0 96px;font-size:15px}
 .foot{display:grid;gap:28px}
 .foot h3{margin:0 0 10px;font-size:15px;color:#fff}
 .foot p{margin:0 0 6px;opacity:.8}
@@ -362,18 +367,18 @@ footer{background:var(--ink);color:#E9D6DF;padding:48px 0 32px;font-size:15px}
   var U='https://images.unsplash.com/photo-',Q='?w=1200&q=70&auto=format&fit=crop';
   var CATS={all:'Tümü',cekirdek:'Çekirdek',filtre:'Filtre',turk:'Türk kahvesi',ekipman:'Ekipman'};
   var P=[
-    {id:1,c:'cekirdek',n:'Etiyopya Guji',o:'Yıkanmış · açık kavrum',notes:['şeftali','yasemin','bergamot'],p:420,u:'250 g',img:'1559056199-641a0ac8b55e',col:'#C7682E',tag:'Yeni hasat'},
+    {id:1,c:'cekirdek',n:'Etiyopya Guji',o:'Yıkanmış · açık kavrum',notes:['şeftali','yasemin','bergamot'],p:420,u:'250 g',img:'1559056199-641a0ac8b55e',col:'#A9531F',tag:'Yeni hasat'},
     {id:2,c:'cekirdek',n:'Kolombiya Huila',o:'Yıkanmış · orta kavrum',notes:['karamel','kırmızı elma','kakao'],p:385,u:'250 g',img:'1587734195503-904fca47e0e9',col:'#2F6B4F'},
     {id:3,c:'cekirdek',n:'Kenya Nyeri',o:'Yıkanmış · açık kavrum',notes:['frenk üzümü','greyfurt','domates'],p:465,u:'250 g',img:'1610889556528-9a770e32642f',col:'#8E1F4C',tag:'Sınırlı'},
     {id:4,c:'cekirdek',n:'Ev Harmanı Espresso',o:'Brezilya ve Guatemala · koyu',notes:['bitter çikolata','fındık'],p:360,u:'250 g',img:'1495474472287-4d71bcdd2085',col:'#4E1638',tag:'Çok satan'},
-    {id:5,c:'filtre',n:'Sabah Harmanı',o:'Filtre için öğütülmüş',notes:['süt çikolata','badem'],p:340,u:'250 g',img:'1497935586351-b67a49e012bf',col:'#B07D1A'},
+    {id:5,c:'filtre',n:'Sabah Harmanı',o:'Filtre için öğütülmüş',notes:['süt çikolata','badem'],p:340,u:'250 g',img:'1497935586351-b67a49e012bf',col:'#86600F'},
     {id:6,c:'filtre',n:'Guatemala Antigua',o:'Filtre için öğütülmüş',notes:['portakal','esmer şeker'],p:395,u:'250 g',img:'1509042239860-f550ce710b93',col:'#3E5C8A'},
     {id:7,c:'turk',n:'Kavruk Türk Kahvesi',o:'Orta kavrum · ince öğütüm',notes:['yoğun köpük','kakao'],p:210,u:'200 g',img:'1514432324607-a09d9b4aefdd',col:'#6B3A1F'},
     {id:8,c:'turk',n:'Dibek Kahvesi',o:'Taş dibekte dövülmüş',notes:['damla sakızı','süt'],p:235,u:'200 g',img:'1442512595331-e89e73853f31',col:'#5C6E3A'},
     {id:9,c:'ekipman',n:'Cam Demlik',o:'6 fincanlık, borosilikat',notes:['filtre kâğıdı hediye'],p:1150,u:'adet',img:'1517701604599-bb29b565090c',col:'#2A1220'},
     {id:10,c:'ekipman',n:'Damla Demleme Seti',o:'Seramik huni ve sürahi',notes:['40 filtre kâğıdı'],p:690,u:'set',img:'1521302080334-4bebac2763a6',col:'#7A4B8C'},
     {id:11,c:'ekipman',n:'El Değirmeni',o:'Ayarlı seramik bıçak',notes:['espresso–filtre'],p:1480,u:'adet',img:'1511920170033-f8396924c348',col:'#355E5B'},
-    {id:12,c:'ekipman',n:'Kavruk Kupa',o:'El yapımı, 300 ml',notes:['bulaşık makinesine uygun'],p:290,u:'adet',img:'1572442388796-11668a67e53d',col:'#C7682E'}
+    {id:12,c:'ekipman',n:'Kavruk Kupa',o:'El yapımı, 300 ml',notes:['bulaşık makinesine uygun'],p:290,u:'adet',img:'1572442388796-11668a67e53d',col:'#A9531F'}
   ];
   var FREE=750,SHIP=59.9;
   var fmt=new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY'});
