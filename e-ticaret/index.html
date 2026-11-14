@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kavruk — Taze Kavrulmuş Nitelikli Kahve</title>
+<meta name="description" content="Kavruk Kahve Kavurma Evi: her pazartesi kavrulan nitelikli çekirdek kahve, filtre kahve, Türk kahvesi ve demleme ekipmanları. 750 ₺ üzeri ücretsiz kargo.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4E1638">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FCF4EE;
+  --card:#FFFFFF;
+  --plum:#4E1638;
+  --plum-2:#6E2350;
+  --apricot:#F2A65A;
+  --apricot-soft:#FCE3C8;
+  --ink:#2A1220;
+  --muted:#7A5F6C;
+  --line:#EBD9CF;
+  --leaf:#2F6B4F;
+  --pad:clamp(16px,4vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:16.5px;line-height:1.55;overflow-x:clip;padding-bottom:60px}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--apricot);outline-offset:2px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 var(--pad)}
+section{scroll-margin-top:80px}
+.num{font-variant-numeric:tabular-nums}
+
+/* top strip + header */
+.strip{background:var(--plum);color:#FBE9DD;font-size:13.5px;text-align:center;padding:8px var(--pad)}
+.hdr{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:24px;letter-spacing:-.04em;color:var(--plum);margin-right:auto}
+.logo svg{flex:none}
+.nav{display:flex;gap:26px;font-weight:500}
+.nav a{text-decoration:none;padding:6px 0}
+.nav a:hover{color:var(--plum-2);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--apricot)}
+.cart-btn{position:relative;display:flex;align-items:center;gap:8px;background:var(--plum);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:600}
+.cart-btn:hover{background:var(--plum-2)}
+.cart-count{min-width:22px;height:22px;border-radius:11px;background:var(--apricot);color:var(--ink);font-size:13px;font-weight:700;display:grid;place-items:center;padding:0 6px}
+.cart-count.bump{animation:bump .35s ease}
+@keyframes bump{50%{transform:scale(1.35)}}
+.menu-btn{display:none;background:none;border:0;padding:10px;margin-left:-10px}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;transition:transform .25s,opacity .2s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:820px){
+  .menu-btn{display:block;order:-1}
+  .cart-btn .lbl{display:none}
+  .nav{position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:4px var(--pad) 16px;display:none}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:18px}
+  .nav a:last-child{border:0}
+}
+
+/* hero */
+.hero{padding:clamp(24px,4vw,48px) 0 clamp(48px,7vw,88px)}
+.hero-box{display:grid;gap:0;background:var(--plum);color:#FBE9DD;border-radius:28px;overflow:hidden}
+.hero-copy{padding:clamp(28px,5vw,64px)}
+.hero h1{margin:0 0 18px;font-size:clamp(40px,7.4vw,92px);line-height:.95;letter-spacing:-.045em;font-weight:800;color:#fff}
+.hero h1 em{font-style:normal;font-weight:300;color:var(--apricot);display:block}
+.hero p{margin:0 0 28px;max-width:40ch;font-size:clamp(17px,1.6vw,19px);opacity:.9}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:14px 24px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-apricot{background:var(--apricot);color:var(--ink)}
+.btn-apricot:hover{background:#F7B877}
+.btn-ghost{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.roast-card{margin-top:32px;display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.08);border-radius:16px;padding:14px 16px;max-width:420px}
+.roast-date{flex:none;width:58px;text-align:center;background:var(--apricot);color:var(--ink);border-radius:12px;padding:6px 0;line-height:1.1}
+.roast-date b{display:block;font-size:24px}
+.roast-date small{font-size:12px;font-weight:600}
+.roast-card p{margin:0;font-size:14.5px;opacity:1}
+.hero-img{min-height:300px;background:#6A3A4F;position:relative}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (min-width:900px){.hero-box{grid-template-columns:1.1fr 1fr}.hero-img{min-height:560px}}
+
+/* shop */
+.shop-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 24px;margin-bottom:24px}
+h2{margin:0;font-size:clamp(32px,5vw,56px);letter-spacing:-.04em;line-height:1;font-weight:800;color:var(--plum)}
+.sub{margin:10px 0 0;color:var(--muted);max-width:52ch}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:4px 2px;margin:0 calc(var(--pad) * -1);padding-left:var(--pad);padding-right:var(--pad);scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+@media (min-width:820px){.filters{margin:0;padding:4px 2px}}
+.chip{flex:none;border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:9px 16px;font-weight:600;font-size:15px;transition:background .2s,border-color .2s,color .2s}
+.chip:hover{border-color:var(--plum)}
+.chip[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff}
+.chip small{opacity:.6;font-weight:500;margin-left:4px}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:980px){.grid{grid-template-columns:repeat(3,1fr);gap:24px}}
+@media (min-width:1180px){.grid{grid-template-columns:repeat(4,1fr)}}
+.prod{background:var(--card);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);transition:transform .25s ease}
+.prod.hide{display:none}
+.prod-img{position:relative;aspect-ratio:1/1;background:var(--apricot-soft);overflow:hidden}
+.prod-img img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:12px;left:12px;background:var(--card);color:var(--ink);font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px}
+.label{margin:-28px 14px 0;position:relative;border-radius:14px;padding:12px 14px;color:#fff}
+.label b{display:block;font-size:19px;line-height:1.15;letter-spacing:-.02em}
+.label span{font-size:13.5px;opacity:.88}
+.prod-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px;flex:1}
+.notes{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.notes li{font-size:13px;background:var(--bg);border-radius:6px;padding:3px 8px;color:var(--muted)}
+.buy{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+.price{font-size:21px;font-weight:700;letter-spacing:-.02em}
+.price{line-height:1.1}
+.price small{display:block;font-size:13px;font-weight:500;color:var(--muted);margin-top:3px;letter-spacing:0}
+.add{white-space:nowrap;flex:none;border:0;background:var(--ink);color:#fff;border-radius:999px;padding:10px 16px;font-weight:600;font-size:14.5px;transition:background .2s}
+.add:hover{background:var(--plum-2)}
+.add.done{background:var(--leaf)}
+
+/* process */
+.process{padding:clamp(72px,9vw,120px) 0}
+.steps{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--apricot-soft);border-radius:20px;padding:24px;display:grid;gap:6px}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:8px}
+.steps h3{margin:0;font-size:22px;letter-spacing:-.02em}
+.steps p{margin:0;color:#5E4451}
+@media (min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:20px}}
+
+/* story */
+.story{display:grid;gap:28px;align-items:center}
+.story-img{border-radius:24px;overflow:hidden;background:#8C6A5A;aspect-ratio:5/4}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story p{margin:0 0 14px;max-width:54ch}
+.story blockquote{margin:22px 0 0;padding:18px 20px;border-left:4px solid var(--apricot);background:var(--card);border-radius:0 14px 14px 0;font-size:18px}
+.story cite{display:block;margin-top:6px;font-size:14px;color:var(--muted);font-style:normal}
+@media (min-width:900px){.story{grid-template-columns:1fr 1fr;gap:64px}}
+
+/* faq */
+.faq{padding:clamp(72px,9vw,120px) 0 clamp(48px,6vw,80px)}
+.faq-list{margin-top:28px;max-width:820px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--plum);border-bottom:2.5px solid var(--plum);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{margin:0 0 20px;color:var(--muted);max-width:62ch}
+
+footer{background:var(--ink);color:#E9D6DF;padding:48px 0 32px;font-size:15px}
+.foot{display:grid;gap:28px}
+.foot h3{margin:0 0 10px;font-size:15px;color:#fff}
+.foot p{margin:0 0 6px;opacity:.8}
+.foot .logo{color:#fff;margin:0 0 10px}
+.copy{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13.5px;opacity:.65}
+@media (min-width:820px){.foot{grid-template-columns:2fr 1fr 1fr}}
+
+/* drawer */
+.overlay{position:fixed;inset:0;background:rgba(42,18,32,.45);z-index:100;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.overlay.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);z-index:101;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.drawer-head h2{font-size:26px}
+.x{background:none;border:0;width:40px;height:40px;border-radius:50%;font-size:26px;line-height:1;display:grid;place-items:center}
+.x:hover{background:var(--apricot-soft)}
+.ship{padding:14px 20px;background:var(--apricot-soft);font-size:14px}
+.bar{height:6px;background:#fff;border-radius:3px;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--plum);width:0;transition:width .4s}
+.items{flex:1;overflow-y:auto;padding:8px 20px;list-style:none;margin:0}
+.item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+.item img{width:64px;height:64px;border-radius:12px;object-fit:cover;background:var(--apricot-soft)}
+.item b{display:block;font-size:15.5px;line-height:1.25}
+.item small{color:var(--muted);font-size:13px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;margin-top:6px;background:var(--card)}
+.qty button{background:none;border:0;width:30px;height:30px;font-size:17px;font-weight:600}
+.qty span{min-width:22px;text-align:center;font-weight:700;font-size:14px}
+.item-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.rm{background:none;border:0;color:var(--muted);font-size:13px;text-decoration:underline;padding:2px}
+.rm:hover{color:var(--plum)}
+.empty{text-align:center;padding:48px 12px;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-size:19px;margin-bottom:6px}
+.drawer-foot{padding:16px 20px 20px;border-top:1px solid var(--line);background:var(--card)}
+.row{display:flex;justify-content:space-between;font-size:15px;margin-bottom:6px}
+.row.total{font-size:20px;font-weight:800;margin:10px 0 14px}
+.checkout{width:100%;background:var(--plum);color:#fff}
+.checkout:hover{background:var(--plum-2)}
+.checkout:disabled{opacity:.4;cursor:not-allowed}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:16px;background:rgba(42,18,32,.55);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.modal.open{opacity:1;visibility:visible}
+.modal-box{background:var(--bg);border-radius:24px;width:min(480px,100%);max-height:calc(100vh - 32px);overflow-y:auto;padding:28px 24px;position:relative;transform:translateY(16px) scale(.98);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.modal.open .modal-box{transform:none}
+.modal-box .x{position:absolute;top:12px;right:12px}
+.ok{width:56px;height:56px;border-radius:50%;background:var(--leaf);display:grid;place-items:center;margin-bottom:14px}
+.modal-box h2{font-size:30px;margin-bottom:6px}
+.modal-box > p{margin:0 0 18px;color:var(--muted)}
+.sum{list-style:none;margin:0 0 12px;padding:14px 16px;background:var(--card);border-radius:16px;border:1px solid var(--line)}
+.sum li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:15px}
+.sum li.t{border-top:1px solid var(--line);margin-top:6px;padding-top:12px;font-weight:800;font-size:18px}
+.note{font-size:13.5px;color:var(--muted);background:var(--apricot-soft);border-radius:12px;padding:10px 12px;margin:0 0 16px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:64px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:14.5px;z-index:95;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.demo-ribbon{position:fixed;left:0;right:0;bottom:0;z-index:90;display:block;background:var(--apricot);color:var(--ink);text-align:center;text-decoration:none;font-size:13.5px;font-weight:600;padding:10px 16px;line-height:1.35}
+.demo-ribbon:hover{background:#F7B877}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="strip">750 ₺ ve üzeri siparişlerde kargo ücretsiz. Pazartesi kavrulur, çarşamba kargoya verilir.</div>
+<header class="hdr" id="top">
+  <div class="wrap">
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menüyü aç"><span></span><span></span><span></span></button>
+    <a href="#top" class="logo" aria-label="Kavruk ana sayfa">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><ellipse cx="15" cy="15" rx="10" ry="13" fill="#4E1638" transform="rotate(25 15 15)"/><path d="M10 7c6 4 4 12 10 16" stroke="#F2A65A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+      kavruk
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#urunler">Kahveler</a>
+      <a href="#nasil">Kavurma takvimi</a>
+      <a href="#hikaye">Hikâyemiz</a>
+      <a href="#sss">Sorular</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Sepeti aç">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+      <span class="lbl">Sepet</span><span class="cart-count num" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-box">
+        <div class="hero-copy">
+          <h1>Pazartesi kavrulur, <em>çarşamba kapınızda.</em></h1>
+          <p>Dünyanın dört bir yanındaki küçük çiftliklerden gelen çekirdekleri İstanbul'daki atölyemizde haftada bir kez, küçük partiler halinde kavuruyoruz. Rafta bekleyen kahve yok.</p>
+          <div class="hero-actions">
+            <a class="btn btn-apricot" href="#urunler">Kahveleri incele</a>
+            <a class="btn btn-ghost" href="#nasil">Nasıl çalışıyoruz?</a>
+          </div>
+          <div class="roast-card">
+            <div class="roast-date"><b id="roastDay">17</b><small id="roastMon">Kas</small></div>
+            <p><strong>Sıradaki kavurma.</strong> Pazar 23.59'a kadar verilen siparişler bu partiye dahil edilir.</p>
+          </div>
+        </div>
+        <div class="hero-img"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&q=70&auto=format&fit=crop" alt="Yakın plan taze kavrulmuş kahve çekirdekleri" fetchpriority="high"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="urunler">
+    <div class="wrap">
+      <div class="shop-head rv">
+        <div>
+          <h2>Bu haftanın kahveleri</h2>
+          <p class="sub">Tüm çekirdek kahveler 250 g, Türk kahveleri 200 g paketlerde. Öğütme tercihinizi sipariş notunda belirtebilirsiniz.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Kategori filtresi" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="process" id="nasil">
+    <div class="wrap">
+      <h2 class="rv">Kavurma takvimi</h2>
+      <p class="sub rv">Kahve kavrulduktan sonraki ilk dört haftada en iyi halindedir. Takvimimiz, paketin size bu aralıkta ulaşması için kuruldu.</p>
+      <ol class="steps">
+        <li class="rv"><h3>Pazartesi: kavurma</h3><p>Bir hafta boyunca toplanan siparişler kadar çekirdek kavrulur. Fazlası yapılmaz.</p></li>
+        <li class="rv"><h3>Salı: dinlenme</h3><p>Çekirdekler 24 saat gaz atar, ardından valfli paketlere doldurulup tarihlenir.</p></li>
+        <li class="rv"><h3>Çarşamba: kargo</h3><p>Paketler aynı gün kargoya verilir. Türkiye genelinde 1–2 iş günü içinde teslim edilir.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="hikaye">
+    <div class="wrap story">
+      <div class="story-img rv"><img loading="lazy" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=70&auto=format&fit=crop" alt="Kavruk atölyesinin sıcak ışıklı kahve barı"></div>
+      <div class="rv">
+        <h2 style="margin-bottom:20px">Atölyeden kısa bir not</h2>
+        <p>Kavruk, 2019'da 5 kiloluk bir kavurma makinesi ve bir garajla başladı. Bugün hâlâ aynı mantıkla çalışıyoruz: az kavur, hızlı gönder, her paketin üzerine kavurma tarihini yaz.</p>
+        <p>Çekirdeklerimizi doğrudan kooperatiflerden ve küçük çiftliklerden alıyor, her hasat döneminde menümüzü yeniliyoruz. Bu yüzden sevdiğiniz bir kahve birkaç ay sonra listeden çıkabilir, yerine yenisi gelir.</p>
+        <blockquote>"Kargo kutusunu açtığımda mutfak kahve kokusuyla doldu. Paketin üzerinde iki gün önceki tarih vardı."<cite>Ece T., Eskişehir</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="sss">
+    <div class="wrap">
+      <h2 class="rv">Sık sorulanlar</h2>
+      <div class="faq-list rv">
+        <details><summary>Kahvemi öğütülmüş olarak alabilir miyim?</summary><p>Evet. Sepeti onaylarken demleme yönteminizi (espresso, filtre, French press, moka pot) yazmanız yeterli. Kendi değirmeniniz varsa çekirdek almanızı öneririz; aroma daha uzun korunur.</p></details>
+        <details><summary>Kargo ne kadar sürer, ücreti nedir?</summary><p>Siparişler çarşamba günü kargoya verilir ve 1–2 iş günü içinde ulaşır. 750 ₺ üzeri siparişlerde kargo ücretsizdir, altında 59,90 ₺ eklenir.</p></details>
+        <details><summary>Kahveyi nasıl saklamalıyım?</summary><p>Paketi valfli haliyle, ağzını sıkıca kapatıp serin ve karanlık bir dolapta saklayın. Buzdolabı nem nedeniyle önerilmez.</p></details>
+        <details><summary>İade edebilir miyim?</summary><p>Gıda ürünü olduğu için açılmış paketlerde iade alamıyoruz. Ancak kahveyi beğenmediyseniz bize yazın, bir sonraki siparişinizde farklı bir kahveyi ücretsiz deneme paketi olarak ekleyelim.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo">kavruk</a>
+        <p>Küçük partiler halinde kavrulan nitelikli kahve.</p>
+        <p>Örnek Mahallesi, Kavurma Sokak No: 7, Beşiktaş / İstanbul</p>
+      </div>
+      <div><h3>İletişim</h3><p>0 (532) 000 00 00</p><p>merhaba@kavruk.example</p></div>
+      <div><h3>Çalışma saatleri</h3><p>Hafta içi 09.00–18.00</p><p>Atölye ziyareti randevuyla</p></div>
+    </div>
+    <div class="copy">© 2026 Kavruk Kahve Kavurma Evi. Bu sitede ödeme alınmaz.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+  <div class="drawer-head"><h2 id="cartTitle">Sepetiniz</h2><button class="x" data-close aria-label="Sepeti kapat">×</button></div>
+  <div class="ship" id="ship"></div>
+  <ul class="items" id="items"></ul>
+  <div class="drawer-foot">
+    <div class="row"><span>Ara toplam</span><span class="num" id="subtotal">0</span></div>
+    <div class="row"><span>Kargo</span><span class="num" id="shipping">0</span></div>
+    <div class="row total"><span>Toplam</span><span class="num" id="total">0</span></div>
+    <button class="btn checkout" id="checkout">Siparişi tamamla</button>
+  </div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-box">
+    <button class="x" data-mclose aria-label="Kapat">×</button>
+    <div class="ok"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2 id="mTitle">Siparişiniz alındı</h2>
+    <p id="mText"></p>
+    <ul class="sum" id="mSum"></ul>
+    <p class="note">Bu bir örnek sitedir. Gerçek bir sipariş oluşturulmadı ve ödeme alınmadı.</p>
+    <button class="btn checkout" data-mclose>Alışverişe dön</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<a class="demo-ribbon" href="https://wa.me/905416264074?text=Merhaba%2C%20%C3%B6rnek%20siteyi%20g%C3%B6rd%C3%BCm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini AFM-CODING ile yaptırın →</a>
+
+<script>
+(function(){
+  var U='https://images.unsplash.com/photo-',Q='?w=1200&q=70&auto=format&fit=crop';
+  var CATS={all:'Tümü',cekirdek:'Çekirdek',filtre:'Filtre',turk:'Türk kahvesi',ekipman:'Ekipman'};
+  var P=[
+    {id:1,c:'cekirdek',n:'Etiyopya Guji',o:'Yıkanmış · açık kavrum',notes:['şeftali','yasemin','bergamot'],p:420,u:'250 g',img:'1559056199-641a0ac8b55e',col:'#C7682E',tag:'Yeni hasat'},
+    {id:2,c:'cekirdek',n:'Kolombiya Huila',o:'Yıkanmış · orta kavrum',notes:['karamel','kırmızı elma','kakao'],p:385,u:'250 g',img:'1587734195503-904fca47e0e9',col:'#2F6B4F'},
+    {id:3,c:'cekirdek',n:'Kenya Nyeri',o:'Yıkanmış · açık kavrum',notes:['frenk üzümü','greyfurt','domates'],p:465,u:'250 g',img:'1610889556528-9a770e32642f',col:'#8E1F4C',tag:'Sınırlı'},
+    {id:4,c:'cekirdek',n:'Ev Harmanı Espresso',o:'Brezilya ve Guatemala · koyu',notes:['bitter çikolata','fındık'],p:360,u:'250 g',img:'1495474472287-4d71bcdd2085',col:'#4E1638',tag:'Çok satan'},
+    {id:5,c:'filtre',n:'Sabah Harmanı',o:'Filtre için öğütülmüş',notes:['süt çikolata','badem'],p:340,u:'250 g',img:'1497935586351-b67a49e012bf',col:'#B07D1A'},
+    {id:6,c:'filtre',n:'Guatemala Antigua',o:'Filtre için öğütülmüş',notes:['portakal','esmer şeker'],p:395,u:'250 g',img:'1509042239860-f550ce710b93',col:'#3E5C8A'},
+    {id:7,c:'turk',n:'Kavruk Türk Kahvesi',o:'Orta kavrum · ince öğütüm',notes:['yoğun köpük','kakao'],p:210,u:'200 g',img:'1514432324607-a09d9b4aefdd',col:'#6B3A1F'},
+    {id:8,c:'turk',n:'Dibek Kahvesi',o:'Taş dibekte dövülmüş',notes:['damla sakızı','süt'],p:235,u:'200 g',img:'1442512595331-e89e73853f31',col:'#5C6E3A'},
+    {id:9,c:'ekipman',n:'Cam Demlik',o:'6 fincanlık, borosilikat',notes:['filtre kâğıdı hediye'],p:1150,u:'adet',img:'1517701604599-bb29b565090c',col:'#2A1220'},
+    {id:10,c:'ekipman',n:'Damla Demleme Seti',o:'Seramik huni ve sürahi',notes:['40 filtre kâğıdı'],p:690,u:'set',img:'1521302080334-4bebac2763a6',col:'#7A4B8C'},
+    {id:11,c:'ekipman',n:'El Değirmeni',o:'Ayarlı seramik bıçak',notes:['espresso–filtre'],p:1480,u:'adet',img:'1511920170033-f8396924c348',col:'#355E5B'},
+    {id:12,c:'ekipman',n:'Kavruk Kupa',o:'El yapımı, 300 ml',notes:['bulaşık makinesine uygun'],p:290,u:'adet',img:'1572442388796-11668a67e53d',col:'#C7682E'}
+  ];
+  var FREE=750,SHIP=59.9;
+  var fmt=new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY'});
+  var $=function(s){return document.querySelector(s)};
+  var cart={};
+  try{cart=JSON.parse(localStorage.getItem('kavruk-cart'))||{}}catch(e){cart={}}
+  function save(){try{localStorage.setItem('kavruk-cart',JSON.stringify(cart))}catch(e){}}
+  function byId(id){for(var i=0;i<P.length;i++)if(P[i].id==id)return P[i]}
+
+  /* roast date: next Monday */
+  (function(){var d=new Date(),k=(8-d.getDay())%7||7;d.setDate(d.getDate()+k);
+    $('#roastDay').textContent=d.getDate();$('#roastMon').textContent=d.toLocaleDateString('tr-TR',{month:'short'})})();
+
+  /* filters */
+  var fWrap=$('#filters');
+  Object.keys(CATS).forEach(function(k){
+    var n=k==='all'?P.length:P.filter(function(p){return p.c===k}).length;
+    var b=document.createElement('button');b.className='chip';b.dataset.cat=k;b.setAttribute('aria-pressed',k==='all');
+    b.innerHTML=CATS[k]+'<small>'+n+'</small>';fWrap.appendChild(b);
+  });
+  fWrap.addEventListener('click',function(e){
+    var b=e.target.closest('.chip');if(!b)return;
+    fWrap.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c===b)});
+    document.querySelectorAll('.prod').forEach(function(el){el.classList.toggle('hide',b.dataset.cat!=='all'&&el.dataset.cat!==b.dataset.cat)});
+  });
+
+  /* grid */
+  $('#grid').innerHTML=P.map(function(p){
+    return '<article class="prod" data-cat="'+p.c+'">'+
+      '<div class="prod-img"><img loading="lazy" src="'+U+p.img+Q+'" alt="'+p.n+'">'+(p.tag?'<span class="tag">'+p.tag+'</span>':'')+'</div>'+
+      '<div class="label" style="background:'+p.col+'"><b>'+p.n+'</b><span>'+p.o+'</span></div>'+
+      '<div class="prod-body"><ul class="notes">'+p.notes.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'+
+      '<div class="buy"><div class="price num">'+fmt.format(p.p)+'<small>'+p.u+'</small></div>'+
+      '<button class="add" data-add="'+p.id+'" aria-label="'+p.n+' sepete ekle">Sepete ekle</button></div></div></article>';
+  }).join('');
+  $('#grid').addEventListener('click',function(e){
+    var b=e.target.closest('[data-add]');if(!b)return;
+    add(b.dataset.add,1);
+    b.classList.add('done');b.textContent='Eklendi';
+    setTimeout(function(){b.classList.remove('done');b.textContent='Sepete ekle'},1300);
+    toast(byId(b.dataset.add).n+' sepete eklendi');
+  });
+
+  function add(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];save();render()}
+  function totals(){var s=0,c=0;Object.keys(cart).forEach(function(id){s+=byId(id).p*cart[id];c+=cart[id]});
+    var sh=s===0||s>=FREE?0:SHIP;return{sub:s,ship:sh,total:s+sh,count:c}}
+
+  function render(){
+    var t=totals(),ids=Object.keys(cart),cc=$('#cartCount');
+    if(cc.textContent!=String(t.count)){cc.textContent=t.count;cc.classList.remove('bump');void cc.offsetWidth;cc.classList.add('bump')}
+    $('#items').innerHTML=ids.length?ids.map(function(id){var p=byId(id);
+      return '<li class="item"><img src="'+U+p.img+Q+'" alt="">'+
+        '<div><b>'+p.n+'</b><small>'+fmt.format(p.p)+' / '+p.u+'</small><br>'+
+        '<div class="qty"><button data-q="-1" data-id="'+id+'" aria-label="Azalt">−</button><span class="num">'+cart[id]+'</span><button data-q="1" data-id="'+id+'" aria-label="Artır">+</button></div></div>'+
+        '<div class="item-right"><b class="num">'+fmt.format(p.p*cart[id])+'</b><button class="rm" data-rm="'+id+'">Kaldır</button></div></li>'}).join('')
+      :'<li class="empty"><b>Sepetiniz boş</b>Bu haftanın kahvelerine göz atın, beğendiğinizi tek dokunuşla ekleyin.<br><br><button class="btn btn-apricot" data-close>Kahvelere dön</button></li>';
+    $('#subtotal').textContent=fmt.format(t.sub);
+    $('#shipping').textContent=t.sub===0?'—':(t.ship?fmt.format(t.ship):'Ücretsiz');
+    $('#total').textContent=fmt.format(t.total);
+    var left=FREE-t.sub;
+    $('#ship').innerHTML=(t.sub===0?'750 ₺ üzeri siparişlerde kargo ücretsiz.':left>0?'Ücretsiz kargo için <strong>'+fmt.format(left)+'</strong> daha ekleyin.':'Kargonuz <strong>ücretsiz</strong>.')+
+      '<div class="bar"><i style="width:'+Math.min(100,t.sub/FREE*100)+'%"></i></div>';
+    $('#checkout').disabled=!ids.length;
+  }
+  $('#items').addEventListener('click',function(e){
+    var q=e.target.closest('[data-q]'),r=e.target.closest('[data-rm]');
+    if(q)add(q.dataset.id,+q.dataset.q);
+    if(r){var n=byId(r.dataset.rm).n;delete cart[r.dataset.rm];save();render();toast(n+' sepetten çıkarıldı')}
+  });
+
+  /* drawer */
+  var drawer=$('#drawer'),ov=$('#overlay'),lastFocus;
+  function openCart(){lastFocus=document.activeElement;drawer.classList.add('open');ov.classList.add('open');drawer.setAttribute('aria-hidden','false');document.body.classList.add('lock');setTimeout(function(){drawer.querySelector('.x').focus()},50)}
+  function closeCart(){drawer.classList.remove('open');ov.classList.remove('open');drawer.setAttribute('aria-hidden','true');document.body.classList.remove('lock');if(lastFocus)lastFocus.focus()}
+  $('#openCart').addEventListener('click',openCart);
+  ov.addEventListener('click',closeCart);
+  drawer.addEventListener('click',function(e){if(e.target.closest('[data-close]')){closeCart();if(e.target.closest('.empty'))location.hash='#urunler'}});
+
+  /* checkout */
+  var modal=$('#modal');
+  $('#checkout').addEventListener('click',function(){
+    var t=totals(),no='KV-'+Math.floor(100000+Math.random()*900000);
+    $('#mText').textContent='Sipariş numaranız '+no+'. Kahveleriniz pazartesi kavrulup çarşamba kargoya verilecek.';
+    $('#mSum').innerHTML=Object.keys(cart).map(function(id){var p=byId(id);return '<li><span>'+cart[id]+' × '+p.n+'</span><span class="num">'+fmt.format(p.p*cart[id])+'</span></li>'}).join('')+
+      '<li><span>Kargo</span><span class="num">'+(t.ship?fmt.format(t.ship):'Ücretsiz')+'</span></li>'+
+      '<li class="t"><span>Toplam</span><span class="num">'+fmt.format(t.total)+'</span></li>';
+    closeCart();cart={};save();render();
+    modal.classList.add('open');document.body.classList.add('lock');
+    setTimeout(function(){modal.querySelector('.x').focus()},50);
+  });
+  function closeModal(){modal.classList.remove('open');document.body.classList.remove('lock')}
+  modal.addEventListener('click',function(e){if(e.target===modal||e.target.closest('[data-mclose]'))closeModal()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(modal.classList.contains('open'))closeModal();else if(drawer.classList.contains('open'))closeCart();setMenu(false)}});
+
+  /* toast */
+  var tEl=$('#toast'),tT;
+  function toast(m){tEl.textContent=m;tEl.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){tEl.classList.remove('show')},1800)}
+
+  /* mobile menu */
+  var mb=$('.menu-btn'),nav=$('#nav');
+  function setMenu(o){mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');nav.classList.toggle('open',o)}
+  mb.addEventListener('click',function(){setMenu(mb.getAttribute('aria-expanded')!=='true')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+
+  render();
+  /* reveal */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(el){io.observe(el)})}
+  else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>

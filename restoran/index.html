@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Köz &amp; Kekik · Ateşte Anadolu Mutfağı</title>
+<meta name="description" content="Köz &amp; Kekik — odun ateşinde pişen modern Anadolu mutfağı. Menü, çalışma saatleri ve online masa rezervasyonu.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#171310">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coal:#171310;--coal-2:#221c17;--coal-3:#2e2620;--bone:#f1e9dc;--ember:#e4572e;--ember-2:#ff7a45;--olive:#9aa65a;
+  --muted:#a89d8e;--line:rgba(241,233,220,.12);
+  --disp:'Bricolage Grotesque',system-ui,sans-serif;--it:'Instrument Serif',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--coal);color:var(--bone);font-family:var(--sans);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--disp);font-weight:800;margin:0;line-height:.95;letter-spacing:-.03em}
+em{font-family:var(--it);font-style:italic;font-weight:400;letter-spacing:0;color:var(--ember-2)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px}
+.sec{padding:84px 0}
+.kicker{font:700 .72rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ember)}
+.kicker::before{content:"● ";font-size:.6rem;vertical-align:2px}
+.h2{font-size:clamp(2.6rem,9vw,5.2rem);margin:14px 0 0}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 .95rem var(--sans);padding:15px 24px;border-radius:0;background:var(--ember);color:var(--coal);text-decoration:none;border:2px solid var(--ember);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--ember)}
+.btn.line{background:transparent;color:var(--bone);border-color:var(--bone)}
+.btn.line:hover{background:var(--bone);color:var(--coal)}
+.ph{background-color:var(--coal-3);background-size:cover;background-position:center}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(23,19,16,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 1.35rem var(--disp);letter-spacing:-.04em;color:var(--bone);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo .fl{width:22px;height:22px}
+.logo i{font-family:var(--it);font-weight:400;color:var(--ember-2);font-size:1.5rem}
+.nav{display:none}
+.nav a{color:var(--bone);text-decoration:none;font-size:.9rem;font-weight:500;opacity:.8;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.menu-btn{background:none;border:2px solid var(--bone);color:var(--bone);font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:9px 14px;cursor:pointer}
+.mnav{position:fixed;inset:64px 0 0;background:var(--ember);color:var(--coal);z-index:49;padding:24px 18px;display:flex;flex-direction:column;clip-path:inset(0 0 100% 0);transition:clip-path .45s cubic-bezier(.7,0,.2,1);visibility:hidden}
+body.open .mnav{clip-path:inset(0);visibility:visible}
+.mnav a{color:var(--coal);text-decoration:none;font:800 clamp(2.4rem,12vw,3.6rem)/1.08 var(--disp);letter-spacing:-.04em;padding:6px 0;border-bottom:2px solid rgba(23,19,16,.2)}
+.mnav p{margin-top:auto;font-weight:500}
+@media(min-width:900px){.nav{display:flex;gap:28px;align-items:center}.menu-btn,.mnav{display:none}}
+
+/* hero */
+.hero{position:relative;padding:40px 0 0}
+.hero h1{font-size:clamp(3.6rem,17vw,11rem);text-transform:uppercase;letter-spacing:-.05em}
+.hero h1 em{text-transform:none;font-size:.82em;display:inline-block;transform:translateY(-.04em)}
+.hero-row{display:grid;gap:26px;margin-top:24px;align-items:end}
+.hero-row p{max-width:440px;color:var(--muted);font-size:1.05rem;margin:0}
+.hero-row .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-img{margin-top:38px;height:58vh;min-height:320px;max-height:620px;position:relative}
+.ticker{background:var(--ember);color:var(--coal);overflow:hidden;white-space:nowrap;padding:12px 0;font:800 1.15rem var(--disp);letter-spacing:-.02em;text-transform:uppercase}
+.ticker div{display:inline-block;animation:tick 28s linear infinite}
+.ticker span{margin:0 22px}
+@keyframes tick{to{transform:translateX(-50%)}}
+.open-badge{position:absolute;left:18px;bottom:18px;background:var(--coal);padding:10px 14px;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.open-badge::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--olive);box-shadow:0 0 0 4px rgba(154,166,90,.25)}
+.open-badge.closed::before{background:#b44;box-shadow:0 0 0 4px rgba(187,68,68,.25)}
+@media(min-width:860px){.hero-row{grid-template-columns:1fr auto}}
+
+/* menu */
+.menu-head{display:flex;flex-direction:column;gap:22px;margin-bottom:34px}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:4px;margin:0 -18px;padding-left:18px;padding-right:18px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font:700 .9rem var(--sans);padding:11px 18px;border:2px solid var(--line);background:transparent;color:var(--bone);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--bone)}
+.tab[aria-selected="true"]{background:var(--bone);color:var(--coal);border-color:var(--bone)}
+.panel{display:none;gap:0 60px}
+.panel.act{display:grid;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.item{padding:20px 0;border-bottom:1px solid var(--line)}
+.item .top{display:flex;align-items:baseline;gap:10px}
+.item h3{font-size:1.3rem;letter-spacing:-.02em;font-weight:600;line-height:1.2}
+.item .dots{flex:1;border-bottom:2px dotted rgba(241,233,220,.25);transform:translateY(-4px);min-width:20px}
+.item .p{font:800 1.2rem var(--disp);color:var(--ember-2);white-space:nowrap}
+.item p{margin:6px 0 0;color:var(--muted);font-size:.92rem}
+.tag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--olive);color:var(--olive);padding:1px 6px;margin-left:6px;vertical-align:3px}
+.menu-note{color:var(--muted);font-size:.85rem;margin-top:24px}
+@media(min-width:860px){.panel.act{grid-template-columns:1fr 1fr}.menu-head{flex-direction:row;justify-content:space-between;align-items:flex-end}.tabs{margin:0;padding:0}}
+
+/* food strip */
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+.strip .ph{aspect-ratio:1/1;filter:saturate(.95) contrast(1.05);transition:filter .4s}
+.strip .ph:hover{filter:saturate(1.2) contrast(1.1)}
+@media(min-width:760px){.strip{grid-template-columns:repeat(4,1fr)}}
+
+/* chef */
+.chef{background:var(--bone);color:var(--coal)}
+.chef .wrap{display:grid;gap:36px;align-items:center}
+.chef .ph{aspect-ratio:4/5;background-color:#cbbca5}
+.chef h2{color:var(--coal)}
+.chef em{color:var(--ember)}
+.chef p{color:#4a4037;font-size:1.04rem}
+.chef blockquote{margin:26px 0 0;font:400 1.7rem/1.25 var(--it);font-style:italic;border-left:4px solid var(--ember);padding-left:18px}
+.chef .stats{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}
+.chef .stats b{display:block;font:800 2.6rem/1 var(--disp);letter-spacing:-.04em}
+.chef .stats span{font-size:.82rem;color:#6d6155}
+@media(min-width:880px){.chef .wrap{grid-template-columns:1fr 1.1fr;gap:70px}}
+
+/* hours + reserve */
+.res-grid{display:grid;gap:40px}
+.hours{list-style:none;padding:0;margin:28px 0 0}
+.hours li{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.hours li.today{color:var(--ember-2);font-weight:700}
+.hours li.today span:first-child::after{content:" · bugün";font-weight:500;font-size:.8rem}
+.addr{margin-top:28px;color:var(--muted);font-size:.95rem}
+.addr a{color:var(--bone)}
+.rform{background:var(--coal-2);border:1px solid var(--line);padding:24px 20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.rform h3{grid-column:span 2;font-size:2rem;margin-bottom:4px}
+.fld{grid-column:span 2;display:flex;flex-direction:column;gap:6px}
+.fld.h{grid-column:span 1}
+.res-grid>*{min-width:0}
+.fld label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.fld input,.fld select,.fld textarea{background:var(--coal);border:1px solid var(--line);color:var(--bone);font:500 1rem var(--sans);padding:13px 12px;width:100%;min-width:0;border-radius:0;color-scheme:dark}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--ember)}
+.ppl{display:flex;gap:6px;flex-wrap:wrap}
+.ppl button{flex:1 0 40px;height:44px;background:var(--coal);border:1px solid var(--line);color:var(--bone);font:700 1rem var(--sans);cursor:pointer}
+.ppl button[aria-pressed="true"]{background:var(--ember);color:var(--coal);border-color:var(--ember)}
+.rform .btn{grid-column:span 2;justify-content:center}
+.ferr{grid-column:span 2;color:var(--ember-2);font-size:.88rem;margin:0;min-height:1.2em}
+.thanks{display:none;grid-column:span 2;text-align:center;padding:30px 8px}
+.thanks svg{width:56px;height:56px;margin:0 auto 14px;stroke:var(--olive);fill:none;stroke-width:2}
+.thanks h3{font-size:2.2rem;margin-bottom:10px}
+.thanks p{color:var(--muted);margin:0 0 18px}
+.rform.done>*:not(.thanks){display:none}
+.rform.done .thanks{display:block}
+@media(min-width:900px){.res-grid{grid-template-columns:.9fr 1.1fr;gap:70px}.rform{padding:36px}}
+
+/* map */
+.map{position:relative;height:340px;background:#211b16;overflow:hidden;border-top:1px solid var(--line)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .mk{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center}
+.map .dot{width:20px;height:20px;border-radius:50%;background:var(--ember);margin:0 auto;box-shadow:0 0 0 0 rgba(228,87,46,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 22px rgba(228,87,46,0)}100%{box-shadow:0 0 0 0 rgba(228,87,46,0)}}
+.map .lbl{margin-top:10px;background:var(--bone);color:var(--coal);font-weight:700;font-size:.85rem;padding:7px 12px}
+.map .dir{position:absolute;right:16px;bottom:16px}
+
+footer .fm{padding:56px 0 30px;border-top:1px solid var(--line)}
+footer .big{font:800 clamp(3rem,16vw,9rem)/.9 var(--disp);letter-spacing:-.06em;color:var(--coal-3);margin:0;user-select:none;text-transform:uppercase}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:22px;color:var(--muted);font-size:.88rem}
+footer .row a{color:var(--bone);text-decoration:none}
+.afm{display:block;text-align:center;background:#0f0c0a;color:var(--muted);font:500 .82rem/1.4 var(--sans);padding:13px 16px;text-decoration:none;border-top:1px solid var(--line);transition:color .2s}
+.afm:hover{color:var(--ember-2)}
+.afm b{color:var(--bone)}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.ticker div,.map .dot,.panel.act{animation:none}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo"><svg class="fl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3-1-6 1-9Z" fill="#e4572e"/></svg>Köz <i>&amp;</i> Kekik</a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#menu">Menü</a><a href="#sef">Şefimiz</a><a href="#saatler">Saatler</a><a href="#konum">Konum</a>
+      <a href="#rezervasyon" class="btn" style="padding:10px 18px;opacity:1">Masa Ayırt</a>
+    </nav>
+    <button class="menu-btn" id="mb" aria-expanded="false" aria-controls="mnav">Menü</button>
+  </div>
+
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobil menü">
+    <a href="#menu">Menü</a><a href="#sef">Şefimiz</a><a href="#saatler">Saatler</a><a href="#rezervasyon">Rezervasyon</a><a href="#konum">Konum</a>
+    <p>Salı–Pazar · 12:00–23:30<br>0 (212) 000 00 00</p>
+  </nav>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker rv">Est. 2019 · Örnek Mahallesi</span>
+    <h1 class="rv">Ateş, <em>kekik</em><br>&amp; sabır.</h1>
+    <div class="hero-row">
+      <p class="rv">Meşe odununun közünde, yavaş yavaş pişen modern Anadolu mutfağı. Mevsimine göre değişen menü, doğal şaraplar ve kalabalık sofralar için uzun masalar.</p>
+      <div class="cta rv"><a href="#rezervasyon" class="btn">Masa Ayırt →</a><a href="#menu" class="btn line">Menüyü Gör</a></div>
+    </div>
+  </div>
+  <div class="wrap"><div class="hero-img ph rv" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Közde pişmiş et"><div class="open-badge" id="openBadge">Şu an açığız</div></div></div>
+  <div class="ticker" aria-hidden="true"><div><span>Odun ateşi</span>✦<span>Yerel üretici</span>✦<span>Ekşi maya ekmek</span>✦<span>Doğal şarap</span>✦<span>Mevsimsel menü</span>✦<span>Odun ateşi</span>✦<span>Yerel üretici</span>✦<span>Ekşi maya ekmek</span>✦<span>Doğal şarap</span>✦<span>Mevsimsel menü</span>✦</div></div>
+</section>
+
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <div class="rv"><span class="kicker">Menü</span><h2 class="h2">Bu mevsim <em>ocakta</em></h2></div>
+      <div class="tabs rv" role="tablist" id="tabs"></div>
+    </div>
+    <div id="panels"></div>
+    <p class="menu-note rv">Fiyatlara KDV dahildir. Alerjen bilgisi için lütfen ekibimize danışın. <span class="tag" style="margin:0">V</span> vejetaryen</p>
+  </div>
+</section>
+
+<div class="strip" aria-label="Yemeklerimizden kareler">
+  <div class="ph rv" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=70&auto=format&fit=crop')"></div>
+  <div class="ph rv" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&q=70&auto=format&fit=crop')"></div>
+  <div class="ph rv" style="background-image:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1200&q=70&auto=format&fit=crop')"></div>
+  <div class="ph rv" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=70&auto=format&fit=crop')"></div>
+</div>
+
+<section class="sec chef" id="sef">
+  <div class="wrap">
+    <div class="ph rv" style="background-image:url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Şef mutfakta"></div>
+    <div class="rv">
+      <span class="kicker">Şefimiz &amp; Hikâyemiz</span>
+      <h2 class="h2">Babaannenin ocağından <em>şehrin</em> ortasına</h2>
+      <p style="margin-top:22px">Şef Kaan Ateşoğlu, çocukluğunu Toroslar'da bir köy evinin ocak başında geçirdi. Yıllarca farklı mutfaklarda çalıştıktan sonra o ilk lezzetin peşine düştü: gaz yok, elektrikli ızgara yok — yalnızca meşe odunu, iyi malzeme ve zaman.</p>
+      <p>Her sabah pazardan gelen sebzeler, küçük üreticilerden kuzu ve peynirler, kendi ekşi mayamızla pişen ekmek. Menümüz her ay değişir, çünkü toprak da değişir.</p>
+      <blockquote>“Ateşe acele ettiremezsin. En iyi lezzet, beklemeyi bilenlerindir.”</blockquote>
+      <div class="stats"><div><b>14</b><span>yerel üretici</span></div><div><b>12 saat</b><span>közde kuzu incik</span></div><div><b>4.8★</b><span>2.300+ yorum</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="saatler">
+  <div class="wrap res-grid">
+    <div class="rv">
+      <span class="kicker">Çalışma Saatleri</span>
+      <h2 class="h2">Ocak <em>yanıyor</em></h2>
+      <ul class="hours" id="hours"></ul>
+      <p class="addr">Örnek Mah. Ateş Sok. No:21, Kadıköy / İstanbul<br><a href="tel:+902120000000">0 (212) 000 00 00</a> · <a href="mailto:masa@kozkekik-ornek.com">masa@kozkekik-ornek.com</a></p>
+    </div>
+    <form class="rform rv" id="rezervasyon" novalidate>
+      <h3>Masa <em>ayırt</em></h3>
+      <div class="fld h"><label for="rd">Tarih</label><input type="date" id="rd"></div>
+      <div class="fld h"><label for="rt">Saat</label><select id="rt"></select></div>
+      <div class="fld"><label>Kişi sayısı</label><div class="ppl" id="ppl"></div></div>
+      <div class="fld h"><label for="rn">Ad Soyad</label><input type="text" id="rn" autocomplete="name"></div>
+      <div class="fld h"><label for="rp">Telefon</label><input type="tel" id="rp" placeholder="0 (5xx) xxx xx xx" autocomplete="tel"></div>
+      <div class="fld"><label for="ro">Özel istek</label><select id="ro"><option>Yok</option><option>Doğum günü / kutlama</option><option>Ocak başı masa</option><option>Teras</option><option>Bebek sandalyesi</option></select></div>
+      <p class="ferr" id="ferr" role="alert"></p>
+      <button class="btn" type="submit">Rezervasyonu Gönder</button>
+      <div class="thanks" aria-live="polite">
+        <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="26"/><path d="M17 29l7 7 15-16"/></svg>
+        <h3>Teşekkürler!</h3>
+        <p id="tmsg"></p>
+        <button type="button" class="btn line" id="again">Yeni rezervasyon</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="konum">
+  <div class="map" role="img" aria-label="Harita (temsili)">
+    <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1200" height="340" fill="#211b16"/>
+      <g stroke="#2e2620" stroke-width="14" fill="none"><path d="M0 90H1200M0 250H1200M180 0V340M420 0V340M760 0V340M1010 0V340"/><path d="M0 330L1200 20" stroke-width="22"/></g>
+      <g stroke="#3a3029" stroke-width="2" fill="none"><path d="M0 170H1200M300 0V340M600 0 640 340M880 0V340"/></g>
+      <path d="M0 330L1200 20" stroke="#e4572e" stroke-width="2" stroke-dasharray="4 10" opacity=".5"/>
+      <rect x="200" y="110" width="200" height="120" fill="#27301c" opacity=".7"/>
+      <rect x="1030" y="190" width="170" height="150" fill="#1d2a30"/>
+    </svg>
+    <div class="mk"><div class="dot"></div><div class="lbl">Köz &amp; Kekik</div></div>
+    <a class="btn dir" href="#konum">Yol tarifi al</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fm">
+    <div class="wrap">
+      <p class="big" aria-hidden="true">Köz&amp;Kekik</p>
+      <div class="row"><span>© 2026 Köz &amp; Kekik · Ateşte Anadolu mutfağı</span><span><a href="#menu">Menü</a> · <a href="#rezervasyon">Rezervasyon</a> · Instagram: @kozkekik.ornek</span></div>
+    </div>
+  </div>
+  <a class="afm" href="https://wa.me/905416264074?text=Merhaba%2C%20örnek%20siteyi%20gördüm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini <b>AFM-CODING</b> ile yaptırın →</a>
+</footer>
+
+<script>
+(function(){
+  /* --- menu data --- */
+  var M={
+    'Başlangıçlar':[
+      ['Közlenmiş Patlıcan','Tahin, nar ekşisi, kavrulmuş fındık',185,1],
+      ['Ekşi Maya Ekmek & Tereyağı','Yayla tereyağı, deniz tuzu, kekik',95,1],
+      ['Kuzu Ciğer Şiş','Sumaklı soğan, köz biber',260],
+      ['Ateşte Hellim','Bal, pul biber, taze nane',210,1],
+      ['Çiğ Köfte Tartar','Dana bonfile, isot, marul yaprağı',290],
+      ['Mevsim Salatası','Pazardan yeşillikler, keçi peyniri',195,1]
+    ],
+    'Ocaktan':[
+      ['12 Saat Kuzu İncik','Közde pişmiş, bulgur pilavı, yoğurt',640],
+      ['Dana Antrikot (300 g)','Kuru dinlendirilmiş, köz domates',890],
+      ['Adana Kebap','Zırhla çekilmiş, lavaş, közde soğan',420],
+      ['Bütün Levrek','Defne yaprağı, limon, zeytinyağı',560],
+      ['Köz Mantar Şiş','Kekikli tereyağı, karabuğday',340,1],
+      ['Tavuk Pirzola','Yoğurt marine, sumak, közlenmiş biber',380]
+    ],
+    'Tatlılar':[
+      ['Közde Ayva','Kaymak, ceviz, tarçın',210,1],
+      ['Fırın Sütlaç','Odun fırınında, üstü yanık',165,1],
+      ['Künefe','Hatay peyniri, Antep fıstığı',240,1],
+      ['Bitter Çikolata & Tahin','Deniz tuzu, pekmez',225,1]
+    ],
+    'İçecekler':[
+      ['Ev Yapımı Limonata','Taze nane, ev şurubu',95],
+      ['Şalgam / Ayran','Yerel üretici',65],
+      ['Türk Kahvesi','Köz üstünde pişer',90],
+      ['Doğal Şarap (kadeh)','Haftanın seçkisi, sommelier önerisi',320],
+      ['Rakı (tek)','Buzlu, meze tabağı ile',260]
+    ]
+  };
+  var tabs=document.getElementById('tabs'),panels=document.getElementById('panels'),i=0;
+  Object.keys(M).forEach(function(k){
+    var id='p'+i,t=document.createElement('button');
+    t.className='tab';t.setAttribute('role','tab');t.id='t'+i;t.setAttribute('aria-controls',id);t.setAttribute('aria-selected',i===0);t.tabIndex=i===0?0:-1;t.textContent=k;tabs.appendChild(t);
+    var p=document.createElement('div');p.className='panel'+(i===0?' act':'');p.id=id;p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','t'+i);
+    p.innerHTML=M[k].map(function(x){return '<div class="item"><div class="top"><h3>'+x[0]+(x[3]?'<span class="tag">V</span>':'')+'</h3><span class="dots"></span><span class="p">₺'+x[2]+'</span></div><p>'+x[1]+'</p></div>'}).join('');
+    panels.appendChild(p);i++;
+  });
+  var tabEls=tabs.querySelectorAll('.tab');
+  function sel(t){tabEls.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).classList.toggle('act',on)});}
+  tabs.addEventListener('click',function(e){var t=e.target.closest('.tab');if(t)sel(t)});
+  tabs.addEventListener('keydown',function(e){var a=[].slice.call(tabEls),ix=a.indexOf(document.activeElement);if(ix<0)return;var n=e.key==='ArrowRight'?ix+1:e.key==='ArrowLeft'?ix-1:null;if(n===null)return;n=(n+a.length)%a.length;a[n].focus();sel(a[n]);});
+
+  /* --- hours --- */
+  var days=['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+  var H={0:[12,23],1:null,2:[12,23.5],3:[12,23.5],4:[12,23.5],5:[12,24.5],6:[11,24.5]};
+  var f=function(h){var hh=Math.floor(h)%24,mm=h%1?'30':'00';return (hh<10?'0':'')+hh+':'+mm};
+  var now=new Date(),d=now.getDay(),ul=document.getElementById('hours');
+  [1,2,3,4,5,6,0].forEach(function(k){var li=document.createElement('li');if(k===d)li.className='today';li.innerHTML='<span>'+days[k]+'</span><span>'+(H[k]?f(H[k][0])+' – '+f(H[k][1]):'Kapalı')+'</span>';ul.appendChild(li)});
+  var hr=now.getHours()+now.getMinutes()/60,isOpen=H[d]&&hr>=H[d][0]&&hr<H[d][1];
+  var prev=H[(d+6)%7];if(!isOpen&&prev&&prev[1]>24&&hr<prev[1]-24)isOpen=true;
+  var ob=document.getElementById('openBadge');if(!isOpen){ob.textContent='Şu an kapalıyız';ob.classList.add('closed')}
+
+  /* --- reservation --- */
+  var rd=document.getElementById('rd'),rt=document.getElementById('rt'),ppl=document.getElementById('ppl'),people=2;
+  var iso=function(x){return new Date(x.getTime()-x.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+  rd.min=iso(now);rd.value=iso(now);
+  for(var h=12;h<=22;h+=.5){var o=document.createElement('option');o.textContent=f(h);if(h===19.5)o.selected=true;rt.appendChild(o)}
+  ['1','2','3','4','5','6','8+'].forEach(function(v){var b=document.createElement('button');b.type='button';b.textContent=v;b.setAttribute('aria-pressed',v==='2');b.addEventListener('click',function(){people=v;ppl.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)})});ppl.appendChild(b)});
+  var form=document.getElementById('rezervasyon'),err=document.getElementById('ferr');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('rn').value.trim(),p=document.getElementById('rp').value.replace(/\D/g,'');
+    if(!rd.value){err.textContent='Lütfen bir tarih seçin.';return}
+    var dt=new Date(rd.value+'T00:00');if(!H[dt.getDay()]){err.textContent='Pazartesi günleri kapalıyız, lütfen başka bir gün seçin.';return}
+    if(n.length<2){err.textContent='Lütfen adınızı yazın.';return}
+    if(p.length<10){err.textContent='Lütfen geçerli bir telefon numarası girin.';return}
+    err.textContent='';
+    var ds=dt.toLocaleDateString('tr-TR',{day:'numeric',month:'long',weekday:'long'});
+    document.getElementById('tmsg').textContent=n+', '+ds+' saat '+rt.value+' için '+people+' kişilik masa talebiniz alındı. Kısa süre içinde sizi arayıp onaylayacağız. (Demo — gerçek rezervasyon oluşturulmaz.)';
+    form.classList.add('done');
+  });
+  document.getElementById('again').addEventListener('click',function(){form.classList.remove('done');form.reset();rd.value=iso(now)});
+
+  /* --- header / menu --- */
+  var hdr=document.getElementById('hdr'),mb=document.getElementById('mb');
+  mb.addEventListener('click',function(){var o=document.body.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Kapat':'Menü';document.body.style.overflow=o?'hidden':''});
+  document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='Menü';document.body.style.overflow=''})});
+
+  /* --- reveal --- */
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+    els.forEach(function(el){io.observe(el)});
+  }else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>

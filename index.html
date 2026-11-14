@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Örnek Siteler · AFM-CODING</title>
+<meta name="description" content="AFM-CODING örnek web siteleri: profil, e-ticaret, otel, pansiyon, restoran ve kurumsal site tasarımları.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #E3E6E0; --card: #F2F4EF; --ink: #171C1E; --muted: #566160; --line: #C4CAC3; --brass: #E5BF45; }
+@media (prefers-color-scheme: dark) { :root { --bg: #1A2124; --card: #232C30; --ink: #EEF1EA; --muted: #A0ACAA; --line: #3A464C; } }
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 17px/1.55 "Instrument Sans", system-ui, sans-serif; }
+.wrap { max-width: 1200px; margin: auto; padding: 0 clamp(16px, 4vw, 40px); }
+header { padding: clamp(48px, 10vh, 110px) 0 40px; }
+.kicker { font-size: 13px; font-weight: 700; letter-spacing: .16em; color: var(--muted); }
+h1 { font: 800 clamp(40px, 7vw, 92px)/.98 "Bricolage Grotesque", sans-serif; letter-spacing: -.04em; margin: 14px 0 18px; }
+h1 span { color: var(--brass); }
+header p { max-width: 56ch; color: var(--muted); font-size: 19px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 22px; padding-bottom: 60px; }
+.card { display: block; text-decoration: none; color: inherit; background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0, 0, 0, .14); }
+.shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--c); }
+.shot iframe { position: absolute; top: 0; left: 0; width: 400%; height: 400%; transform: scale(.25); transform-origin: 0 0; border: 0; pointer-events: none; background: #fff; }
+.body { padding: 18px 20px 20px; display: grid; gap: 4px; }
+.body h2 { font: 700 23px/1.2 "Bricolage Grotesque", sans-serif; display: flex; justify-content: space-between; gap: 10px; }
+.body h2 i { font-style: normal; transition: transform .25s; }
+.card:hover h2 i { transform: translateX(4px); }
+.body p { color: var(--muted); font-size: 15px; }
+.tag { justify-self: start; margin-bottom: 6px; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 99px; background: var(--c); color: #fff; }
+.cta { margin: 0 0 70px; padding: clamp(26px, 4vw, 44px); border-radius: 28px; background: var(--ink); color: var(--bg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+.cta h3 { font: 800 clamp(26px, 3.4vw, 40px)/1.1 "Bricolage Grotesque", sans-serif; max-width: 22ch; }
+.cta a { display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border-radius: 99px; background: var(--brass); color: #171C1E; font-weight: 700; text-decoration: none; }
+footer { padding: 0 0 40px; color: var(--muted); font-size: 14px; }
+footer a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { .card, .body h2 i { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">AFM-CODING · ÖRNEK SİTELER</p>
+    <h1>İşletmene uygun <span>örneği</span> seç.</h1>
+    <p>Aşağıdaki siteler, sana özel olarak uyarlanabilecek örnek tasarımlardır. Renkler, logo, içerik ve bölümler tamamen işletmene göre yeniden hazırlanır.</p>
+  </header>
+
+  <main class="grid" id="grid"></main>
+
+  <section class="cta">
+    <h3>Beğendiğin bir örnek var mı? Hemen konuşalım.</h3>
+    <a href="https://wa.me/905416264074?text=Merhaba%2C%20%C3%B6rnek%20siteleri%20inceledim%2C%20kendi%20sitemi%20yapt%C4%B1rmak%20istiyorum" target="_blank" rel="noopener">WhatsApp'tan yaz →</a>
+  </section>
+
+  <footer>© 2026 <a href="https://afmcoding.com/">AFM-CODING</a> · Ahmed Farah Mohamed · +90 541 626 4074</footer>
+</div>
+<script>
+const SITES = [
+  { slug: 'profil', title: 'Profil / Kişisel Site', desc: 'Fotoğrafçı, mimar, doktor, avukat ve serbest çalışanlar için kişisel tanıtım sitesi.', c: '#C2436B' },
+  { slug: 'e-ticaret', title: 'E-Ticaret Sitesi', desc: 'Ürün vitrini, kategori filtresi ve sepet içeren online mağaza.', c: '#2C6BD6' },
+  { slug: 'otel', title: 'Otel Sitesi', desc: 'Oda tipleri, galeri, yorumlar ve fiyat hesaplayan rezervasyon formu.', c: '#1F5D6B' },
+  { slug: 'pansiyon', title: 'Pansiyon Sitesi', desc: 'Sıcak, aile işletmesi havası; WhatsApp üzerinden müsaitlik talebi.', c: '#2F8F68' },
+  { slug: 'restoran', title: 'Restoran / Kafe Sitesi', desc: 'Kategorili menü, şef hikâyesi, çalışma saatleri ve masa rezervasyonu.', c: '#B5542A' },
+  { slug: 'kurumsal', title: 'Kurumsal / Şirket Sitesi', desc: 'Hizmetler, süreç, referanslar ve ekip sayfası olan şirket sitesi.', c: '#6A3FC4' },
+];
+document.getElementById('grid').innerHTML = SITES.map((s) => `
+  <a class="card" href="${s.slug}/" style="--c:${s.c}">
+    <div class="shot"><iframe src="${s.slug}/" loading="lazy" tabindex="-1" aria-hidden="true" title=""></iframe></div>
+    <div class="body">
+      <span class="tag">${s.slug}</span>
+      <h2>${s.title}<i aria-hidden="true">→</i></h2>
+      <p>${s.desc}</p>
+    </div>
+  </a>`).join('');
+</script>
+</body>
+</html>

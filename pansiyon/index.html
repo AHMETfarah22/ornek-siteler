@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yaprak Ev Pansiyon · Karadeniz'de Aile Pansiyonu</title>
+<meta name="description" content="Yaprak Ev Pansiyon — Karadeniz yaylalarının eteğinde, üç kuşaktır aile işletmesi. Ev yapımı serpme kahvaltı, sıcak odalar, doğa yürüyüşleri.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2e4a3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2e4a3a;--green-2:#3f6450;--leaf:#8aa978;--cream:#f8f2e6;--paper:#fffaf1;--terra:#c8693f;--terra-2:#a9532f;--mustard:#e3aa3d;
+  --text:#2b2a26;--muted:#6d6a60;--line:#e6dcc8;
+  --serif:'Fraunces',Georgia,serif;--sans:'Nunito',system-ui,sans-serif;--hand:'Caveat',cursive;
+  --max:1120px;--r:22px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{margin:0;font-family:var(--sans);color:var(--text);background:var(--cream);line-height:1.7;font-size:1.02rem;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);color:var(--green);margin:0;line-height:1.12;font-weight:600}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.hand{font-family:var(--hand);color:var(--terra);font-size:1.5rem;line-height:1;display:inline-block;transform:rotate(-2deg)}
+.sec{padding:80px 0}
+.sec-head{text-align:center;max-width:600px;margin:0 auto 44px}
+.sec-head h2{font-size:clamp(2rem,6vw,3rem);margin-top:6px}
+.sec-head p{color:var(--muted);margin:12px 0 0}
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;font:800 .98rem var(--sans);padding:15px 26px;border-radius:999px;border:0;background:var(--terra);color:#fff;text-decoration:none;cursor:pointer;box-shadow:0 6px 0 var(--terra-2);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--terra-2)}
+.btn:active{transform:translateY(6px);box-shadow:0 0 0 var(--terra-2)}
+.btn.alt{background:var(--paper);color:var(--green);box-shadow:0 6px 0 #d9cdb3}
+html,body{overflow-x:clip}
+.ph{background-color:var(--green-2);background-size:cover;background-position:center}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(248,242,230,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.sc{border-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--green);font:800 1.3rem var(--serif)}
+.logo svg{width:34px;height:34px}
+.nav{display:none}
+.nav a{text-decoration:none;color:var(--green);font-weight:700;font-size:.95rem;padding:8px 12px;border-radius:999px;transition:background .2s}
+.nav a:hover{background:#ece2cd}
+.burger{border:0;background:var(--green);color:#fff;border-radius:999px;height:42px;padding:0 16px;font:800 .9rem var(--sans);cursor:pointer;display:flex;align-items:center;gap:8px}
+.burger i{display:block;width:16px;height:2px;background:#fff;position:relative;border-radius:2px;transition:background .2s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:16px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,top .25s}
+.burger i::before{top:-5px}.burger i::after{top:5px}
+.open .burger i{background:transparent}.open .burger i::before{top:0;transform:rotate(45deg)}.open .burger i::after{top:0;transform:rotate(-45deg)}
+.mnav{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease;background:var(--cream)}
+.mnav>div{overflow:hidden}
+.open .mnav{grid-template-rows:1fr;border-bottom:1px solid var(--line)}
+.mnav a{display:block;padding:13px 20px;text-decoration:none;color:var(--green);font:600 1.25rem var(--serif);border-top:1px dashed var(--line)}
+@media(min-width:900px){.nav{display:flex;gap:4px;align-items:center}.burger,.mnav{display:none}}
+
+/* hero */
+.hero{padding:34px 0 60px}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,9vw,4.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:var(--terra);font-style:italic;font-weight:400}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:480px;margin:18px 0 26px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.facts span{background:var(--paper);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.88rem;font-weight:700;color:var(--green)}
+.collage{position:relative;height:400px;max-width:480px;width:100%;margin:0 auto}
+.pol{position:absolute;background:#fff;padding:10px 10px 38px;box-shadow:0 14px 30px -14px rgba(46,74,58,.45);border-radius:4px}
+.pol .ph{width:100%;height:100%;border-radius:2px}
+.pol figcaption{position:absolute;left:0;right:0;bottom:6px;text-align:center;font:600 1.25rem var(--hand);color:var(--green)}
+.p1{width:66%;height:300px;left:0;top:10px;transform:rotate(-4deg)}
+.p2{width:56%;height:240px;right:0;top:120px;transform:rotate(5deg)}
+.stamp{position:absolute;left:44%;top:-6px;width:96px;height:96px;border-radius:50%;background:var(--mustard);color:var(--green);display:grid;place-items:center;text-align:center;font:800 .78rem/1.15 var(--sans);transform:rotate(12deg);box-shadow:0 0 0 6px var(--cream),0 0 0 8px var(--mustard);z-index:2}
+@media(min-width:880px){.hero{padding:60px 0 90px}.hero .wrap{grid-template-columns:1.05fr 1fr}.collage{height:470px}.p1{height:350px}.p2{height:280px;top:150px}}
+
+.wave{display:block;width:100%;height:46px}
+
+/* story */
+.story{background:var(--green);color:#e9efe5}
+.story h2{color:#fff}
+.story .wrap{display:grid;gap:36px;align-items:center}
+.story .img{aspect-ratio:1/1;border-radius:50% 50% var(--r) var(--r);border:8px solid var(--green-2)}
+.story p{color:#cfdcc9}
+.story .hand{color:var(--mustard);font-size:1.9rem}
+.family{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.family div{background:var(--green-2);border-radius:14px;padding:12px 16px;font-size:.9rem}
+.family b{display:block;color:#fff;font-family:var(--serif);font-size:1.1rem}
+@media(min-width:880px){.story .wrap{grid-template-columns:.9fr 1.1fr;gap:70px}}
+
+/* rooms */
+.rooms{display:grid;gap:26px}
+.room{background:var(--paper);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.room .ph{aspect-ratio:16/11}
+.room .b{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.room h3{font-size:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+.tags span{font-size:.78rem;font-weight:700;background:#efe6d2;color:var(--green);padding:3px 10px;border-radius:999px}
+.room p{margin:0 0 16px;color:var(--muted);font-size:.95rem}
+.room .pr{margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:2px dotted var(--line);padding-top:14px}
+.room .pr b{font:800 1.6rem var(--serif);color:var(--terra)}
+.room .pr small{color:var(--muted);font-size:.85rem}
+@media(min-width:760px){.rooms{grid-template-columns:repeat(3,1fr)}}
+
+/* breakfast */
+.bf{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bf .wrap{display:grid;gap:36px;align-items:center}
+.bf h2{font-size:clamp(2rem,6vw,3rem);margin:6px 0 16px}
+.bf p{color:var(--muted)}
+.menu-list{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.menu-list li{padding-left:24px;position:relative;font-weight:600;font-size:.95rem}
+.menu-list li::before{content:"";position:absolute;left:0;top:.5em;width:12px;height:12px;border-radius:50% 0;background:var(--leaf);transform:rotate(-20deg)}
+.bf-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bf-imgs .ph{border-radius:var(--r);aspect-ratio:3/4}
+.bf-imgs .ph:nth-child(2){margin-top:40px}
+.time{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:var(--mustard);color:var(--green);font-weight:800;padding:8px 16px;border-radius:999px;font-size:.9rem}
+@media(min-width:880px){.bf .wrap{grid-template-columns:1fr 1fr;gap:70px}}
+
+/* activities */
+.acts{display:grid;gap:18px}
+.act{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:12px;transition:transform .25s}
+.act:hover{transform:rotate(-.6deg) translateY(-2px)}
+.act .ph{width:96px;height:96px;border-radius:16px}
+.act h3{font-size:1.15rem}
+.act p{margin:4px 0 0;color:var(--muted);font-size:.9rem;line-height:1.5}
+.act .km{display:inline-block;margin-top:6px;font-size:.78rem;font-weight:800;color:var(--terra)}
+@media(min-width:760px){.acts{grid-template-columns:1fr 1fr}}
+
+/* reviews */
+.quotes{display:grid;gap:18px}
+.q{background:#fff;border-radius:var(--r);padding:24px;border:1px solid var(--line);position:relative}
+.q:nth-child(2){background:#fdf0dc}
+.q p{margin:0 0 12px;font-family:var(--serif);font-size:1.1rem;color:var(--green);line-height:1.5}
+.q span{font-weight:700;font-size:.88rem;color:var(--muted)}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+
+/* form */
+.req{background:var(--green);color:#e9efe5}
+.req .wrap{display:grid;gap:34px}
+.req h2{color:#fff;font-size:clamp(2rem,6vw,3rem);margin:6px 0 14px}
+.req p{color:#cfdcc9}
+.req .hand{color:var(--mustard)}
+.card{background:var(--paper);color:var(--text);border-radius:var(--r);padding:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;box-shadow:0 20px 40px -24px rgba(0,0,0,.5)}
+.f{display:flex;flex-direction:column;gap:6px;grid-column:span 2}
+.f.h{grid-column:span 1}
+.req .wrap>*,.hero .wrap>*,.story .wrap>*,.bf .wrap>*{min-width:0}
+.f label{font-weight:800;font-size:.85rem;color:var(--green)}
+.f input,.f select,.f textarea{font:600 1rem var(--sans);color:var(--text);border:2px solid var(--line);background:#fff;border-radius:14px;padding:12px;width:100%;min-width:0}
+.f textarea{resize:vertical;min-height:84px}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--leaf)}
+.card .btn{grid-column:span 2;background:#25a35a;box-shadow:0 6px 0 #1b7b43}
+.card .btn:hover{box-shadow:0 4px 0 #1b7b43}
+.card .msg{grid-column:span 2;font-size:.88rem;color:var(--terra-2);font-weight:700;min-height:1.2em;margin:0}
+.contact-list{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
+.contact-list li{display:flex;gap:12px;align-items:flex-start}
+.contact-list i{flex:0 0 36px;height:36px;border-radius:50%;background:var(--green-2);display:grid;place-items:center;font-style:normal}
+.contact-list a{color:#fff}
+@media(min-width:880px){.req .wrap{grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}}
+
+footer .fm{background:#22382c;color:#b9c8b3;text-align:center;padding:36px 20px 28px;font-size:.9rem}
+footer .fm .logo{justify-content:center;color:#fff;margin-bottom:8px}
+.afm{display:block;text-align:center;background:#1a2b21;color:#cfdcc9;text-decoration:none;font:600 .82rem/1.4 var(--sans);padding:12px 16px;transition:color .2s}
+.afm:hover{color:var(--mustard)}
+.afm b{color:#fff}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2e4a3a"/><path d="M12 27c0-9 6-15 16-16-1 10-7 16-16 16Zm0 0 9-9" stroke="#e3aa3d" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>Yaprak Ev</a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#hikaye">Hikâyemiz</a><a href="#odalar">Odalar</a><a href="#kahvalti">Kahvaltı</a><a href="#gezi">Gezilecekler</a><a href="#yorumlar">Yorumlar</a>
+      <a href="#musaitlik" class="btn" style="padding:10px 18px;margin-left:8px">Müsaitlik Sor</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav"><i></i>Menü</button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobil menü"><div>
+    <a href="#hikaye">Hikâyemiz</a><a href="#odalar">Odalar</a><a href="#kahvalti">Kahvaltı</a><a href="#gezi">Gezilecekler</a><a href="#yorumlar">Yorumlar</a><a href="#musaitlik" style="color:var(--terra)">Müsaitlik Sor →</a>
+  </div></nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hand rv">Hoş geldiniz, buyurun çayımız taze!</span>
+      <h1 class="rv">Yaylanın eteğinde <span>sıcacık</span> bir ev</h1>
+      <p class="rv">Çay bahçelerinin ve fındık ağaçlarının arasında, sisin sabah sabah vadiye indiği küçük bir köy pansiyonu. Yalnızca 6 oda, kocaman bir kahvaltı sofrası ve bir aile.</p>
+      <div class="cta rv"><a href="#musaitlik" class="btn">WhatsApp'tan Sor</a><a href="#odalar" class="btn alt">Odalara Bak</a></div>
+      <div class="facts rv"><span>🌿 Doğa içinde</span><span>🍳 Köy kahvaltısı</span><span>🐾 Evcil dostu</span><span>🚗 Ücretsiz otopark</span></div>
+    </div>
+    <div class="collage rv" aria-hidden="true">
+      <figure class="pol p1" style="margin:0"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=1200&q=70&auto=format&fit=crop')"></div><figcaption>bizim ev</figcaption></figure>
+      <figure class="pol p2" style="margin:0"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=70&auto=format&fit=crop')"></div><figcaption>sabah sisi</figcaption></figure>
+      <div class="stamp">3 KUŞAK<br>AİLE<br>İŞLETMESİ</div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)"><path d="M0 46V20C180 0 360 40 540 26S900 0 1080 18s270 22 360 10V46Z" fill="#2e4a3a"/></svg>
+<section class="sec story" id="hikaye" style="padding-top:50px">
+  <div class="wrap">
+    <div class="img ph rv" style="background-image:url('https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Pansiyonun dış görünümü"></div>
+    <div class="rv">
+      <span class="hand">Hikâyemiz</span>
+      <h2 style="font-size:clamp(2rem,6vw,3rem);margin:8px 0 18px">Dedemizin taş evi, şimdi sizin de eviniz</h2>
+      <p>1962'de dedemiz Hasan Usta bu evi dere taşlarıyla, kendi elleriyle ördü. Yıllar sonra babaannemizin mutfağından yayılan mısır ekmeği kokusu misafirlerimizi karşılamaya başladı.</p>
+      <p>Bugün Ayten Hanım kahvaltıyı hazırlıyor, Mehmet Bey misafirleri yaylaya götürüyor, biz torunlar da her şeyin yolunda gitmesine çalışıyoruz. Burada misafir değil, ev halkı olursunuz.</p>
+      <div class="family">
+        <div><b>Ayten Hanım</b>Mutfağın sultanı</div>
+        <div><b>Mehmet Bey</b>Yayla rehberi</div>
+        <div><b>Elif &amp; Kerem</b>Her işe koşanlar</div>
+      </div>
+    </div>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream);transform:scaleY(-1)"><path d="M0 46V20C180 0 360 40 540 26S900 0 1080 18s270 22 360 10V46Z" fill="#2e4a3a"/></svg>
+
+<section class="sec" id="odalar">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="hand">Odalarımız</span><h2>Ahşap kokulu, pencereden vadi</h2><p>Her odada kendi banyosu, el örgüsü battaniyeler ve sabah çayı için küçük bir semaver.</p></div>
+    <div class="rooms">
+      <article class="room rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Çift kişilik oda"></div><div class="b"><h3>Fındık Odası</h3><div class="tags"><span>2 kişi</span><span>Vadi manzarası</span><span>Balkon</span></div><p>Çift kişilik yatak, ahşap balkon ve sabah güneşi. Balayı çiftlerinin favorisi.</p><div class="pr"><b>₺1.850</b><small>gecelik · kahvaltı dahil</small></div></div></article>
+      <article class="room rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Aile odası"></div><div class="b"><h3>Çay Bahçesi Odası</h3><div class="tags"><span>4 kişi</span><span>Aile</span><span>Bahçe katı</span></div><p>Bir çift kişilik ve iki tek yatak. Çocuklar doğrudan bahçeye çıkabilir.</p><div class="pr"><b>₺2.600</b><small>gecelik · kahvaltı dahil</small></div></div></article>
+      <article class="room rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Mutfaklı çatı katı"></div><div class="b"><h3>Çatı Katı</h3><div class="tags"><span>3 kişi</span><span>Mini mutfak</span><span>Şömine</span></div><p>Eğimli ahşap tavan, şömine ve yıldızları gösteren çatı penceresi.</p><div class="pr"><b>₺2.250</b><small>gecelik · kahvaltı dahil</small></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec bf" id="kahvalti">
+  <div class="wrap">
+    <div class="bf-imgs rv">
+      <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Kahvaltı sofrası"></div>
+      <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Sıcak içecek"></div>
+    </div>
+    <div class="rv">
+      <span class="hand">Sabahın en güzel saati</span>
+      <h2>Ayten Hanım'ın serpme köy kahvaltısı</h2>
+      <p>Neredeyse her şey bahçemizden ya da komşu köylerden gelir. Tereyağını kendimiz yayıkta çalkalarız, reçeller geçen yazın meyvelerinden.</p>
+      <ul class="menu-list">
+        <li>Mıhlama (kuymak)</li><li>Yayla tereyağı</li><li>Mısır ekmeği</li><li>Ev yapımı reçeller</li><li>Köy yumurtası</li><li>Karalahana sarması</li><li>Petek bal</li><li>Demlik çay, sınırsız</li>
+      </ul>
+      <span class="time">☀ Her sabah 08:00 – 11:00</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="gezi">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="hand">Yakınlarda</span><h2>Kapıdan çıkınca neler var?</h2><p>Mehmet Bey'e sorun, en güzel rotaları o bilir.</p></div>
+    <div class="acts">
+      <div class="act rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=70&auto=format&fit=crop')"></div><div><h3>Yayla Yürüyüşü</h3><p>Bulutların üstünde, çiçekli yamaçlarda rehberli günübirlik yürüyüş.</p><span class="km">12 km · araçla 25 dk</span></div></div>
+      <div class="act rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=1200&q=70&auto=format&fit=crop')"></div><div><h3>Orman Patikası</h3><p>Kayın ağaçları arasında, şelaleye inen kolay seviye patika.</p><span class="km">Pansiyondan yürüyerek 10 dk</span></div></div>
+      <div class="act rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=70&auto=format&fit=crop')"></div><div><h3>Krater Gölü</h3><p>Gün batımında piknik ve fotoğraf için eşsiz bir nokta.</p><span class="km">18 km · araçla 35 dk</span></div></div>
+      <div class="act rv"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=70&auto=format&fit=crop')"></div><div><h3>Çay Hasadı</h3><p>Mayıs–Eylül arası komşularımızla çay toplama deneyimi.</p><span class="km">Köy içinde</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="yorumlar" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="hand">Misafir defterimizden</span><h2>Giderken bıraktıkları notlar</h2></div>
+    <div class="quotes">
+      <div class="q rv"><p>“Kendimizi teyzemizin evinde gibi hissettik. Kuymağın tadı hâlâ damağımızda.”</p><span>— Zeynep &amp; Burak, Bursa</span></div>
+      <div class="q rv"><p>“Sabah sisinin vadiye inişini balkondan izlemek için bile tekrar geleceğiz.”</p><span>— Oğuz A., İstanbul</span></div>
+      <div class="q rv"><p>“Mehmet Bey'in yayla turu muhteşemdi. Çocuklar köpekleri Karabaş'a âşık oldu.”</p><span>— Demir ailesi, Eskişehir</span></div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--cream)"><path d="M0 46V20C180 0 360 40 540 26S900 0 1080 18s270 22 360 10V46Z" fill="#2e4a3a"/></svg>
+<section class="sec req" id="musaitlik" style="padding-top:50px">
+  <div class="wrap">
+    <div class="rv">
+      <span class="hand">Müsaitlik sorun</span>
+      <h2>Bir mesaj kadar uzağız</h2>
+      <p>Formu doldurun, mesajınız WhatsApp'ta hazır olarak açılsın. Genellikle 1 saat içinde dönüş yaparız (yayladaysak biraz gecikebilir!).</p>
+      <ul class="contact-list">
+        <li><i>📍</i><span>Gümüşyaprak Köyü, Yamaç Mah. No:7<br>Örnekdere / Rize</span></li>
+        <li><i>📞</i><a href="tel:+905416264074">0 (532) 000 00 00</a></li>
+        <li><i>🚌</i><span>İlçe merkezinden köy minibüsü ya da ücretsiz karşılama</span></li>
+      </ul>
+    </div>
+    <form class="card rv" id="waForm" novalidate>
+      <div class="f"><label for="ad">Adınız</label><input id="ad" type="text" placeholder="Ör. Ayşe Yılmaz" autocomplete="name"></div>
+      <div class="f h"><label for="gir">Giriş tarihi</label><input id="gir" type="date"></div>
+      <div class="f h"><label for="cik">Çıkış tarihi</label><input id="cik" type="date"></div>
+      <div class="f h"><label for="kisi">Kişi sayısı</label><select id="kisi"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+      <div class="f h"><label for="oda">Oda</label><select id="oda"><option>Fark etmez</option><option>Fındık Odası</option><option>Çay Bahçesi Odası</option><option>Çatı Katı</option></select></div>
+      <div class="f"><label for="not">Notunuz (isteğe bağlı)</label><textarea id="not" placeholder="Evcil hayvanımız var, yayla turuna katılmak istiyoruz..."></textarea></div>
+      <p class="msg" id="msg" role="alert"></p>
+      <button type="submit" class="btn">💬 WhatsApp ile Gönder</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fm">
+    <a href="#top" class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#3f6450"/><path d="M12 27c0-9 6-15 16-16-1 10-7 16-16 16Zm0 0 9-9" stroke="#e3aa3d" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>Yaprak Ev Pansiyon</a>
+    <div>Gümüşyaprak Köyü, Örnekdere / Rize · 0 (532) 000 00 00</div>
+    <div style="margin-top:6px;opacity:.7">© 2026 Yaprak Ev Pansiyon</div>
+  </div>
+  <a class="afm" href="https://wa.me/905416264074?text=Merhaba%2C%20örnek%20siteyi%20gördüm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini <b>AFM-CODING</b> ile yaptırın →</a>
+</footer>
+
+<script>
+(function(){
+  var PHONE='905416264074'; // pansiyonun WhatsApp numarası (örnek)
+  var hdr=document.getElementById('hdr'),bg=document.getElementById('burger');
+  addEventListener('scroll',function(){hdr.classList.toggle('sc',scrollY>10)},{passive:true});
+  bg.addEventListener('click',function(){var o=hdr.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');bg.setAttribute('aria-expanded','false')})});
+
+  var gir=document.getElementById('gir'),cik=document.getElementById('cik');
+  var iso=function(d){return new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+  var t=new Date();t.setHours(0,0,0,0);gir.min=iso(t);cik.min=iso(new Date(t.getTime()+864e5));
+  gir.addEventListener('change',function(){if(gir.value){var d=new Date(gir.value);d.setDate(d.getDate()+1);cik.min=iso(d);if(cik.value&&cik.value<=gir.value)cik.value=iso(d);}});
+  var tr=function(s){var p=s.split('-');return p[2]+'.'+p[1]+'.'+p[0]};
+
+  document.getElementById('waForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('msg'),ad=document.getElementById('ad').value.trim();
+    if(!ad){m.textContent='Lütfen adınızı yazın.';return;}
+    if(!gir.value||!cik.value||cik.value<=gir.value){m.textContent='Lütfen geçerli giriş ve çıkış tarihleri seçin.';return;}
+    m.textContent='';
+    var n=Math.round((new Date(cik.value)-new Date(gir.value))/864e5);
+    var note=document.getElementById('not').value.trim();
+    var txt='Merhaba Yaprak Ev 🌿\n\nMüsaitlik sormak istiyorum:\n'+
+      '• Ad: '+ad+'\n• Giriş: '+tr(gir.value)+'\n• Çıkış: '+tr(cik.value)+' ('+n+' gece)\n'+
+      '• Kişi: '+document.getElementById('kisi').value+'\n• Oda: '+document.getElementById('oda').value+
+      (note?'\n• Not: '+note:'')+'\n\nTeşekkürler!';
+    window.open('https://wa.me/'+PHONE+'?text='+encodeURIComponent(txt),'_blank','noopener');
+  });
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  }else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>

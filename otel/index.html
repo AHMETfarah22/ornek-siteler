@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maverra Kıyı Otel · Denize Sıfır Butik Lüks</title>
+<meta name="description" content="Maverra Kıyı Otel — denize sıfır konumda butik lüks konaklama. Deniz manzaralı odalar, spa, gurme restoran ve online rezervasyon.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e1a26">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e1a26;--ink-2:#17293a;--sand:#f3ece1;--sand-2:#e8dccb;--brass:#b08d57;--brass-2:#cfae78;
+  --text:#22303c;--muted:#6b7480;--line:rgba(14,26,38,.12);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;
+  --r:2px;--max:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--sans);font-weight:400;color:var(--text);background:var(--sand);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0;color:var(--ink)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);font-weight:500;display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.sec{padding:88px 0}
+.sec-head{max-width:620px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2.1rem,5.5vw,3.3rem);margin-top:14px}
+.sec-head p{color:var(--muted);margin:14px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 .78rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:17px 28px;border:1px solid var(--brass);background:var(--brass);color:#fff;text-decoration:none;cursor:pointer;transition:background .3s,color .3s,border-color .3s;border-radius:var(--r)}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.ph{background-color:var(--ink-2);background-size:cover;background-position:center}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,box-shadow .35s}
+.hdr.solid{background:rgba(14,26,38,.96);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--serif);color:#fff;text-decoration:none;font-size:1.55rem;letter-spacing:.06em;line-height:1}
+.logo small{display:block;font:500 .56rem/1 var(--sans);letter-spacing:.42em;color:var(--brass-2);margin-top:5px}
+.nav{display:none}
+.nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;transition:color .25s}
+.nav a:hover{color:var(--brass-2)}
+.burger{width:44px;height:44px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.burger span{display:block;width:24px;height:1px;background:#fff;position:relative;transition:transform .3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:24px;height:1px;background:#fff;transition:transform .3s,top .3s}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{top:0;transform:rotate(45deg)}
+.menu-open .burger span::after{top:0;transform:rotate(-45deg)}
+.mnav{position:fixed;inset:72px 0 0 0;background:var(--ink);z-index:49;display:flex;flex-direction:column;padding:34px 24px;gap:6px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s}
+.menu-open .mnav{opacity:1;transform:none;visibility:visible}
+.mnav a{color:#fff;text-decoration:none;font-family:var(--serif);font-size:2rem;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mnav .btn{margin-top:22px}
+@media(min-width:960px){
+  .nav{display:flex;gap:30px;align-items:center}
+  .burger,.mnav{display:none}
+}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;padding:120px 0 64px;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,26,38,.55) 0%,rgba(14,26,38,0) 65%),linear-gradient(180deg,rgba(14,26,38,.45) 0%,rgba(14,26,38,.1) 40%,rgba(14,26,38,.85) 100%)}
+.hero h1{color:#fff;font-size:clamp(2.9rem,10vw,6.2rem);font-weight:400;letter-spacing:-.01em;text-shadow:0 2px 30px rgba(14,26,38,.35)}
+.hero h1 em{color:var(--brass-2);font-style:italic}
+.hero p{max-width:460px;color:rgba(255,255,255,.85);font-weight:300;font-size:1.06rem;margin:20px 0 30px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:46px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero .meta b{display:block;font:400 1.9rem/1 var(--serif);letter-spacing:0;text-transform:none;color:#fff;margin-bottom:4px}
+
+/* intro */
+.intro{display:grid;gap:40px;align-items:center}
+.intro .img{aspect-ratio:4/5;position:relative}
+.intro .img .badge{position:absolute;right:-1px;bottom:-1px;background:var(--sand);padding:18px 22px;font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
+.intro .img .badge b{display:block;font-size:2.4rem;color:var(--brass);font-weight:500;line-height:1}
+.intro h2{font-size:clamp(2rem,5vw,3rem);margin:14px 0 18px}
+.intro p{color:var(--muted)}
+.sig{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--ink);margin-top:22px}
+@media(min-width:860px){.intro{grid-template-columns:1fr 1.05fr;gap:80px}}
+
+/* rooms */
+.rooms{background:#fff}
+.room-grid{display:grid;gap:28px}
+.room{background:var(--sand);display:flex;flex-direction:column;transition:transform .4s,box-shadow .4s}
+.room:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(14,26,38,.45)}
+.room .ph{aspect-ratio:3/2}
+.room .body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
+.room h3{font-size:1.75rem}
+.room .specs{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 14px}
+.room p{margin:0 0 20px;color:var(--muted);font-size:.95rem}
+.room .foot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.price{font-family:var(--serif);font-size:2rem;color:var(--ink);line-height:1}
+.price small{font:400 .72rem var(--sans);color:var(--muted);letter-spacing:.06em;display:block;margin-top:6px}
+.room .pick{font:500 .72rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--brass);background:none;border:0;border-bottom:1px solid currentColor;padding:4px 0;cursor:pointer}
+@media(min-width:720px){.room-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1060px){.room-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* amenities */
+.amen{background:var(--ink);color:#fff}
+.amen h2{color:#fff}
+.amen .sec-head p{color:rgba(255,255,255,.65)}
+.amen-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+.am{padding:28px 20px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.am svg{width:30px;height:30px;stroke:var(--brass-2);fill:none;stroke-width:1.2;margin-bottom:16px}
+.am h3{color:#fff;font-size:1.35rem;margin-bottom:6px}
+.am p{margin:0;font-size:.86rem;color:rgba(255,255,255,.6)}
+@media(min-width:900px){.amen-grid{grid-template-columns:repeat(4,1fr)}.am{padding:38px 30px}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;grid-auto-rows:150px}
+.gal .ph{transition:filter .4s}
+.gal .ph:hover{filter:brightness(1.08)}
+.gal .t{grid-row:span 2}
+.gal .w{grid-column:span 2}
+@media(min-width:860px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}}
+
+/* reviews */
+.reviews{background:var(--sand-2)}
+.rev-grid{display:grid;gap:22px}
+.rev{background:var(--sand);padding:30px 26px;position:relative}
+.rev::before{content:"\201C";font-family:var(--serif);font-size:4.5rem;line-height:1;color:var(--brass);position:absolute;top:14px;right:22px;opacity:.5}
+.stars{color:var(--brass);letter-spacing:3px;font-size:.9rem}
+.rev blockquote{margin:14px 0 18px;font-family:var(--serif);font-size:1.28rem;line-height:1.45;color:var(--ink)}
+.rev cite{font-style:normal;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.score{display:flex;align-items:center;gap:18px;margin-bottom:38px}
+.score b{font-family:var(--serif);font-size:3.6rem;font-weight:500;color:var(--ink);line-height:1}
+.score span{font-size:.85rem;color:var(--muted)}
+@media(min-width:860px){.rev-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* booking */
+.book{background:#fff}
+.book-grid{display:grid;gap:30px}
+.form{display:grid;gap:16px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.book-grid>*,.loc>*,.intro>*{min-width:0}
+.field{display:flex;flex-direction:column;gap:7px;grid-column:span 2}
+.field.half{grid-column:span 1}
+.field label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.field input,.field select{font:400 1rem var(--sans);color:var(--ink);padding:14px 14px;border:1px solid var(--line);background:var(--sand);border-radius:var(--r);width:100%;min-width:0;appearance:none;-webkit-appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--brass) 50%),linear-gradient(135deg,var(--brass) 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:36px}
+.field input:focus,.field select:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 3px rgba(176,141,87,.18)}
+.form .btn{grid-column:span 2;margin-top:6px}
+.err{grid-column:span 2;color:#a2412c;font-size:.86rem;min-height:1.2em;margin:-4px 0 0}
+.summary{background:var(--ink);color:#fff;padding:30px 26px;align-self:start}
+.summary h3{color:#fff;font-size:1.8rem;margin-bottom:6px}
+.summary .lead{color:rgba(255,255,255,.6);font-size:.9rem;margin:0 0 22px}
+.summary dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 16px;font-size:.92rem}
+.summary dt{color:rgba(255,255,255,.55)}
+.summary dd{margin:0;text-align:right}
+.summary .total{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);display:flex;justify-content:space-between;align-items:baseline}
+.summary .total b{font-family:var(--serif);font-size:2.4rem;font-weight:500;color:var(--brass-2)}
+.summary .note{font-size:.78rem;color:rgba(255,255,255,.5);margin:16px 0 0}
+.confirm{display:none;margin-top:20px;padding:16px;border:1px solid var(--brass);color:var(--brass-2);font-size:.9rem}
+.confirm.show{display:block}
+@media(min-width:900px){.book-grid{grid-template-columns:1.2fr .8fr;gap:60px}.summary{position:sticky;top:96px}}
+
+/* location */
+.loc{display:grid;gap:30px}
+.map{position:relative;min-height:320px;background:#d9cdb9;overflow:hidden;border:1px solid var(--line)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:52%;top:46%;transform:translate(-50%,-100%);background:var(--ink);color:#fff;padding:10px 14px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.pin::after{content:"";position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);border:8px solid transparent;border-bottom:0;border-top-color:var(--ink)}
+.loc ul{list-style:none;padding:0;margin:24px 0 0}
+.loc li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.loc li span:last-child{color:var(--brass);font-weight:500;white-space:nowrap}
+.contact{margin-top:26px;font-size:.95rem;color:var(--muted)}
+.contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brass)}
+@media(min-width:900px){.loc{grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}.map{min-height:440px}}
+
+/* footer */
+.foot-main{background:var(--ink);color:rgba(255,255,255,.6);padding:60px 0 34px;font-size:.88rem}
+.foot-main .wrap{display:grid;gap:30px}
+.foot-main .logo{font-size:1.8rem}
+.foot-main h4{color:#fff;font:500 .7rem var(--sans);letter-spacing:.24em;text-transform:uppercase;margin:0 0 12px}
+.foot-main a{text-decoration:none}
+.foot-main a:hover{color:var(--brass-2)}
+.copy{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;font-size:.78rem}
+@media(min-width:800px){.foot-main .wrap{grid-template-columns:1.4fr 1fr 1fr}.copy{grid-column:1/-1}}
+.afm{display:block;text-align:center;background:#0a131c;color:rgba(255,255,255,.7);font:400 .8rem/1.4 var(--sans);letter-spacing:.04em;padding:13px 16px;text-decoration:none;transition:color .25s}
+.afm:hover{color:var(--brass-2)}
+.afm b{font-weight:600;color:#fff}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo">MAVERRA<small>KIYI OTEL</small></a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#odalar">Odalar</a><a href="#olanaklar">Olanaklar</a><a href="#galeri">Galeri</a><a href="#yorumlar">Yorumlar</a><a href="#konum">Konum</a>
+      <a href="#rezervasyon" class="btn" style="padding:13px 20px;color:#fff">Rezervasyon</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobil menü">
+  <a href="#odalar">Odalar</a><a href="#olanaklar">Olanaklar</a><a href="#galeri">Galeri</a><a href="#yorumlar">Yorumlar</a><a href="#konum">Konum</a>
+  <a href="#rezervasyon" class="btn">Rezervasyon Yap</a>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="bg ph" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=70&auto=format&fit=crop')"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Denize sıfır · 42 oda &amp; süit</span>
+    <h1 class="rv">Ege'nin <em>en sakin</em><br>kıyısında</h1>
+    <p class="rv">Turkuaz bir koyun kenarında, yalnızca deniz sesinin olduğu bir sabah. Maverra'da her ayrıntı sizin dinginliğiniz için tasarlandı.</p>
+    <div class="cta rv">
+      <a href="#rezervasyon" class="btn">Müsaitlik Sorgula</a>
+      <a href="#odalar" class="btn ghost">Odaları Keşfet</a>
+    </div>
+    <div class="meta rv">
+      <div><b>9.6</b>Misafir puanı</div>
+      <div><b>120 m</b>Özel plaj</div>
+      <div><b>7/24</b>Concierge</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap intro">
+    <div class="img ph rv" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=70&auto=format&fit=crop')">
+      <div class="badge"><b>1987</b>yılından beri</div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Hoş geldiniz</span>
+      <h2>Bir otelden fazlası: kıyıda bir yaşam biçimi</h2>
+      <p>Zeytin ağaçlarıyla çevrili yamaçta, eski bir sünger avcısı konağından dönüşen Maverra; taş, keten ve meşeyi Ege ışığıyla buluşturur. Odalarımızın tamamı denize bakar, sabahları kahvaltınız teraslarda servis edilir.</p>
+      <p>Kalabalıktan uzak, ama her şeye yakın. Akşamları marina yürüyüşü, gündüzleri ise yalnızca size ait bir şezlong.</p>
+      <div class="sig">— Selin &amp; Arda Kıyıcı, ev sahipleriniz</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rooms" id="odalar">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Odalar &amp; Süitler</span>
+      <h2>Size uygun manzarayı seçin</h2>
+      <p>Tüm fiyatlar gecelik, iki kişi için kahvaltı dahildir. Erken rezervasyonda %10 indirim.</p>
+    </div>
+    <div class="room-grid" id="roomGrid"></div>
+  </div>
+</section>
+
+<section class="sec amen" id="olanaklar">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Olanaklar</span>
+      <h2>Konforun her hâli</h2>
+      <p>Konaklamanızı kusursuz kılmak için düşünülmüş ayrıcalıklar.</p>
+    </div>
+    <div class="amen-grid rv">
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M3 22c3 0 3-2 6.5-2S13 22 16 22s3-2 6.5-2S26 22 29 22M3 27c3 0 3-2 6.5-2S13 27 16 27s3-2 6.5-2S26 27 29 27M10 18V6a3 3 0 0 1 6 0M22 18V6a3 3 0 0 0-6 0M10 10h12M10 14h12"/></svg><h3>Sonsuzluk Havuzu</h3><p>Isıtmalı, denize akan 25 m havuz.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M16 4c4 5 4 9 0 13-4-4-4-8 0-13ZM6 12c5 1 8 4 10 9-5 0-8-3-10-9ZM26 12c-5 1-8 4-10 9 5 0 8-3 10-9ZM6 26h20"/></svg><h3>Thalassa Spa</h3><p>Hamam, sauna ve deniz tuzu bakımları.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M8 4v10a3 3 0 0 0 6 0V4M11 4v24M22 28V4c-3 2-4 6-4 10h4"/></svg><h3>Gurme Restoran</h3><p>Yerel üreticilerden mevsimsel menü.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M4 22h24l-3 5H7zM16 22V5l9 13H16M16 8l-7 10h7"/></svg><h3>Özel İskele</h3><p>Tekne turları ve koy transferi.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M5 12a16 16 0 0 1 22 0M9 16a10 10 0 0 1 14 0M13 20a4 4 0 0 1 6 0M16 25h.01"/></svg><h3>Hızlı Wi‑Fi</h3><p>Tüm alanlarda fiber bağlantı.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M5 20h22v4H5zM8 20v-6a8 8 0 0 1 16 0v6M16 6V4"/></svg><h3>Oda Servisi</h3><p>Günün her saati menüden sipariş.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M6 23h20M9 23l2-8h10l2 8M11 15l1-5h8l1 5M10 27h.01M22 27h.01"/></svg><h3>Havalimanı Transferi</h3><p>VIP araçla karşılama hizmeti.</p></div>
+      <div class="am"><svg viewBox="0 0 32 32"><path d="M10 6h12v6a6 6 0 0 1-12 0zM16 18v6M11 27h10M22 8h3a3 3 0 0 1-3 4M10 8H7a3 3 0 0 0 3 4"/></svg><h3>Çocuk Kulübü</h3><p>Pedagog eşliğinde gün boyu etkinlik.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="galeri">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Galeri</span>
+      <h2>Kıyıdan kareler</h2>
+    </div>
+    <div class="gal rv">
+      <div class="ph t" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Havuz ve şezlonglar"></div>
+      <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Oda detayı"></div>
+      <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Spa"></div>
+      <div class="ph w" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Kumsal ve deniz"></div>
+      <div class="ph w" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Restoran"></div>
+      <div class="ph t" style="background-image:url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Banyo"></div>
+      <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Resort havuzu"></div>
+      <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=1200&q=70&auto=format&fit=crop')" role="img" aria-label="Akşam havuz"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec reviews" id="yorumlar">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Misafir Yorumları</span>
+      <h2>Bizi en iyi misafirlerimiz anlatır</h2>
+    </div>
+    <div class="score rv"><b>9.6</b><span>1.240+ doğrulanmış<br>misafir değerlendirmesi</span></div>
+    <div class="rev-grid">
+      <figure class="rev rv" style="margin:0"><div class="stars">★★★★★</div><blockquote>Balkondan gün doğumunu izlerken kahvaltı yapmak paha biçilemezdi. Personelin ilgisi gerçekten kusursuz.</blockquote><cite>Deniz K. · İstanbul</cite></figure>
+      <figure class="rev rv" style="margin:0"><div class="stars">★★★★★</div><blockquote>Spa'daki hamam ritüeli tatilin en güzel anıydı. Süitimiz fotoğraflardan bile daha etkileyiciydi.</blockquote><cite>Melis &amp; Can · Ankara</cite></figure>
+      <figure class="rev rv" style="margin:0"><div class="stars">★★★★★</div><blockquote>Çocuklarla gelmemize rağmen huzurlu bir tatil geçirdik. Restoranın levrek tabağını unutamıyoruz.</blockquote><cite>Ayşe T. · İzmir</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="rezervasyon">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Online Rezervasyon</span>
+      <h2>Tarihlerinizi seçin, fiyatınızı anında görün</h2>
+      <p>Komisyonsuz, doğrudan rezervasyon ile en iyi fiyat garantisi.</p>
+    </div>
+    <div class="book-grid">
+      <form class="form rv" id="bookForm" novalidate>
+        <div class="field half"><label for="cin">Giriş</label><input type="date" id="cin" required></div>
+        <div class="field half"><label for="cout">Çıkış</label><input type="date" id="cout" required></div>
+        <div class="field half"><label for="adults">Yetişkin</label><select id="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+        <div class="field half"><label for="kids">Çocuk</label><select id="kids"><option selected>0</option><option>1</option><option>2</option></select></div>
+        <div class="field"><label for="room">Oda Tipi</label><select id="room"></select></div>
+        <div class="field"><label for="name">Ad Soyad</label><input type="text" id="name" placeholder="Adınız ve soyadınız" autocomplete="name"></div>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn" type="submit">Rezervasyonu Tamamla</button>
+      </form>
+      <aside class="summary rv" aria-live="polite">
+        <h3>Rezervasyon Özeti</h3>
+        <p class="lead" id="sumLead">Tarih seçtiğinizde fiyat otomatik hesaplanır.</p>
+        <dl>
+          <dt>Oda</dt><dd id="sRoom">—</dd>
+          <dt>Tarihler</dt><dd id="sDates">—</dd>
+          <dt>Misafir</dt><dd id="sGuests">—</dd>
+          <dt>Gecelik</dt><dd id="sNight">—</dd>
+          <dt>Gece sayısı</dt><dd id="sCount">—</dd>
+        </dl>
+        <div class="total"><span>Toplam</span><b id="sTotal">₺0</b></div>
+        <p class="note">KDV ve konaklama vergisi dahildir. Girişten 72 saat öncesine kadar ücretsiz iptal.</p>
+        <div class="confirm" id="confirm"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="konum" style="padding-top:0">
+  <div class="wrap loc">
+    <div class="rv">
+      <span class="eyebrow">Konum</span>
+      <h2 style="font-size:clamp(2rem,5vw,3rem);margin-top:14px">Koyun tam kalbinde</h2>
+      <ul>
+        <li><span>Havalimanı</span><span>35 dk</span></li>
+        <li><span>Marina &amp; çarşı</span><span>8 dk yürüme</span></li>
+        <li><span>Antik tiyatro</span><span>15 dk</span></li>
+        <li><span>Gizli koylar (tekne)</span><span>20 dk</span></li>
+      </ul>
+      <p class="contact">Örnek Koyu Cad. No:12, Kıyıköy Mah., Muğla<br>
+      <a href="tel:+905320000000">0 (532) 000 00 00</a> · <a href="mailto:rezervasyon@maverra-ornek.com">rezervasyon@maverra-ornek.com</a></p>
+    </div>
+    <div class="map rv" role="img" aria-label="Harita (temsili)">
+      <svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="600" height="440" fill="#dccfb9"/>
+        <path d="M0 300 C120 260 160 340 260 300 S420 220 600 260 V440 H0Z" fill="#9fb7bf"/>
+        <path d="M0 330 C140 300 170 370 280 330 S430 260 600 300" fill="none" stroke="#f3ece1" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/>
+        <path d="M40 60 L560 120 M120 0 L200 440 M380 0 L330 300 M0 200 L600 170" stroke="#efe6d6" stroke-width="10"/>
+        <path d="M40 60 L560 120 M0 200 L600 170" stroke="#c9b48e" stroke-width="2"/>
+        <circle cx="140" cy="110" r="26" fill="#c7c39f"/><circle cx="470" cy="80" r="34" fill="#c7c39f"/><circle cx="230" cy="220" r="18" fill="#c7c39f"/>
+      </svg>
+      <div class="pin">Maverra Kıyı Otel</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot-main">
+    <div class="wrap">
+      <div><a href="#top" class="logo">MAVERRA<small>KIYI OTEL</small></a><p style="max-width:320px;margin-top:16px">Denize sıfır butik lüks konaklama. Her mevsim, kıyıda sakin bir sığınak.</p></div>
+      <div><h4>Keşfet</h4><a href="#odalar">Odalar</a><br><a href="#olanaklar">Olanaklar</a><br><a href="#galeri">Galeri</a><br><a href="#rezervasyon">Rezervasyon</a></div>
+      <div><h4>İletişim</h4>0 (532) 000 00 00<br>rezervasyon@maverra-ornek.com<br>Kıyıköy Mah., Muğla</div>
+      <div class="copy">© 2026 Maverra Kıyı Otel · Tüm hakları saklıdır.</div>
+    </div>
+  </div>
+  <a class="afm" href="https://wa.me/905416264074?text=Merhaba%2C%20örnek%20siteyi%20gördüm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini <b>AFM-CODING</b> ile yaptırın →</a>
+</footer>
+
+<script>
+(function(){
+  var U='?w=1200&q=70&auto=format&fit=crop',I='https://images.unsplash.com/photo-';
+  var rooms=[
+    {id:'klasik',name:'Klasik Oda',m2:28,cap:2,view:'Bahçe & deniz',price:4200,img:'1611892440504-42a792e24d32',desc:'Keten nevresimler, yağmur duşu ve zeytin bahçesine açılan Fransız balkon.'},
+    {id:'deluxe',name:'Deluxe Deniz',m2:36,cap:3,view:'Tam deniz',price:5800,img:'1590490360182-c33d57733427',desc:'Gün doğumuna bakan geniş teras, oturma köşesi ve espresso makinesi.'},
+    {id:'aile',name:'Aile Süiti',m2:52,cap:4,view:'Deniz & havuz',price:7900,img:'1596394516093-501ba68a0ba6',desc:'İki ayrı yatak odası, çocuklar için ranza ve havuza doğrudan erişim.'},
+    {id:'junior',name:'Junior Süit',m2:44,cap:2,view:'Panoramik',price:8600,img:'1618773928121-c32242e63f39',desc:'Serbest duran küvet, şarap dolabı ve koyun tamamını gören köşe konum.'},
+    {id:'teras',name:'Teras Süit',m2:68,cap:3,view:'Panoramik',price:11500,img:'1631049307264-da0ec9d70304',desc:'Özel jakuzili çatı terası, butler hizmeti ve günbatımı kokteyli.'},
+    {id:'villa',name:'Kıyı Villa',m2:120,cap:4,view:'Özel plaj',price:18900,img:'1582719478250-c89cae4dc85b',desc:'Kendi havuzu ve iskelesi olan bağımsız villa; tam mahremiyet.'}
+  ];
+  var fmt=function(n){return '₺'+n.toLocaleString('tr-TR')};
+  var grid=document.getElementById('roomGrid'),sel=document.getElementById('room');
+  rooms.forEach(function(r){
+    var el=document.createElement('article');el.className='room rv';
+    el.innerHTML='<div class="ph" style="background-image:url(\''+I+r.img+U+'\')" role="img" aria-label="'+r.name+'"></div><div class="body"><h3>'+r.name+'</h3><div class="specs"><span>'+r.m2+' m²</span><span>'+r.cap+' kişi</span><span>'+r.view+'</span></div><p>'+r.desc+'</p><div class="foot"><div class="price">'+fmt(r.price)+'<small>gecelik / kahvaltı dahil</small></div><button class="pick" type="button" data-id="'+r.id+'">Seç</button></div></div>';
+    grid.appendChild(el);
+    var o=document.createElement('option');o.value=r.id;o.textContent=r.name+' — '+fmt(r.price)+' / gece';sel.appendChild(o);
+  });
+  grid.addEventListener('click',function(e){var b=e.target.closest('.pick');if(!b)return;sel.value=b.dataset.id;calc();document.getElementById('rezervasyon').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+
+  var cin=document.getElementById('cin'),cout=document.getElementById('cout'),ad=document.getElementById('adults'),kd=document.getElementById('kids'),err=document.getElementById('err');
+  var iso=function(d){return new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10)};
+  var today=new Date();today.setHours(0,0,0,0);
+  cin.min=iso(today);
+  var t1=new Date(today);t1.setDate(t1.getDate()+14);var t2=new Date(t1);t2.setDate(t2.getDate()+3);
+  cin.value=iso(t1);cout.value=iso(t2);cout.min=iso(new Date(t1.getTime()+864e5));
+  var trDate=function(s){var p=s.split('-');return p[2]+'.'+p[1]+'.'+p[0]};
+
+  function calc(){
+    var r=rooms.filter(function(x){return x.id===sel.value})[0];
+    var g=+ad.value+ +kd.value;err.textContent='';
+    document.getElementById('confirm').classList.remove('show');
+    if(cin.value){var mn=new Date(cin.value);mn.setDate(mn.getDate()+1);cout.min=iso(mn);}
+    var n=0;
+    if(cin.value&&cout.value){n=Math.round((new Date(cout.value)-new Date(cin.value))/864e5);}
+    document.getElementById('sRoom').textContent=r.name;
+    document.getElementById('sNight').textContent=fmt(r.price);
+    document.getElementById('sGuests').textContent=ad.value+' yetişkin'+(+kd.value?', '+kd.value+' çocuk':'');
+    if(g>r.cap)err.textContent='Seçtiğiniz oda en fazla '+r.cap+' kişiliktir. Lütfen daha geniş bir oda seçin.';
+    if(n>0){
+      document.getElementById('sDates').textContent=trDate(cin.value)+' – '+trDate(cout.value);
+      document.getElementById('sCount').textContent=n+' gece';
+      document.getElementById('sTotal').textContent=fmt(n*r.price);
+      document.getElementById('sumLead').textContent=n+' gece × '+fmt(r.price)+' = '+fmt(n*r.price);
+    }else{
+      document.getElementById('sDates').textContent='—';document.getElementById('sCount').textContent='—';
+      document.getElementById('sTotal').textContent='₺0';
+      document.getElementById('sumLead').textContent='Çıkış tarihi girişten sonra olmalıdır.';
+    }
+    return {r:r,n:n,g:g};
+  }
+  [cin,cout,ad,kd,sel].forEach(function(el){el.addEventListener('change',calc)});
+  calc();
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();var c=calc();
+    if(c.n<1){err.textContent='Lütfen geçerli giriş ve çıkış tarihleri seçin.';return;}
+    if(c.g>c.r.cap)return;
+    var nm=document.getElementById('name').value.trim();
+    if(!nm){err.textContent='Lütfen adınızı ve soyadınızı yazın.';return;}
+    var code='MV-'+Math.random().toString(36).slice(2,8).toUpperCase();
+    var box=document.getElementById('confirm');
+    box.innerHTML='Teşekkürler <b>'+nm.replace(/[<>&"]/g,'')+'</b>! Ön rezervasyonunuz alındı. Referans kodunuz: <b>'+code+'</b><br><small>(Bu bir demo sitedir, gerçek rezervasyon oluşturulmaz.)</small>';
+    box.classList.add('show');
+  });
+
+  // header + menu
+  var hdr=document.getElementById('hdr'),bg=document.getElementById('burger');
+  var onS=function(){hdr.classList.toggle('solid',scrollY>40||document.body.classList.contains('menu-open'))};
+  addEventListener('scroll',onS,{passive:true});onS();
+  bg.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');onS();});
+  document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');bg.setAttribute('aria-expanded','false');onS();})});
+
+  // reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>

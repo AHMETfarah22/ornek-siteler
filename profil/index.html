@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defne Aral — Mimar</title>
+<meta name="description" content="Mimar Defne Aral'ın portfolyosu: konut, kamusal yapı ve restorasyon projeleri. İstanbul merkezli küçük ölçekli mimarlık pratiği.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E9ECEE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E9ECEE;
+  --sheet:#F7F8F9;
+  --ink:#171A1F;
+  --graphite:#4A5260;
+  --line:#C3C9D0;
+  --cobalt:#2340A8;
+  --cobalt-soft:#DCE2F5;
+  --pad:clamp(16px,4vw,48px);
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-stretch:100%;font-size:17px;line-height:1.6;overflow-x:clip;padding-bottom:56px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+section{scroll-margin-top:72px}
+.wide{font-stretch:125%;letter-spacing:-.01em}
+.narrow{font-stretch:75%}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.scrolled{border-bottom-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:750;font-stretch:125%;text-decoration:none;font-size:15px;letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:14px;height:14px;border:2px solid var(--cobalt);position:relative}
+.logo i::after{content:"";position:absolute;inset:3px 3px auto auto;width:4px;height:4px;background:var(--cobalt)}
+.nav{display:flex;gap:28px;font-size:15px}
+.nav a{text-decoration:none;color:var(--graphite);padding:6px 0;border-bottom:1.5px solid transparent}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--cobalt)}
+.menu-btn{display:none;background:none;border:0;padding:10px;margin-right:-10px;cursor:pointer;color:var(--ink)}
+.menu-btn span{display:block;width:22px;height:2px;background:currentColor;margin:5px 0;transition:transform .25s,opacity .2s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:760px){
+  .menu-btn{display:block}
+  .nav{position:fixed;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--sheet);border-bottom:1px solid var(--line);padding:8px var(--pad) 20px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+  .nav.open{opacity:1;visibility:visible;transform:none}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:18px;color:var(--ink)}
+  .nav a:last-child{border-bottom:0}
+}
+
+/* hero */
+.hero{padding:clamp(28px,6vw,72px) 0 0;position:relative}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;opacity:.45;-webkit-mask-image:linear-gradient(#000 40%,transparent 85%);mask-image:linear-gradient(#000 40%,transparent 85%)}
+.hero .wrap{position:relative}
+.hero h1{margin:0;font-weight:800;font-stretch:125%;line-height:.88;letter-spacing:-.035em;font-size:clamp(52px,14.2vw,188px)}
+.hero h1 span{display:block}
+.hero h1 .l2{font-weight:300;font-stretch:62%;letter-spacing:-.02em;color:var(--cobalt);padding-left:clamp(0px,12vw,180px)}
+.hero-meta{display:grid;grid-template-columns:1fr;gap:20px;margin:clamp(24px,4vw,44px) 0 clamp(28px,4vw,48px)}
+.hero-meta p{margin:0;max-width:34ch;font-size:clamp(18px,2vw,22px);line-height:1.45}
+.hero-meta dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;font-size:14px;color:var(--graphite);align-self:end}
+.hero-meta dt{font-stretch:75%;font-weight:600;color:var(--ink)}
+.hero-meta dd{margin:0}
+@media (min-width:820px){.hero-meta{grid-template-columns:1.2fr 1fr;align-items:end}.hero-meta dl{justify-self:end}}
+.hero-img{position:relative;background:#B9C0C7;aspect-ratio:16/9;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-img figcaption{position:absolute;left:0;bottom:0;background:var(--sheet);font-size:13px;padding:8px 14px;color:var(--graphite)}
+@media (max-width:600px){.hero-img{aspect-ratio:4/5}}
+
+/* section heads */
+.sec{padding:clamp(72px,10vw,140px) 0 0}
+.sec-head{display:grid;gap:12px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2{margin:0;font-weight:750;font-stretch:125%;letter-spacing:-.025em;line-height:1;font-size:clamp(34px,6vw,72px)}
+.sec-head p{margin:0;color:var(--graphite);max-width:52ch}
+@media (min-width:900px){.sec-head{grid-template-columns:1fr 1fr;align-items:end}.sec-head p{justify-self:end}}
+
+/* projects */
+.projects{display:grid;gap:clamp(48px,7vw,96px)}
+.proj{display:grid;gap:20px}
+.proj-img{background:#BCC3CA;overflow:hidden;aspect-ratio:4/3}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.proj:hover .proj-img img{transform:scale(1.03)}
+.proj h3{margin:0 0 6px;font-size:clamp(24px,3vw,34px);font-weight:700;font-stretch:110%;letter-spacing:-.02em;line-height:1.1}
+.proj p{margin:0 0 16px;color:var(--graphite);max-width:46ch}
+.spec{width:100%;border-collapse:collapse;font-size:14px}
+.spec th,.spec td{text-align:left;padding:8px 0;border-top:1px solid var(--line);vertical-align:top}
+.spec th{font-weight:600;font-stretch:75%;width:38%;color:var(--graphite)}
+@media (min-width:900px){
+  .proj{grid-template-columns:7fr 4fr;gap:48px;align-items:end}
+  .proj.flip{grid-template-columns:4fr 7fr}
+  .proj.flip .proj-img{order:2}
+  .proj.tall .proj-img{aspect-ratio:4/5}
+}
+
+/* about */
+.about{display:grid;gap:40px}
+.portrait{background:#B6BDC4;aspect-ratio:4/5;overflow:hidden;max-width:460px}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35) contrast(1.05)}
+.about-text p{margin:0 0 1em;max-width:60ch}
+.about-text .lead{font-size:clamp(21px,2.4vw,28px);line-height:1.35;font-weight:400;letter-spacing:-.01em;max-width:30ch}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.facts div{background:var(--paper);padding:16px}
+.facts b{display:block;font-size:clamp(28px,4vw,40px);font-weight:300;font-stretch:62%;line-height:1;color:var(--cobalt)}
+.facts span{font-size:14px;color:var(--graphite)}
+@media (min-width:900px){.about{grid-template-columns:5fr 7fr;gap:72px}.facts{grid-template-columns:repeat(4,1fr)}}
+
+/* approach */
+.principles{display:grid;gap:0;border-top:2px solid var(--ink)}
+.principle{display:grid;gap:8px;padding:28px 0;border-bottom:1px solid var(--line)}
+.principle h3{margin:0;font-size:clamp(22px,2.6vw,30px);font-weight:700;font-stretch:115%;letter-spacing:-.02em;line-height:1.15}
+.principle p{margin:0;color:var(--graphite);max-width:58ch}
+@media (min-width:900px){.principle{grid-template-columns:5fr 7fr;gap:48px;padding:36px 0}}
+
+/* services */
+.svc-list{display:grid;gap:0;border-top:1px solid var(--line);margin-top:clamp(48px,6vw,72px)}
+.svc-item{display:grid;gap:4px;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc-item h3{margin:0;font-size:19px;font-weight:650}
+.svc-item p{margin:0;color:var(--graphite);font-size:16px;max-width:52ch}
+.svc-item span{font-stretch:75%;font-weight:600;font-size:15px;color:var(--cobalt)}
+@media (min-width:900px){.svc-list{grid-template-columns:1fr 1fr;column-gap:56px}.svc-item{grid-template-columns:1fr auto;align-items:baseline}.svc-item p{grid-column:1/-1}}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline li{display:grid;grid-template-columns:72px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.timeline time{font-stretch:62%;font-weight:600;font-size:22px;color:var(--cobalt);line-height:1.2}
+.timeline b{display:block;font-weight:600}
+.timeline span{color:var(--graphite);font-size:15px}
+@media (min-width:900px){.timeline li{grid-template-columns:140px 1fr 1fr;gap:32px}.timeline time{font-size:30px}}
+
+/* quote */
+.quote{margin:0;padding:clamp(40px,6vw,72px) clamp(20px,5vw,72px);background:var(--cobalt);color:#F2F4FB}
+.quote p{margin:0 0 24px;font-size:clamp(22px,3vw,36px);line-height:1.3;font-weight:350;letter-spacing:-.015em;max-width:36ch}
+.quote cite{font-style:normal;font-size:15px;opacity:.85}
+
+/* contact */
+.contact{padding:clamp(72px,10vw,140px) 0 clamp(48px,6vw,80px)}
+.contact h2{margin:0 0 28px;font-weight:800;font-stretch:125%;letter-spacing:-.035em;line-height:.92;font-size:clamp(40px,9vw,120px)}
+.contact-grid{display:grid;gap:28px;border-top:2px solid var(--ink);padding-top:28px}
+.contact-grid h3{margin:0 0 6px;font-size:14px;font-weight:600;font-stretch:75%;color:var(--graphite)}
+.contact-grid p{margin:0}
+.contact-grid a{text-decoration:none;border-bottom:1.5px solid var(--cobalt)}
+.contact-grid a:hover{color:var(--cobalt)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--sheet);text-decoration:none;padding:16px 26px;font-weight:600;font-size:16px;margin-top:8px;border:0 !important;transition:background .2s}
+.btn:hover{background:var(--cobalt);color:#fff !important}
+@media (min-width:820px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:14px;color:var(--graphite)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* demo ribbon */
+.demo-ribbon{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:90;display:block;max-width:calc(100% - 24px);width:max-content;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;line-height:1.35;padding:9px 16px;border-radius:999px;box-shadow:0 6px 20px rgba(23,26,31,.25);text-align:center}
+.demo-ribbon:hover{background:var(--cobalt)}
+
+/* reveal */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+  .hero h1 span{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 .l2{animation-delay:.12s}
+  @keyframes rise{from{opacity:0;transform:translateY(.25em)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Defne Aral, başa dön"><i aria-hidden="true"></i>Defne Aral</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menüyü aç"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#projeler">Projeler</a>
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#yaklasim">Yaklaşım</a>
+      <a href="#ozgecmis">Özgeçmiş</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <h1><span>Defne</span><span class="l2">Aral, mimar</span></h1>
+      <div class="hero-meta">
+        <p>Işığı, eşiği ve malzemeyi önemseyen küçük ölçekli yapılar tasarlıyorum. Konut, atölye ve tarihi yapı dönüşümleri.</p>
+        <dl>
+          <dt>Ofis</dt><dd>Kadıköy, İstanbul</dd>
+          <dt>Pratik</dt><dd>2012'den beri</dd>
+          <dt>Durum</dt><dd>2027 bahar dönemi için yeni iş kabul ediliyor</dd>
+        </dl>
+      </div>
+      <figure class="hero-img" style="margin:0">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=70&auto=format&fit=crop" alt="Beyaz cepheli, keskin geometrili modern bir yapının alttan görünümü" fetchpriority="high">
+        <figcaption>Kıyı Kütüphanesi, cephe detayı · 2024</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="projeler">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Seçili projeler</h2>
+        <p>Son on yılda tamamlanan işlerden bir seçki. Her projede ilk soru aynı: burada yaşayacak kişi sabahı nasıl karşılayacak?</p>
+      </div>
+      <div class="projects">
+        <article class="proj rv">
+          <div class="proj-img"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=70&auto=format&fit=crop" alt="Havuz kenarında geniş cam yüzeyli tek katlı konut"></div>
+          <div>
+            <h3>Zeytinlik Evi</h3>
+            <p>Eğimli bir zeytinliğe yerleşen, ağaçların hiçbirine dokunmadan üç kademeye bölünmüş tek katlı aile evi.</p>
+            <table class="spec">
+              <tr><th>Konum</th><td>Ayvalık, Balıkesir</td></tr>
+              <tr><th>Yıl</th><td>2023</td></tr>
+              <tr><th>Alan</th><td>240 m²</td></tr>
+              <tr><th>Tür</th><td>Müstakil konut</td></tr>
+            </table>
+          </div>
+        </article>
+        <article class="proj flip tall rv">
+          <div class="proj-img"><img loading="lazy" src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&q=70&auto=format&fit=crop" alt="Gökyüzüne doğru yükselen geometrik beton cephe"></div>
+          <div>
+            <h3>Kıyı Kütüphanesi</h3>
+            <p>Mahalle ölçeğinde bir okuma evi. Kuzey ışığını içeri alan testere dişi çatı, gün boyu yapay aydınlatmaya ihtiyaç bırakmıyor.</p>
+            <table class="spec">
+              <tr><th>Konum</th><td>Karşıyaka, İzmir</td></tr>
+              <tr><th>Yıl</th><td>2024</td></tr>
+              <tr><th>Alan</th><td>1.150 m²</td></tr>
+              <tr><th>Tür</th><td>Kamusal yapı, yarışma 1. ödülü</td></tr>
+            </table>
+          </div>
+        </article>
+        <article class="proj rv">
+          <div class="proj-img"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=70&auto=format&fit=crop" alt="Doğal ahşap ve açık tonlarda ferah bir iç mekân"></div>
+          <div>
+            <h3>Moda Apartmanı Dönüşümü</h3>
+            <p>1950'lerden kalma bir apartman dairesinin taşıyıcısına dokunmadan, iki küçük odayı tek bir ışık koridorunda birleştirdik.</p>
+            <table class="spec">
+              <tr><th>Konum</th><td>Kadıköy, İstanbul</td></tr>
+              <tr><th>Yıl</th><td>2022</td></tr>
+              <tr><th>Alan</th><td>135 m²</td></tr>
+              <tr><th>Tür</th><td>İç mekân, renovasyon</td></tr>
+            </table>
+          </div>
+        </article>
+        <article class="proj flip rv">
+          <div class="proj-img"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=70&auto=format&fit=crop" alt="Akşam ışığında aydınlatılmış modern villa ve bahçesi"></div>
+          <div>
+            <h3>Bağ Evi</h3>
+            <p>Bağ bozumu dönemi için yazlık bir ev. Gölgeli sundurma, evin en çok kullanılan odası haline geldi.</p>
+            <table class="spec">
+              <tr><th>Konum</th><td>Urla, İzmir</td></tr>
+              <tr><th>Yıl</th><td>2021</td></tr>
+              <tr><th>Alan</th><td>180 m²</td></tr>
+              <tr><th>Tür</th><td>Yazlık konut</td></tr>
+            </table>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="hakkimda">
+    <div class="wrap about">
+      <div class="portrait rv"><img loading="lazy" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=1200&q=70&auto=format&fit=crop" alt="Defne Aral'ın portresi"></div>
+      <div class="about-text rv">
+        <div class="sec-head" style="grid-template-columns:1fr;margin-bottom:28px"><h2>Hakkımda</h2></div>
+        <p class="lead">Her yapıyı, içinde geçecek sıradan bir salı gününe göre tasarlarım.</p>
+        <p>Mimarlık eğitimimi İstanbul'da tamamladım, ardından Porto'da iki yıl tarihi yapı restorasyonu üzerine çalıştım. 2012'de Kadıköy'de kendi stüdyomu kurdum. Bugün dört kişilik bir ekiple, yılda en fazla altı proje üstleniyoruz.</p>
+        <p>Az sayıda iş almayı bilerek seçiyorum: şantiyeye her hafta kendim gidiyor, ustalarla aynı masada detay çözüyorum. Proje teslim edildikten bir yıl sonra yeniden ziyaret edip evin nasıl kullanıldığını not alıyorum.</p>
+        <div class="facts">
+          <div><b>14</b><span>yıllık pratik</span></div>
+          <div><b>62</b><span>tamamlanan proje</span></div>
+          <div><b>9</b><span>restorasyon</span></div>
+          <div><b>3</b><span>yarışma ödülü</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="yaklasim">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Yaklaşım</h2>
+        <p>Projeye başlamadan önce müşterilerimle konuştuğum üç konu, tasarımın neredeyse tamamını belirliyor.</p>
+      </div>
+      <div class="principles">
+        <div class="principle rv"><h3>Önce arsa, sonra çizim</h3><p>İlk toplantıyı ofiste değil, arsada yaparız. Güneşin nereden doğduğu, rüzgârın nereden geldiği ve komşunun penceresi, ilk eskizden daha önemlidir.</p></div>
+        <div class="principle rv"><h3>Yerel malzeme, yerel usta</h3><p>Taşı yakın ocaktan, ahşabı bölgedeki atölyeden alırız. Hem bakım kolaylaşır hem de yapı bulunduğu yere ait görünür.</p></div>
+        <div class="principle rv"><h3>Bütçe tasarımın parçasıdır</h3><p>Maliyet tablosu ilk eskizle birlikte hazırlanır. Nereye harcayıp nereden tasarruf edeceğimizi birlikte, baştan konuşuruz.</p></div>
+      </div>
+      <div class="svc-list rv">
+        <div class="svc-item"><h3>Konut tasarımı</h3><span>Avan projeden uygulamaya</span><p>Müstakil ev, yazlık ve küçük apartmanlar için mimari proje, ruhsat süreci ve şantiye kontrolü.</p></div>
+        <div class="svc-item"><h3>Restorasyon</h3><span>Rölöve ve restitüsyon</span><p>Tescilli ve eski yapıların belgelenmesi, kurul süreçlerinin yürütülmesi ve yeniden kullanım önerileri.</p></div>
+        <div class="svc-item"><h3>İç mekân dönüşümü</h3><span>Daire ve ofis</span><p>Taşıyıcı sisteme dokunmadan plan düzenleme, ışık, depolama ve özel mobilya tasarımı.</p></div>
+        <div class="svc-item"><h3>Arsa danışmanlığı</h3><span>Satın almadan önce</span><p>Arsa almadan önce yerinde inceleme: imar durumu, yönlenme, olası yapı kütlesi ve kaba maliyet tahmini.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ozgecmis">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Özgeçmiş</h2>
+        <p>Eğitim, ödüller ve yayınlar.</p>
+      </div>
+      <ol class="timeline rv">
+        <li><time>2024</time><b>Kıyı Kütüphanesi ulusal yarışması</b><span>Birincilik ödülü</span></li>
+        <li><time>2022</time><b>Genç Mimarlar Seçkisi</b><span>Moda Apartmanı Dönüşümü sergilendi</span></li>
+        <li><time>2019</time><b>Yapı ve Işık Konferansı</b><span>Konuşmacı: "Küçük evlerde gün ışığı"</span></li>
+        <li><time>2012</time><b>Defne Aral Mimarlık kuruldu</b><span>Kadıköy, İstanbul</span></li>
+        <li><time>2010</time><b>Restorasyon bursu</b><span>Porto, iki yıllık araştırma programı</span></li>
+        <li><time>2008</time><b>Mimarlık lisansı</b><span>İstanbul</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <blockquote class="quote rv">
+        <p>"Evimizi çizerken bize en çok sorduğu şey, sabah kahvemizi nerede içtiğimizdi. Şimdi o köşe evin en güzel yeri."</p>
+        <cite>Selin ve Kaan Yüce, Zeytinlik Evi</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="iletisim">
+    <div class="wrap">
+      <h2 class="rv">Bir proje<br>konuşalım</h2>
+      <div class="contact-grid rv">
+        <div><h3>E-posta</h3><p><a href="mailto:merhaba@defnearal.example">merhaba@defnearal.example</a></p></div>
+        <div><h3>Telefon</h3><p><a href="tel:+905320000000">0 (532) 000 00 00</a></p></div>
+        <div><h3>Stüdyo</h3><p>Örnek Sokak No: 12/3<br>Kadıköy, İstanbul</p></div>
+      </div>
+      <a class="btn rv" href="mailto:merhaba@defnearal.example?subject=Proje%20g%C3%B6r%C3%BC%C5%9Fmesi">Görüşme talep et</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Defne Aral Mimarlık</span><span>Fotoğraflar: Unsplash</span></div>
+</footer>
+
+<a class="demo-ribbon" href="https://wa.me/905416264074?text=Merhaba%2C%20%C3%B6rnek%20siteyi%20g%C3%B6rd%C3%BCm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini AFM-CODING ile yaptırın →</a>
+
+<script>
+(function(){
+  var hdr=document.querySelector('.hdr'),btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  function setMenu(o){btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');nav.classList.toggle('open',o)}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

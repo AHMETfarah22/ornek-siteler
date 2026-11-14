@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuzeyhat Yazılım ve Danışmanlık</title>
+<meta name="description" content="Kuzeyhat; orta ölçekli şirketler için yazılım geliştirme, eski sistem dönüşümü, bulut altyapısı ve veri danışmanlığı sunar. Ankara ve İstanbul.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F3D3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#0F3D3E;
+  --pine-2:#175556;
+  --mist:#EEF3F1;
+  --white:#FFFFFF;
+  --amber:#F2B134;
+  --sky:#C9DDEB;
+  --ink:#132423;
+  --muted:#53676A;
+  --line:#D5E0DD;
+  --pad:clamp(16px,4vw,48px);
+  --r:10px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip;padding-bottom:52px}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+h1,h2,h3{font-family:"Sora",system-ui,sans-serif;letter-spacing:-.025em;margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad)}
+section{scroll-margin-top:76px}
+.sec{padding:clamp(72px,10vw,128px) 0}
+.sec-title{font-size:clamp(30px,4.6vw,52px);line-height:1.08;font-weight:700;max-width:18ch}
+.sec-intro{color:var(--muted);max-width:56ch;margin:16px 0 0;font-size:18px}
+.head{display:grid;gap:8px;margin-bottom:clamp(36px,5vw,56px)}
+@media (min-width:900px){.head{grid-template-columns:1fr 1fr;align-items:end}.head .sec-intro{justify-self:end;margin:0}}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--pine);color:#fff}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Sora";font-weight:700;font-size:19px;letter-spacing:-.02em}
+.logo svg{flex:none}
+.nav{display:flex;align-items:center;gap:28px;font-size:15.5px}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--amber);text-decoration-thickness:2px}
+.nav .cta{opacity:1;background:var(--amber);color:var(--ink);padding:9px 16px;border-radius:var(--r);font-weight:600}
+.nav .cta:hover{text-decoration:none;background:#F6C25A}
+.menu-btn{display:none;background:none;border:0;padding:10px;margin-right:-10px;cursor:pointer}
+.menu-btn span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:transform .25s,opacity .2s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:880px){
+  .menu-btn{display:block}
+  .nav{position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--pine);flex-direction:column;align-items:stretch;gap:0;padding:12px var(--pad) 32px;display:none;overflow-y:auto}
+  .nav.open{display:flex}
+  .nav a{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:20px;opacity:1}
+  .nav .cta{margin-top:20px;text-align:center;border:0}
+}
+
+/* hero */
+.hero{background:var(--pine);color:#E7F0EE;padding:clamp(40px,6vw,80px) 0 0;overflow:hidden}
+.hero-grid{display:grid;gap:40px;align-items:end}
+.hero h1{color:#fff;font-size:clamp(34px,5.4vw,64px);line-height:1.06;font-weight:700;max-width:16ch}
+.hero-lead{margin:22px 0 30px;max-width:46ch;font-size:clamp(17px,1.7vw,20px);color:#C8DAD6}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:var(--r);font-weight:600;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{background:#F6C25A}
+.btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.trust{margin:40px 0 clamp(40px,6vw,72px);font-size:14.5px;color:#9FBDB7;max-width:44ch}
+.hero-visual{position:relative;align-self:stretch;min-height:340px}
+.hero-photo{position:absolute;inset:0 0 0 0;border-radius:14px 14px 0 0;overflow:hidden;background:#2B5A5A}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.worknote{position:absolute;left:16px;right:16px;bottom:16px;background:var(--white);color:var(--ink);border-radius:12px;padding:16px 18px;box-shadow:0 18px 40px rgba(6,30,30,.35);max-width:340px}
+.worknote h3{font-size:14.5px;font-weight:600;margin-bottom:10px;display:flex;justify-content:space-between;gap:8px}
+.worknote h3 span{color:var(--muted);font-family:"IBM Plex Sans";font-weight:400;letter-spacing:0}
+.worknote ul{list-style:none;margin:0;padding:0;font-size:14.5px}
+.worknote li{display:flex;align-items:center;gap:10px;padding:5px 0}
+.worknote li::before{content:"";flex:none;width:16px;height:16px;border-radius:4px;border:1.5px solid var(--line)}
+.worknote li.done{color:var(--muted);text-decoration:line-through}
+.worknote li.done::before{background:var(--pine) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/100% no-repeat;border-color:var(--pine)}
+.worknote li.now::before{border-color:var(--amber);background:var(--amber)}
+.prog{height:6px;border-radius:3px;background:var(--mist);margin-top:12px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--amber);border-radius:3px;transition:width 1.4s cubic-bezier(.2,.7,.2,1) .4s}
+.prog.go i{width:68%}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.15fr 1fr}.hero-visual{min-height:520px}.worknote{left:-40px;bottom:40px}}
+
+/* services */
+.services{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.svc{background:var(--white);padding:clamp(24px,3vw,36px);display:grid;gap:12px;align-content:start}
+.svc-ic{width:44px;height:44px;border-radius:10px;background:var(--mist);display:grid;place-items:center;color:var(--pine)}
+.svc h3{font-size:22px;font-weight:600}
+.svc p{margin:0;color:var(--muted)}
+.svc ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.svc li{font-size:13.5px;background:var(--mist);color:var(--pine);border-radius:6px;padding:3px 9px}
+@media (min-width:760px){.services{grid-template-columns:1fr 1fr}}
+
+/* process */
+.process{background:var(--mist)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st;position:relative}
+.step{counter-increment:st;position:relative;padding:0 0 32px 64px}
+.step::before{content:counter(st);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--pine);color:var(--pine);font-family:"Sora";font-weight:700;display:grid;place-items:center;z-index:1}
+.step::after{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--line)}
+.step:last-child::after{display:none}
+.step:last-child{padding-bottom:0}
+.step h3{font-size:20px;font-weight:600;margin:8px 0 6px}
+.step p{margin:0;color:var(--muted);font-size:16px}
+.step small{display:inline-block;margin-top:10px;font-size:13.5px;color:var(--pine);font-weight:600;background:var(--white);border-radius:6px;padding:2px 8px}
+@media (min-width:980px){
+  .steps{grid-template-columns:repeat(5,1fr);gap:24px}
+  .step{padding:64px 0 0}
+  .step::after{left:44px;right:-24px;top:21px;bottom:auto;width:auto;height:2px}
+}
+
+/* references */
+.logos{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:40px}
+.logos div{background:var(--white);min-height:92px;display:grid;place-items:center;padding:16px;text-align:center;color:#5D7174;font-weight:600;font-size:17px;letter-spacing:-.01em}
+.logos .l1{font-family:"Sora";font-weight:700;letter-spacing:.06em}
+.logos .l2{font-style:italic;font-weight:400;font-size:19px}
+.logos .l3{font-family:"Sora";font-weight:400;letter-spacing:-.04em;font-size:20px}
+.logos .l4{font-weight:600;letter-spacing:.18em;font-size:14px}
+.logos .l5{font-family:"Sora";font-weight:600}
+.logos .l6{font-weight:500;font-size:18px}
+@media (min-width:760px){.logos{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1100px){.logos{grid-template-columns:repeat(6,1fr)}}
+.cases{display:grid;gap:20px}
+.case{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;background:var(--white)}
+.case-img{background:#9DB5B2;aspect-ratio:16/9;overflow:hidden}
+.case-img img{width:100%;height:100%;object-fit:cover}
+.case-body{padding:clamp(22px,3vw,32px);display:grid;gap:12px;align-content:start}
+.case-body .client{font-size:14.5px;color:var(--muted)}
+.case-body h3{font-size:clamp(21px,2.4vw,26px);font-weight:600;line-height:1.25}
+.case-body p{margin:0;color:var(--muted)}
+.result{display:flex;gap:12px;align-items:baseline;padding-top:14px;border-top:1px solid var(--line);margin-top:6px}
+.result b{font-family:"Sora";font-size:28px;color:var(--pine);letter-spacing:-.03em;flex:none}
+.result span{font-size:15px;color:var(--muted)}
+@media (min-width:900px){.cases{grid-template-columns:1fr 1fr;gap:28px}}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 16px}
+.person img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;background:var(--sky);filter:saturate(.85)}
+.person h3{font-size:18px;font-weight:600;margin:14px 0 2px}
+.person p{margin:0;font-size:15px;color:var(--muted);line-height:1.45}
+@media (min-width:900px){.team{grid-template-columns:repeat(4,1fr);gap:28px}}
+
+/* contact */
+.contact{background:var(--pine);color:#E7F0EE}
+.contact .sec-title{color:#fff}
+.contact .sec-intro{color:#B9CFCB}
+.contact-grid{display:grid;gap:40px}
+.info{display:grid;gap:22px;align-content:start;font-size:16px}
+.info h3{font-family:"IBM Plex Sans";font-size:14px;font-weight:500;color:#9FBDB7;letter-spacing:0;margin-bottom:4px}
+.info p{margin:0}
+.info a{text-decoration:none;border-bottom:1px solid var(--amber)}
+form{background:var(--white);color:var(--ink);border-radius:16px;padding:clamp(22px,3vw,36px);display:grid;gap:16px}
+.f2{display:grid;gap:16px}
+@media (min-width:600px){.f2{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-size:14.5px;font-weight:500}
+input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--white);font-size:16px;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pine);box-shadow:0 0 0 3px rgba(15,61,62,.12)}
+textarea{min-height:120px;resize:vertical}
+.err{color:#A3341C;font-size:13.5px;font-weight:500;min-height:0}
+.invalid{border-color:#C0462A}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--muted)}
+.consent input{width:18px;height:18px;margin-top:3px;flex:none;accent-color:var(--pine)}
+form .btn{background:var(--pine);color:#fff;justify-self:start}
+form .btn:hover{background:var(--pine-2)}
+.thanks{display:none;text-align:left;padding:12px 0}
+.thanks .tick{width:52px;height:52px;border-radius:50%;background:var(--mist);display:grid;place-items:center;margin-bottom:16px}
+.thanks h3{font-size:26px;margin-bottom:8px}
+.thanks p{margin:0 0 6px;color:var(--muted)}
+form.sent > :not(.thanks){display:none}
+form.sent .thanks{display:block}
+@media (min-width:900px){.contact-grid{grid-template-columns:1fr 1.3fr;gap:64px}}
+
+footer{background:#0A2E2F;color:#9FBDB7;font-size:14.5px;padding:28px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+
+.demo-ribbon{position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--ink);color:#fff;text-align:center;text-decoration:none;font-size:13.5px;padding:10px 16px;line-height:1.35;border-top:2px solid var(--amber)}
+.demo-ribbon:hover{background:var(--pine-2)}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .rv.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){.prog i{transition:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Kuzeyhat ana sayfa">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#F2B134"/><path d="M7 20L14 8l7 12" stroke="#0F3D3E" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/><circle cx="14" cy="8" r="2.4" fill="#0F3D3E"/></svg>
+      Kuzeyhat
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menüyü aç"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#surec">Süreç</a>
+      <a href="#referanslar">Referanslar</a>
+      <a href="#ekip">Ekip</a>
+      <a href="#iletisim" class="cta">Görüşme planla</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 class="rv">Eski sistemlerinizi işinizi durdurmadan yeniliyoruz.</h1>
+        <p class="hero-lead rv">Kuzeyhat, üretim, lojistik ve sağlık sektöründeki orta ölçekli şirketlere yazılım geliştirme ve dönüşüm danışmanlığı veriyor. Yıllardır çalışan sistemleri, ekibinizin günlük işini aksatmadan adım adım modernleştiriyoruz.</p>
+        <div class="actions rv">
+          <a class="btn btn-amber" href="#iletisim">Ücretsiz ön görüşme planla</a>
+          <a class="btn btn-line" href="#referanslar">Projeleri incele</a>
+        </div>
+        <p class="trust rv">2014'ten bu yana 40'tan fazla kurumla çalıştık. Ankara ve İstanbul ofislerimizde 28 kişilik ekip.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=70&auto=format&fit=crop" alt="Kuzeyhat ekibi masa başında bir proje üzerinde çalışırken" fetchpriority="high"></div>
+        <div class="worknote" aria-label="Örnek proje durum kartı">
+          <h3>ERP geçişi, 3. aşama <span>Hafta 9 / 14</span></h3>
+          <ul>
+            <li class="done">Stok modülü yeni sisteme taşındı</li>
+            <li class="done">Eski raporlar birebir doğrulandı</li>
+            <li class="now">Satın alma ekibiyle paralel kullanım</li>
+            <li>Eski sunucunun kapatılması</li>
+          </ul>
+          <div class="prog" id="prog"><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="hizmetler">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 class="sec-title">Ne yapıyoruz?</h2>
+        <p class="sec-intro">Tek bir proje ya da uzun soluklu bir teknoloji ortaklığı. Her iki durumda da işe mevcut sisteminizi ve ekibinizi tanıyarak başlıyoruz.</p>
+      </div>
+      <div class="services rv">
+        <div class="svc">
+          <div class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg></div>
+          <h3>Özel yazılım geliştirme</h3>
+          <p>Hazır paketlerin karşılamadığı iş süreçleri için web ve mobil uygulamalar. Kodun ve tüm hakların sahibi siz olursunuz.</p>
+          <ul><li>Web uygulaması</li><li>Mobil</li><li>Entegrasyon</li></ul>
+        </div>
+        <div class="svc">
+          <div class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></div>
+          <h3>Eski sistem dönüşümü</h3>
+          <p>10–20 yıllık masaüstü veya yerel sunucu uygulamalarını, veri kaybı ve kesinti olmadan modern altyapıya taşıyoruz.</p>
+          <ul><li>Veri göçü</li><li>Paralel çalışma</li><li>Eğitim</li></ul>
+        </div>
+        <div class="svc">
+          <div class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9a4 4 0 0 1-1 9H7z"/></svg></div>
+          <h3>Bulut ve altyapı</h3>
+          <p>Sunucu maliyetlerinizi düşüren, yedekleme ve güvenliği otomatikleştiren bulut mimarisi kurulumu ve işletimi.</p>
+          <ul><li>Bulut geçişi</li><li>Yedekleme</li><li>7/24 izleme</li></ul>
+        </div>
+        <div class="svc">
+          <div class="svc-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Veri ve raporlama</h3>
+          <p>Farklı sistemlerdeki verileri bir araya getirip yöneticilerin her sabah baktığı, güvenilir raporlar hazırlıyoruz.</p>
+          <ul><li>Veri ambarı</li><li>Yönetim paneli</li><li>KVKK uyumu</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec process" id="surec">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 class="sec-title">Bir proje nasıl ilerler?</h2>
+        <p class="sec-intro">Her aşamanın sonunda elinizde çalışan bir çıktı olur. Projeyi istediğiniz noktada durdurabilir, o ana kadar yapılan işi teslim alabilirsiniz.</p>
+      </div>
+      <ol class="steps">
+        <li class="step rv"><h3>Keşif</h3><p>Mevcut sistemi, ekipleri ve darboğazları yerinde inceleriz.</p><small>1–2 hafta</small></li>
+        <li class="step rv"><h3>Yol haritası</h3><p>Kapsam, bütçe ve aşamaları tek sayfalık bir planla netleştiririz.</p><small>1 hafta</small></li>
+        <li class="step rv"><h3>Geliştirme</h3><p>İki haftalık döngülerle çalışır, her döngü sonunda demo yaparız.</p><small>2–6 ay</small></li>
+        <li class="step rv"><h3>Geçiş</h3><p>Eski ve yeni sistem bir süre birlikte çalışır, ekip eğitilir.</p><small>2–4 hafta</small></li>
+        <li class="step rv"><h3>Destek</h3><p>Canlıya alınan sistemi izler, bakım ve geliştirmeyi sürdürürüz.</p><small>Sürekli</small></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="referanslar">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 class="sec-title">Birlikte çalıştığımız kurumlar</h2>
+        <p class="sec-intro">Müşterilerimizin çoğu ilk projeden sonra bizimle çalışmaya devam ediyor. İki örnek:</p>
+      </div>
+      <div class="logos rv" aria-label="Referans firmalar">
+        <div class="l1">LODOS</div>
+        <div class="l2">Narçiçeği Gıda</div>
+        <div class="l3">poyraz enerji</div>
+        <div class="l4">MAVİTAŞ</div>
+        <div class="l5">Kumsal Sağlık</div>
+        <div class="l6">Ardıç Perakende</div>
+      </div>
+      <div class="cases">
+        <article class="case rv">
+          <div class="case-img"><img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=70&auto=format&fit=crop" alt="Proje toplantısında not alan ekip üyeleri"></div>
+          <div class="case-body">
+            <span class="client">Lodos Lojistik · Depo yönetimi</span>
+            <h3>15 yıllık depo programı, tek hafta sonu kesintiyle yeni sisteme taşındı</h3>
+            <p>Üç depoda kullanılan masaüstü yazılımı, el terminalleriyle çalışan bir web uygulamasına dönüştürdük. Geçiş boyunca sevkiyat bir gün bile durmadı.</p>
+            <div class="result"><b>%38</b><span>daha kısa sipariş hazırlama süresi</span></div>
+          </div>
+        </article>
+        <article class="case rv">
+          <div class="case-img"><img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=70&auto=format&fit=crop" alt="Ekranlar başında birlikte çalışan yazılım ekibi"></div>
+          <div class="case-body">
+            <span class="client">Kumsal Sağlık · Randevu ve raporlama</span>
+            <h3>Dört klinikteki randevu verisi tek panelde birleşti</h3>
+            <p>Farklı yazılımlarla tutulan randevuları ortak bir veri altyapısına aldık, yönetim için günlük doluluk raporları hazırladık.</p>
+            <div class="result"><b>6 saat</b><span>haftalık manuel rapor işi ortadan kalktı</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="ekip" style="padding-top:0">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 class="sec-title">Projenizde karşılaşacağınız ekip</h2>
+        <p class="sec-intro">Satış ekibimiz yok. İlk görüşmeye, projeyi yürütecek kişiler katılır.</p>
+      </div>
+      <div class="team">
+        <div class="person rv"><img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=70&auto=format&fit=crop" alt="Emre Kalkan"><h3>Emre Kalkan</h3><p>Kurucu ortak, yazılım mimarı</p></div>
+        <div class="person rv"><img loading="lazy" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=70&auto=format&fit=crop" alt="Zeynep Özdal"><h3>Zeynep Özdal</h3><p>Kurucu ortak, dönüşüm danışmanı</p></div>
+        <div class="person rv"><img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200&q=70&auto=format&fit=crop" alt="Burak Teker"><h3>Burak Teker</h3><p>Bulut ve altyapı lideri</p></div>
+        <div class="person rv"><img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=70&auto=format&fit=crop" alt="İpek Sarıgül"><h3>İpek Sarıgül</h3><p>Veri ve raporlama uzmanı</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="iletisim">
+    <div class="wrap contact-grid">
+      <div class="info rv">
+        <div>
+          <h2 class="sec-title">Projenizi konuşalım</h2>
+          <p class="sec-intro">Formu doldurun, iki iş günü içinde 30 dakikalık ücretsiz bir ön görüşme için sizi arayalım.</p>
+        </div>
+        <div><h3>Telefon</h3><p><a href="tel:+905320000000">0 (532) 000 00 00</a></p></div>
+        <div><h3>E-posta</h3><p><a href="mailto:iletisim@kuzeyhat.example">iletisim@kuzeyhat.example</a></p></div>
+        <div><h3>Ankara</h3><p>Örnek Plaza, Kat 4, Çankaya / Ankara</p></div>
+        <div><h3>İstanbul</h3><p>Teknoloji Sokak No: 21, Maslak / İstanbul</p></div>
+      </div>
+      <form id="form" class="rv" novalidate>
+        <div class="f2">
+          <label>Ad soyad<input name="ad" autocomplete="name" required><span class="err"></span></label>
+          <label>Şirket<input name="sirket" autocomplete="organization"><span class="err"></span></label>
+        </div>
+        <div class="f2">
+          <label>E-posta<input name="eposta" type="email" autocomplete="email" required><span class="err"></span></label>
+          <label>Telefon<input name="tel" type="tel" autocomplete="tel" placeholder="0 (5xx) xxx xx xx"><span class="err"></span></label>
+        </div>
+        <label>İlgilendiğiniz hizmet
+          <select name="hizmet">
+            <option>Özel yazılım geliştirme</option>
+            <option>Eski sistem dönüşümü</option>
+            <option>Bulut ve altyapı</option>
+            <option>Veri ve raporlama</option>
+            <option>Henüz emin değilim</option>
+          </select>
+        </label>
+        <label>Kısaca projeniz<textarea name="mesaj" required placeholder="Şu an hangi sistemi kullanıyorsunuz, neyi değiştirmek istiyorsunuz?"></textarea><span class="err"></span></label>
+        <label class="consent"><input type="checkbox" name="kvkk" required><span>Bilgilerimin görüşme amacıyla işlenmesini kabul ediyorum.</span></label>
+        <span class="err" id="kvkkErr"></span>
+        <button class="btn" type="submit">Görüşme talebini gönder</button>
+        <div class="thanks" role="status" aria-live="polite">
+          <div class="tick"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F3D3E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3>Teşekkürler, talebiniz alındı</h3>
+          <p id="thanksText">İki iş günü içinde sizi arayacağız.</p>
+          <p style="font-size:14px">Not: Bu bir örnek sitedir, form bilgileri hiçbir yere gönderilmedi.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Kuzeyhat Yazılım ve Danışmanlık</span><span>KVKK aydınlatma metni · Çerez politikası</span></div>
+</footer>
+
+<a class="demo-ribbon" href="https://wa.me/905416264074?text=Merhaba%2C%20%C3%B6rnek%20siteyi%20g%C3%B6rd%C3%BCm%2C%20benzerini%20istiyorum" target="_blank" rel="noopener">Bu bir örnek sitedir · Benzerini AFM-CODING ile yaptırın →</a>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  function setMenu(o){btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç');nav.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  addEventListener('resize',function(){if(innerWidth>880)setMenu(false)});
+
+  setTimeout(function(){document.getElementById('prog').classList.add('go')},300);
+
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  }else els.forEach(function(el){el.classList.add('in')});
+
+  var f=document.getElementById('form');
+  function setErr(el,msg){var s=el.parentNode.querySelector('.err');el.classList.toggle('invalid',!!msg);if(s)s.textContent=msg||''}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true,first=null;
+    function chk(el,msg){setErr(el,msg);if(msg){ok=false;first=first||el}}
+    chk(f.ad,f.ad.value.trim().length<2?'Lütfen adınızı ve soyadınızı yazın.':'');
+    chk(f.eposta,!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.eposta.value.trim())?'Geçerli bir e-posta adresi girin, örneğin ad@sirket.com.':'');
+    chk(f.mesaj,f.mesaj.value.trim().length<10?'Projenizi birkaç cümleyle anlatın.':'');
+    var k=document.getElementById('kvkkErr');
+    if(!f.kvkk.checked){k.textContent='Devam etmek için onay kutusunu işaretleyin.';ok=false;first=first||f.kvkk}else k.textContent='';
+    if(!ok){first.focus();return}
+    var name=f.ad.value.trim().split(' ')[0];
+    document.getElementById('thanksText').textContent='Merhaba '+name+', '+f.hizmet.value.toLocaleLowerCase('tr')+' talebinizi aldık. İki iş günü içinde '+(f.tel.value.trim()?'telefonla':'e-postayla')+' size ulaşacağız.';
+    f.classList.add('sent');
+    f.querySelector('.thanks').scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  });
+  f.addEventListener('input',function(e){if(e.target.classList.contains('invalid'))setErr(e.target,'')});
+})();
+</script>
+</body>
+</html>
